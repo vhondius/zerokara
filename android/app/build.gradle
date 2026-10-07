@@ -1,0 +1,126 @@
+apply plugin: 'com.android.application'
+
+// Self-incrementing build number, persisted in version.properties. Every
+// Gradle run bumps it, so each APK gets a distinct filename/version instead
+// of silently overwriting app-debug.apk — a file-transfer tool that dedupes
+// by name can otherwise skip copying a "same-named" file to the device,
+// leaving a stale build installed with no visible sign anything changed.
+def versionPropsFile = file('version.properties')
+def versionProps = new Properties()
+if (versionPropsFile.exists()) {
+    versionPropsFile.withInputStream { versionProps.load(it) }
+}
+def buildNumber = (versionProps.getProperty('buildNumber', '0')).toInteger() + 1
+// Separate counter for the human-visible "x.y.N" version name/filename, reset
+// to 0 whenever the minor version bumps (started fresh at the 1.2.0 release).
+// versionCode (buildNumber) must keep increasing from whatever's already
+// installed, so it stays on its own independent counter, never resetting.
+def minorBuildNumber = (versionProps.getProperty('minorBuildNumber', '-1')).toInteger() + 1
+versionProps.setProperty('buildNumber', buildNumber.toString())
+versionProps.setProperty('minorBuildNumber', minorBuildNumber.toString())
+versionPropsFile.withOutputStream { versionProps.store(it, null) }
+
+// Fails the build unless the in-app "What's New" changelog (src/lib/changelog.ts,
+// shown on first launch after an update — see UpdateNotesDialog.tsx) has an entry
+// dated today. Keeps a real build from ever shipping silently un-announced.
+// Bypass for an intentional no-op rebuild with -PskipChangelogCheck=true.
+tasks.register('checkChangelogUpdated') {
+    doLast {
+        if (project.hasProperty('skipChangelogCheck')) return
+        def changelogFile = file("${projectDir}/../../src/lib/changelog.ts")
+        def m = (changelogFile.text =~ /date:\s*"(\d{4}-\d{2}-\d{2})"/)
+        if (!m.find()) {
+            throw new GradleException("Couldn't find a dated entry in src/lib/changelog.ts.")
+        }
+        def today = new Date().format('yyyy-MM-dd')
+        if (m.group(1) != today) {
+            throw new GradleException(
+                "src/lib/changelog.ts's newest entry is dated ${m.group(1)}, not today (${today}).\n" +
+                "Add or extend today's CHANGELOG entry with what changed before building " +
+                "(see AGENTS.md), or pass -PskipChangelogCheck=true to bypass."
+            )
+        }
+    }
+}
+tasks.matching { it.name in ['assembleDebug', 'assembleRelease'] }.configureEach {
+    dependsOn 'checkChangelogUpdated'
+}
+
+android {
+    namespace = "com.vincenthondius.zerokara"
+    compileSdk = rootProject.ext.compileSdkVersion
+    defaultConfig {
+        applicationId "com.vincenthondius.zerokara"
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode buildNumber
+        versionName "1.0.${minorBuildNumber}"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        aaptOptions {
+             // Files and dirs to omit from the packaged assets dir, modified to accommodate modern web apps.
+             // Default: https://android.googlesource.com/platform/frameworks/base/+/282e181b58cf72b6ca770dc7ca5f91f135444502/tools/aapt/AaptAssets.cpp#61
+            ignoreAssetsPattern = '!.svn:!.git:!.ds_store:!*.scc:.*:!CVS:!thumbs.db:!picasa.ini:!*~'
+        }
+    }
+    // A project-local, checked-in signing key — NOT the machine-default
+    // ~/.android/debug.keystore. That file is regenerated per-machine/per-checkout,
+    // so a rebuild elsewhere would sign with a different key and Android would
+    // refuse to install it over the already-installed app ("signatures do not
+    // match"), forcing an uninstall that wipes all localStorage progress. Signing
+    // every build (debug and release) with this same key means `adb install -r`
+    // (or just tapping the APK again) always updates in place.
+    signingConfigs {
+        zerokara {
+            storeFile file('zerokara.keystore')
+            storePassword 'android'
+            keyAlias 'zerokara'
+            keyPassword 'android'
+        }
+    }
+
+    buildTypes {
+        debug {
+            signingConfig signingConfigs.zerokara
+        }
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.zerokara
+        }
+    }
+
+    applicationVariants.all { variant ->
+        variant.outputs.all { output ->
+            outputFileName = "Zerokara_v1.0.${minorBuildNumber}.apk"
+        }
+    }
+}
+
+repositories {
+    flatDir{
+        dirs '../capacitor-cordova-android-plugins/src/main/libs', 'libs'
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation "androidx.appcompat:appcompat:$androidxAppCompatVersion"
+    implementation "androidx.coordinatorlayout:coordinatorlayout:$androidxCoordinatorLayoutVersion"
+    implementation "androidx.core:core-splashscreen:$coreSplashScreenVersion"
+    implementation project(':capacitor-android')
+    testImplementation "junit:junit:$junitVersion"
+    androidTestImplementation "androidx.test.ext:junit:$androidxJunitVersion"
+    androidTestImplementation "androidx.test.espresso:espresso-core:$androidxEspressoCoreVersion"
+    implementation project(':capacitor-cordova-android-plugins')
+}
+
+apply from: 'capacitor.build.gradle'
+
+try {
+    def servicesJSON = file('google-services.json')
+    if (servicesJSON.text) {
+        apply plugin: 'com.google.gms.google-services'
+    }
+} catch(Exception e) {
+    logger.info("google-services.json not found, google-services plugin not applied. Push Notifications won't work")
+}

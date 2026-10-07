@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Zerokara</string>
+    <string name="title_activity_main">Zerokara</string>
+    <string name="package_name">com.vincenthondius.zerokara</string>
+    <string name="custom_url_scheme">com.vincenthondius.zerokara</string>
+</resources>
