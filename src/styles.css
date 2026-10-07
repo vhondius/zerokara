@@ -1,0 +1,337 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+@import "./fonts.css";
+
+@custom-variant dark (&:is(.dark *));
+
+/*
+ * Design system: warm washi paper + ink.
+ * Light: off-white paper background, deep ink foreground.
+ * Dark: charcoal ink background, warm bone foreground.
+ * Single accent: muted vermilion (shu-iro), the color of a hanko seal.
+ * All colors oklch. Fonts loaded via <link> in __root.tsx.
+ */
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+  --radius-4xl: calc(var(--radius) + 16px);
+
+  /* Noto Sans JP after the Latin fonts: kanji anywhere in the text then use
+     the bundled Japanese font instead of the phone's fallback, which on a
+     Chinese-locale device draws Chinese glyph shapes. */
+  --font-sans: "Open Sans", "Noto Sans JP", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Dosis", "Noto Sans JP", ui-sans-serif, system-ui, sans-serif;
+  --font-jp: "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Yu Gothic", sans-serif;
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-ring-offset-background: var(--background);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+
+  /* Layered paper depth (see DESIGN.md → Elevation & Depth). */
+  --shadow-well: var(--depth-well);
+  --shadow-sheet: var(--depth-sheet);
+  --shadow-lift: var(--depth-lift);
+  --shadow-float: var(--depth-float);
+  --shadow-held: var(--depth-held);
+}
+
+:root {
+  --radius: 0.5rem;
+
+  /* Paper & ink */
+  --background: oklch(0.98 0.008 85); /* warm off-white washi */
+  --foreground: oklch(0.22 0.015 55); /* soft sumi ink */
+
+  --card: oklch(0.995 0.005 85);
+  --card-foreground: oklch(0.22 0.015 55);
+  --popover: oklch(0.995 0.005 85);
+  --popover-foreground: oklch(0.22 0.015 55);
+
+  /* Primary = ink */
+  --primary: oklch(0.28 0.02 55);
+  --primary-foreground: oklch(0.98 0.008 85);
+
+  --secondary: oklch(0.94 0.012 80);
+  --secondary-foreground: oklch(0.28 0.02 55);
+
+  --muted: oklch(0.94 0.012 80);
+  --muted-foreground: oklch(0.5 0.02 65);
+
+  /* Accent = shu-iro (vermilion hanko red), deep enough to read as text */
+  --accent: oklch(0.55 0.17 32);
+  --accent-foreground: oklch(0.98 0.008 85);
+
+  --destructive: oklch(0.5 0.2 25);
+  --destructive-foreground: oklch(0.98 0.008 85);
+
+  --border: oklch(0.9 0.015 75);
+  --input: oklch(0.9 0.015 75);
+  --ring: oklch(0.62 0.17 32);
+
+  --chart-1: oklch(0.62 0.17 32);
+  --chart-2: oklch(0.55 0.09 200);
+  --chart-3: oklch(0.65 0.12 145);
+  --chart-4: oklch(0.7 0.14 75);
+  --chart-5: oklch(0.5 0.12 300);
+
+  --sidebar: oklch(0.96 0.01 85);
+  --sidebar-foreground: oklch(0.22 0.015 55);
+  --sidebar-primary: oklch(0.28 0.02 55);
+  --sidebar-primary-foreground: oklch(0.98 0.008 85);
+  --sidebar-accent: oklch(0.94 0.012 80);
+  --sidebar-accent-foreground: oklch(0.28 0.02 55);
+  --sidebar-border: oklch(0.9 0.015 75);
+  --sidebar-ring: oklch(0.62 0.17 32);
+
+  /* Depth, tinted with sumi ink rather than grey: soft, warm, offset down. */
+  --depth-well: inset 0 1px 2px oklch(0.22 0.015 55 / 0.07);
+  --depth-sheet:
+    0 1px 1px oklch(0.22 0.015 55 / 0.04), 0 2px 4px oklch(0.22 0.015 55 / 0.04),
+    0 8px 18px -6px oklch(0.22 0.015 55 / 0.09);
+  --depth-lift:
+    0 2px 4px oklch(0.22 0.015 55 / 0.05), 0 6px 12px oklch(0.22 0.015 55 / 0.06),
+    0 18px 32px -10px oklch(0.22 0.015 55 / 0.16);
+  --depth-float:
+    0 1px 2px oklch(0.22 0.015 55 / 0.05), 0 10px 24px -10px oklch(0.22 0.015 55 / 0.18);
+  --depth-held:
+    0 4px 8px oklch(0.22 0.015 55 / 0.06), 0 24px 48px -12px oklch(0.22 0.015 55 / 0.28);
+  --depth-press:
+    inset 0 1px 0 oklch(1 0 0 / 0.12), 0 1px 2px oklch(0.22 0.015 55 / 0.2),
+    0 3px 6px -2px oklch(0.22 0.015 55 / 0.18);
+
+  /* The top bar is an obi: the paper band wrapped around a Japanese book. */
+  --obi: oklch(0.945 0.016 78);
+  --obi-shadow: oklch(0.22 0.015 55 / 0.16);
+  /* Its hand-torn (deckled) lower edge, used as a repeating mask. */
+  --deckle: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='8'%3E%3Cpath d='M0 0H160V3.7L155.9 3.2L151.8 3.0L147.7 6.9L143.6 7.2L139.5 4.7L135.4 6.5L131.3 4.5L127.2 7.1L123.1 6.1L119.0 6.9L114.9 6.1L110.8 4.9L106.7 6.8L102.6 2.7L98.5 4.0L94.4 5.5L90.3 6.3L86.2 2.8L82.1 5.9L77.9 6.2L73.8 5.1L69.7 6.8L65.6 5.7L61.5 3.3L57.4 5.7L53.3 4.9L49.2 6.7L45.1 4.9L41.0 7.5L36.9 3.7L32.8 3.8L28.7 6.7L24.6 2.6L20.5 2.8L16.4 5.6L12.3 5.5L8.2 4.3L4.1 5.2L0.0 3.7Z' fill='black'/%3E%3C/svg%3E");
+
+  /* Washi texture: fine grain, cloudy pulp and short kozo fibres, in ink.
+     A seamless 320px tile layered over --background on page surfaces only
+     (cards stay smooth sheets). Generated by scripts/gen-washi-texture.py. */
+  --paper-texture: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='320' height='320'%3E%3Cfilter id='g' x='0' y='0' width='1' height='1'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .36  0 0 0 0 .27  0 0 0 0 .18  0.208 0 0 0 -0.094'/%3E%3C/filter%3E%3Cfilter id='m' x='0' y='0' width='1' height='1'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.012' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .45  0 0 0 0 .35  0 0 0 0 .22  0.160 0 0 0 -0.060'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23m)'/%3E%3Crect width='100%25' height='100%25' filter='url(%23g)'/%3E%3Cg fill='none' stroke='rgb(120,92,60)' stroke-linecap='round'%3E%3Cpath transform='translate(0 0)' d='M103.6 48.3Q128.7 50.7 152.1 59.5' stroke-width='0.33' stroke-opacity='0.141'/%3E%3Cpath transform='translate(0 0)' d='M12.0 138.8Q17.9 148.9 27.4 143.3' stroke-width='0.36' stroke-opacity='0.107'/%3E%3Cpath transform='translate(0 -320)' d='M200.8 303.3Q219.5 313.9 215.3 346.4' stroke-width='0.73' stroke-opacity='0.115'/%3E%3Cpath transform='translate(0 0)' d='M200.8 303.3Q219.5 313.9 215.3 346.4' stroke-width='0.73' stroke-opacity='0.115'/%3E%3Cpath transform='translate(0 0)' d='M46.2 37.7Q26.0 47.8 21.1 54.0' stroke-width='0.62' stroke-opacity='0.125'/%3E%3Cpath transform='translate(0 0)' d='M175.3 20.1Q185.8 23.0 187.6 29.4' stroke-width='0.46' stroke-opacity='0.150'/%3E%3Cpath transform='translate(0 0)' d='M145.0 95.9Q121.9 121.3 111.0 143.0' stroke-width='0.56' stroke-opacity='0.185'/%3E%3Cpath transform='translate(0 0)' d='M233.4 92.1Q263.5 110.8 297.6 117.1' stroke-width='0.38' stroke-opacity='0.139'/%3E%3Cpath transform='translate(0 0)' d='M12.5 213.8Q15.2 236.8 -0.3 268.7' stroke-width='0.65' stroke-opacity='0.151'/%3E%3Cpath transform='translate(320 0)' d='M12.5 213.8Q15.2 236.8 -0.3 268.7' stroke-width='0.65' stroke-opacity='0.151'/%3E%3Cpath transform='translate(0 0)' d='M185.6 146.0Q155.0 155.2 125.8 156.5' stroke-width='0.33' stroke-opacity='0.164'/%3E%3Cpath transform='translate(0 -320)' d='M207.1 317.8Q223.0 345.1 244.4 364.3' stroke-width='0.31' stroke-opacity='0.135'/%3E%3Cpath transform='translate(0 0)' d='M207.1 317.8Q223.0 345.1 244.4 364.3' stroke-width='0.31' stroke-opacity='0.135'/%3E%3Cpath transform='translate(0 0)' d='M53.8 37.5Q39.1 36.5 42.3 47.7' stroke-width='0.50' stroke-opacity='0.185'/%3E%3Cpath transform='translate(0 0)' d='M25.8 143.7Q13.0 160.3 -15.2 159.5' stroke-width='0.44' stroke-opacity='0.130'/%3E%3Cpath transform='translate(320 0)' d='M25.8 143.7Q13.0 160.3 -15.2 159.5' stroke-width='0.44' stroke-opacity='0.130'/%3E%3Cpath transform='translate(0 0)' d='M114.8 282.9Q137.1 291.9 174.9 313.8' stroke-width='0.42' stroke-opacity='0.138'/%3E%3Cpath transform='translate(0 0)' d='M188.5 84.1Q186.9 91.6 191.6 95.9' stroke-width='0.78' stroke-opacity='0.163'/%3E%3Cpath transform='translate(0 0)' d='M165.0 197.6Q199.8 208.7 215.4 206.3' stroke-width='0.74' stroke-opacity='0.176'/%3E%3Cpath transform='translate(0 0)' d='M125.6 127.7Q111.4 125.5 118.2 144.1' stroke-width='0.40' stroke-opacity='0.099'/%3E%3Cpath transform='translate(0 0)' d='M108.8 16.8Q104.6 16.3 119.5 22.3' stroke-width='0.31' stroke-opacity='0.185'/%3E%3Cpath transform='translate(0 0)' d='M196.5 47.5Q199.4 50.3 208.8 71.2' stroke-width='0.72' stroke-opacity='0.199'/%3E%3Cpath transform='translate(0 0)' d='M149.1 154.8Q153.4 151.9 165.2 160.2' stroke-width='0.71' stroke-opacity='0.099'/%3E%3Cpath transform='translate(0 -320)' d='M7.4 304.3Q27.5 302.4 45.6 323.3' stroke-width='0.56' stroke-opacity='0.197'/%3E%3Cpath transform='translate(0 0)' d='M7.4 304.3Q27.5 302.4 45.6 323.3' stroke-width='0.56' stroke-opacity='0.197'/%3E%3Cpath transform='translate(0 0)' d='M276.3 222.8Q273.8 241.7 287.3 247.6' stroke-width='0.57' stroke-opacity='0.173'/%3E%3Cpath transform='translate(0 0)' d='M105.5 71.4Q84.5 80.1 46.5 74.2' stroke-width='0.71' stroke-opacity='0.169'/%3E%3Cpath transform='translate(0 0)' d='M72.6 165.6Q77.5 161.8 105.0 168.6' stroke-width='0.43' stroke-opacity='0.163'/%3E%3Cpath transform='translate(0 0)' d='M306.1 143.1Q283.9 141.1 239.8 145.6' stroke-width='0.41' stroke-opacity='0.107'/%3E%3Cpath transform='translate(0 0)' d='M62.9 65.4Q48.2 72.3 17.1 80.2' stroke-width='0.63' stroke-opacity='0.176'/%3E%3Cpath transform='translate(0 0)' d='M27.1 211.4Q8.0 231.3 -23.1 252.3' stroke-width='0.39' stroke-opacity='0.175'/%3E%3Cpath transform='translate(320 0)' d='M27.1 211.4Q8.0 231.3 -23.1 252.3' stroke-width='0.39' stroke-opacity='0.175'/%3E%3Cpath transform='translate(0 -320)' d='M106.4 256.3Q115.0 299.4 128.4 321.0' stroke-width='0.66' stroke-opacity='0.100'/%3E%3Cpath transform='translate(0 0)' d='M106.4 256.3Q115.0 299.4 128.4 321.0' stroke-width='0.66' stroke-opacity='0.100'/%3E%3Cpath transform='translate(0 0)' d='M40.7 48.4Q5.7 74.6 -12.3 85.2' stroke-width='0.79' stroke-opacity='0.159'/%3E%3Cpath transform='translate(320 0)' d='M40.7 48.4Q5.7 74.6 -12.3 85.2' stroke-width='0.79' stroke-opacity='0.159'/%3E%3Cpath transform='translate(0 0)' d='M112.1 175.6Q133.2 179.6 131.7 176.4' stroke-width='0.56' stroke-opacity='0.192'/%3E%3Cpath transform='translate(0 0)' d='M138.8 279.0Q156.5 292.4 186.0 315.8' stroke-width='0.42' stroke-opacity='0.150'/%3E%3Cpath transform='translate(0 0)' d='M83.0 134.1Q70.1 135.8 64.2 139.6' stroke-width='0.59' stroke-opacity='0.189'/%3E%3Cpath transform='translate(0 -320)' d='M134.6 293.7Q133.1 302.6 130.5 334.6' stroke-width='0.52' stroke-opacity='0.102'/%3E%3Cpath transform='translate(0 0)' d='M134.6 293.7Q133.1 302.6 130.5 334.6' stroke-width='0.52' stroke-opacity='0.102'/%3E%3Cpath transform='translate(0 0)' d='M1.3 255.7Q7.6 268.0 3.1 277.7' stroke-width='0.46' stroke-opacity='0.142'/%3E%3Cpath transform='translate(0 0)' d='M177.7 251.0Q170.0 254.5 174.3 268.8' stroke-width='0.69' stroke-opacity='0.141'/%3E%3Cpath transform='translate(0 0)' d='M179.8 243.2Q188.2 275.3 191.3 307.1' stroke-width='0.56' stroke-opacity='0.163'/%3E%3Cpath transform='translate(0 0)' d='M144.8 170.7Q130.0 183.3 105.7 177.9' stroke-width='0.77' stroke-opacity='0.111'/%3E%3Cpath transform='translate(0 -320)' d='M179.0 301.8Q197.5 313.1 234.2 327.2' stroke-width='0.34' stroke-opacity='0.109'/%3E%3Cpath transform='translate(0 0)' d='M179.0 301.8Q197.5 313.1 234.2 327.2' stroke-width='0.34' stroke-opacity='0.109'/%3E%3Cpath transform='translate(0 0)' d='M23.4 214.2Q-12.1 228.6 -31.1 232.5' stroke-width='0.63' stroke-opacity='0.097'/%3E%3Cpath transform='translate(320 0)' d='M23.4 214.2Q-12.1 228.6 -31.1 232.5' stroke-width='0.63' stroke-opacity='0.097'/%3E%3Cpath transform='translate(0 0)' d='M282.5 309.6Q267.8 311.1 258.0 313.3' stroke-width='0.79' stroke-opacity='0.180'/%3E%3Cpath transform='translate(0 0)' d='M51.7 138.1Q54.5 152.1 72.0 174.8' stroke-width='0.66' stroke-opacity='0.082'/%3E%3Cpath transform='translate(0 0)' d='M177.3 140.9Q183.6 146.9 183.9 152.2' stroke-width='0.33' stroke-opacity='0.198'/%3E%3Cpath transform='translate(0 -320)' d='M252.3 310.9Q247.3 324.3 264.4 324.3' stroke-width='0.44' stroke-opacity='0.096'/%3E%3Cpath transform='translate(0 0)' d='M252.3 310.9Q247.3 324.3 264.4 324.3' stroke-width='0.44' stroke-opacity='0.096'/%3E%3Cpath transform='translate(0 -320)' d='M135.1 291.7Q147.2 323.3 176.0 334.8' stroke-width='0.59' stroke-opacity='0.164'/%3E%3Cpath transform='translate(0 0)' d='M135.1 291.7Q147.2 323.3 176.0 334.8' stroke-width='0.59' stroke-opacity='0.164'/%3E%3Cpath transform='translate(0 0)' d='M28.6 18.4Q24.4 54.2 40.7 68.9' stroke-width='0.62' stroke-opacity='0.176'/%3E%3Cpath transform='translate(0 0)' d='M26.8 274.0Q18.5 273.4 12.4 280.6' stroke-width='0.58' stroke-opacity='0.191'/%3E%3Cpath transform='translate(0 0)' d='M85.7 41.4Q91.9 47.7 116.9 70.3' stroke-width='0.33' stroke-opacity='0.104'/%3E%3Cpath transform='translate(0 0)' d='M99.8 97.6Q117.0 112.0 134.2 141.9' stroke-width='0.47' stroke-opacity='0.082'/%3E%3Cpath transform='translate(0 0)' d='M80.1 4.9Q68.3 31.2 71.4 58.7' stroke-width='0.77' stroke-opacity='0.093'/%3E%3Cpath transform='translate(0 0)' d='M262.1 138.3Q241.8 148.6 226.7 158.5' stroke-width='0.64' stroke-opacity='0.198'/%3E%3Cpath transform='translate(0 0)' d='M109.7 266.3Q96.4 286.8 87.7 314.6' stroke-width='0.33' stroke-opacity='0.096'/%3E%3Cpath transform='translate(0 0)' d='M22.6 237.1Q24.3 251.9 46.0 250.2' stroke-width='0.74' stroke-opacity='0.160'/%3E%3Cpath transform='translate(0 0)' d='M90.2 77.5Q83.8 90.6 93.9 106.3' stroke-width='0.43' stroke-opacity='0.195'/%3E%3Cpath transform='translate(0 0)' d='M311.2 175.1Q293.7 173.0 285.2 177.9' stroke-width='0.30' stroke-opacity='0.126'/%3E%3Cpath transform='translate(0 0)' d='M151.9 160.9Q139.8 167.1 151.5 184.5' stroke-width='0.34' stroke-opacity='0.128'/%3E%3Cpath transform='translate(0 0)' d='M13.3 7.2Q26.4 17.8 35.4 27.0' stroke-width='0.68' stroke-opacity='0.159'/%3E%3Cpath transform='translate(0 0)' d='M229.1 281.3Q249.7 287.7 247.1 310.9' stroke-width='0.66' stroke-opacity='0.157'/%3E%3Cpath transform='translate(0 -320)' d='M14.0 267.3Q7.2 304.1 -10.8 326.0' stroke-width='0.37' stroke-opacity='0.143'/%3E%3Cpath transform='translate(0 0)' d='M14.0 267.3Q7.2 304.1 -10.8 326.0' stroke-width='0.37' stroke-opacity='0.143'/%3E%3Cpath transform='translate(320 -320)' d='M14.0 267.3Q7.2 304.1 -10.8 326.0' stroke-width='0.37' stroke-opacity='0.143'/%3E%3Cpath transform='translate(320 0)' d='M14.0 267.3Q7.2 304.1 -10.8 326.0' stroke-width='0.37' stroke-opacity='0.143'/%3E%3Cpath transform='translate(0 0)' d='M161.4 267.2Q138.3 291.8 111.2 297.6' stroke-width='0.64' stroke-opacity='0.163'/%3E%3Cpath transform='translate(0 0)' d='M73.6 10.0Q68.3 27.0 81.9 27.8' stroke-width='0.58' stroke-opacity='0.155'/%3E%3Cpath transform='translate(0 0)' d='M200.4 217.8Q227.7 224.0 240.8 218.2' stroke-width='0.55' stroke-opacity='0.144'/%3E%3Cpath transform='translate(0 0)' d='M211.0 21.1Q220.0 35.0 249.4 60.1' stroke-width='0.66' stroke-opacity='0.105'/%3E%3Cpath transform='translate(0 -320)' d='M236.7 312.2Q243.6 335.6 251.4 350.1' stroke-width='0.68' stroke-opacity='0.154'/%3E%3Cpath transform='translate(0 0)' d='M236.7 312.2Q243.6 335.6 251.4 350.1' stroke-width='0.68' stroke-opacity='0.154'/%3E%3Cpath transform='translate(0 0)' d='M205.7 24.8Q218.7 27.5 220.0 39.5' stroke-width='0.58' stroke-opacity='0.081'/%3E%3Cpath transform='translate(0 0)' d='M19.4 86.0Q9.2 102.0 -9.5 128.0' stroke-width='0.56' stroke-opacity='0.136'/%3E%3Cpath transform='translate(320 0)' d='M19.4 86.0Q9.2 102.0 -9.5 128.0' stroke-width='0.56' stroke-opacity='0.136'/%3E%3Cpath transform='translate(0 0)' d='M149.2 37.9Q186.6 67.1 201.0 75.3' stroke-width='0.31' stroke-opacity='0.135'/%3E%3Cpath transform='translate(0 -320)' d='M262.4 309.8Q268.1 334.7 287.7 338.2' stroke-width='0.41' stroke-opacity='0.150'/%3E%3Cpath transform='translate(0 0)' d='M262.4 309.8Q268.1 334.7 287.7 338.2' stroke-width='0.41' stroke-opacity='0.150'/%3E%3Cpath transform='translate(0 0)' d='M45.4 167.7Q83.8 181.5 106.9 194.9' stroke-width='0.74' stroke-opacity='0.164'/%3E%3Cpath transform='translate(0 0)' d='M74.0 287.3Q82.2 288.6 114.1 290.4' stroke-width='0.53' stroke-opacity='0.116'/%3E%3Cpath transform='translate(0 0)' d='M45.0 110.1Q19.8 123.4 18.4 124.7' stroke-width='0.72' stroke-opacity='0.094'/%3E%3Cpath transform='translate(-320 0)' d='M296.4 228.2Q313.1 251.0 335.9 278.9' stroke-width='0.80' stroke-opacity='0.151'/%3E%3Cpath transform='translate(0 0)' d='M296.4 228.2Q313.1 251.0 335.9 278.9' stroke-width='0.80' stroke-opacity='0.151'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+.dark {
+  --background: oklch(0.18 0.012 55); /* deep sumi */
+  --foreground: oklch(0.94 0.01 85); /* bone */
+
+  --card: oklch(0.22 0.014 55);
+  --card-foreground: oklch(0.94 0.01 85);
+  --popover: oklch(0.22 0.014 55);
+  --popover-foreground: oklch(0.94 0.01 85);
+
+  --primary: oklch(0.94 0.01 85);
+  --primary-foreground: oklch(0.22 0.014 55);
+
+  --secondary: oklch(0.27 0.015 55);
+  --secondary-foreground: oklch(0.94 0.01 85);
+
+  --muted: oklch(0.27 0.015 55);
+  --muted-foreground: oklch(0.68 0.015 70);
+
+  --accent: oklch(0.68 0.16 32);
+  --accent-foreground: oklch(0.18 0.012 55);
+
+  --destructive: oklch(0.7 0.17 25);
+  --destructive-foreground: oklch(0.18 0.012 55);
+
+  --border: oklch(1 0 0 / 10%);
+  --input: oklch(1 0 0 / 15%);
+  --ring: oklch(0.68 0.16 32);
+
+  --chart-1: oklch(0.68 0.16 32);
+  --chart-2: oklch(0.65 0.11 200);
+  --chart-3: oklch(0.7 0.13 145);
+  --chart-4: oklch(0.75 0.14 75);
+  --chart-5: oklch(0.6 0.14 300);
+
+  --sidebar: oklch(0.22 0.014 55);
+  --sidebar-foreground: oklch(0.94 0.01 85);
+  --sidebar-primary: oklch(0.68 0.16 32);
+  --sidebar-primary-foreground: oklch(0.18 0.012 55);
+  --sidebar-accent: oklch(0.27 0.015 55);
+  --sidebar-accent-foreground: oklch(0.94 0.01 85);
+  --sidebar-border: oklch(1 0 0 / 10%);
+  --sidebar-ring: oklch(0.68 0.16 32);
+
+  /* On sumi, shadows alone vanish: a faint top highlight catches the sheet's edge. */
+  --depth-well: inset 0 1px 3px oklch(0 0 0 / 0.35);
+  --depth-sheet:
+    inset 0 1px 0 oklch(1 0 0 / 0.045), 0 1px 2px oklch(0 0 0 / 0.3),
+    0 10px 22px -8px oklch(0 0 0 / 0.5);
+  --depth-lift:
+    inset 0 1px 0 oklch(1 0 0 / 0.06), 0 2px 4px oklch(0 0 0 / 0.3),
+    0 20px 36px -10px oklch(0 0 0 / 0.6);
+  --depth-float: 0 1px 0 oklch(1 0 0 / 0.04), 0 12px 28px -10px oklch(0 0 0 / 0.6);
+  --depth-held: inset 0 1px 0 oklch(1 0 0 / 0.06), 0 28px 56px -12px oklch(0 0 0 / 0.7);
+  --depth-press:
+    inset 0 1px 0 oklch(1 0 0 / 0.35), 0 1px 2px oklch(0 0 0 / 0.4),
+    0 4px 8px -2px oklch(0 0 0 / 0.35);
+
+  --obi: oklch(0.235 0.016 55);
+  --obi-shadow: oklch(0 0 0 / 0.55);
+
+  /* The same washi, with bone-coloured fibres for the dark sheet. */
+  --paper-texture: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='320' height='320'%3E%3Cfilter id='g' x='0' y='0' width='1' height='1'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .92  0 0 0 0 .87  0 0 0 0 .78  0.160 0 0 0 -0.072'/%3E%3C/filter%3E%3Cfilter id='m' x='0' y='0' width='1' height='1'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.012' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .92  0 0 0 0 .87  0 0 0 0 .78  0.080 0 0 0 -0.030'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23m)'/%3E%3Crect width='100%25' height='100%25' filter='url(%23g)'/%3E%3Cg fill='none' stroke='rgb(232,220,200)' stroke-linecap='round'%3E%3Cpath transform='translate(0 0)' d='M103.6 48.3Q128.7 50.7 152.1 59.5' stroke-width='0.33' stroke-opacity='0.092'/%3E%3Cpath transform='translate(0 0)' d='M12.0 138.8Q17.9 148.9 27.4 143.3' stroke-width='0.36' stroke-opacity='0.069'/%3E%3Cpath transform='translate(0 -320)' d='M200.8 303.3Q219.5 313.9 215.3 346.4' stroke-width='0.73' stroke-opacity='0.075'/%3E%3Cpath transform='translate(0 0)' d='M200.8 303.3Q219.5 313.9 215.3 346.4' stroke-width='0.73' stroke-opacity='0.075'/%3E%3Cpath transform='translate(0 0)' d='M46.2 37.7Q26.0 47.8 21.1 54.0' stroke-width='0.62' stroke-opacity='0.081'/%3E%3Cpath transform='translate(0 0)' d='M175.3 20.1Q185.8 23.0 187.6 29.4' stroke-width='0.46' stroke-opacity='0.098'/%3E%3Cpath transform='translate(0 0)' d='M145.0 95.9Q121.9 121.3 111.0 143.0' stroke-width='0.56' stroke-opacity='0.120'/%3E%3Cpath transform='translate(0 0)' d='M233.4 92.1Q263.5 110.8 297.6 117.1' stroke-width='0.38' stroke-opacity='0.090'/%3E%3Cpath transform='translate(0 0)' d='M12.5 213.8Q15.2 236.8 -0.3 268.7' stroke-width='0.65' stroke-opacity='0.098'/%3E%3Cpath transform='translate(320 0)' d='M12.5 213.8Q15.2 236.8 -0.3 268.7' stroke-width='0.65' stroke-opacity='0.098'/%3E%3Cpath transform='translate(0 0)' d='M185.6 146.0Q155.0 155.2 125.8 156.5' stroke-width='0.33' stroke-opacity='0.107'/%3E%3Cpath transform='translate(0 -320)' d='M207.1 317.8Q223.0 345.1 244.4 364.3' stroke-width='0.31' stroke-opacity='0.088'/%3E%3Cpath transform='translate(0 0)' d='M207.1 317.8Q223.0 345.1 244.4 364.3' stroke-width='0.31' stroke-opacity='0.088'/%3E%3Cpath transform='translate(0 0)' d='M53.8 37.5Q39.1 36.5 42.3 47.7' stroke-width='0.50' stroke-opacity='0.120'/%3E%3Cpath transform='translate(0 0)' d='M25.8 143.7Q13.0 160.3 -15.2 159.5' stroke-width='0.44' stroke-opacity='0.084'/%3E%3Cpath transform='translate(320 0)' d='M25.8 143.7Q13.0 160.3 -15.2 159.5' stroke-width='0.44' stroke-opacity='0.084'/%3E%3Cpath transform='translate(0 0)' d='M114.8 282.9Q137.1 291.9 174.9 313.8' stroke-width='0.42' stroke-opacity='0.090'/%3E%3Cpath transform='translate(0 0)' d='M188.5 84.1Q186.9 91.6 191.6 95.9' stroke-width='0.78' stroke-opacity='0.106'/%3E%3Cpath transform='translate(0 0)' d='M165.0 197.6Q199.8 208.7 215.4 206.3' stroke-width='0.74' stroke-opacity='0.114'/%3E%3Cpath transform='translate(0 0)' d='M125.6 127.7Q111.4 125.5 118.2 144.1' stroke-width='0.40' stroke-opacity='0.065'/%3E%3Cpath transform='translate(0 0)' d='M108.8 16.8Q104.6 16.3 119.5 22.3' stroke-width='0.31' stroke-opacity='0.120'/%3E%3Cpath transform='translate(0 0)' d='M196.5 47.5Q199.4 50.3 208.8 71.2' stroke-width='0.72' stroke-opacity='0.129'/%3E%3Cpath transform='translate(0 0)' d='M149.1 154.8Q153.4 151.9 165.2 160.2' stroke-width='0.71' stroke-opacity='0.065'/%3E%3Cpath transform='translate(0 -320)' d='M7.4 304.3Q27.5 302.4 45.6 323.3' stroke-width='0.56' stroke-opacity='0.128'/%3E%3Cpath transform='translate(0 0)' d='M7.4 304.3Q27.5 302.4 45.6 323.3' stroke-width='0.56' stroke-opacity='0.128'/%3E%3Cpath transform='translate(0 0)' d='M276.3 222.8Q273.8 241.7 287.3 247.6' stroke-width='0.57' stroke-opacity='0.113'/%3E%3Cpath transform='translate(0 0)' d='M105.5 71.4Q84.5 80.1 46.5 74.2' stroke-width='0.71' stroke-opacity='0.110'/%3E%3Cpath transform='translate(0 0)' d='M72.6 165.6Q77.5 161.8 105.0 168.6' stroke-width='0.43' stroke-opacity='0.106'/%3E%3Cpath transform='translate(0 0)' d='M306.1 143.1Q283.9 141.1 239.8 145.6' stroke-width='0.41' stroke-opacity='0.070'/%3E%3Cpath transform='translate(0 0)' d='M62.9 65.4Q48.2 72.3 17.1 80.2' stroke-width='0.63' stroke-opacity='0.114'/%3E%3Cpath transform='translate(0 0)' d='M27.1 211.4Q8.0 231.3 -23.1 252.3' stroke-width='0.39' stroke-opacity='0.114'/%3E%3Cpath transform='translate(320 0)' d='M27.1 211.4Q8.0 231.3 -23.1 252.3' stroke-width='0.39' stroke-opacity='0.114'/%3E%3Cpath transform='translate(0 -320)' d='M106.4 256.3Q115.0 299.4 128.4 321.0' stroke-width='0.66' stroke-opacity='0.065'/%3E%3Cpath transform='translate(0 0)' d='M106.4 256.3Q115.0 299.4 128.4 321.0' stroke-width='0.66' stroke-opacity='0.065'/%3E%3Cpath transform='translate(0 0)' d='M40.7 48.4Q5.7 74.6 -12.3 85.2' stroke-width='0.79' stroke-opacity='0.103'/%3E%3Cpath transform='translate(320 0)' d='M40.7 48.4Q5.7 74.6 -12.3 85.2' stroke-width='0.79' stroke-opacity='0.103'/%3E%3Cpath transform='translate(0 0)' d='M112.1 175.6Q133.2 179.6 131.7 176.4' stroke-width='0.56' stroke-opacity='0.125'/%3E%3Cpath transform='translate(0 0)' d='M138.8 279.0Q156.5 292.4 186.0 315.8' stroke-width='0.42' stroke-opacity='0.098'/%3E%3Cpath transform='translate(0 0)' d='M83.0 134.1Q70.1 135.8 64.2 139.6' stroke-width='0.59' stroke-opacity='0.123'/%3E%3Cpath transform='translate(0 -320)' d='M134.6 293.7Q133.1 302.6 130.5 334.6' stroke-width='0.52' stroke-opacity='0.066'/%3E%3Cpath transform='translate(0 0)' d='M134.6 293.7Q133.1 302.6 130.5 334.6' stroke-width='0.52' stroke-opacity='0.066'/%3E%3Cpath transform='translate(0 0)' d='M1.3 255.7Q7.6 268.0 3.1 277.7' stroke-width='0.46' stroke-opacity='0.092'/%3E%3Cpath transform='translate(0 0)' d='M177.7 251.0Q170.0 254.5 174.3 268.8' stroke-width='0.69' stroke-opacity='0.092'/%3E%3Cpath transform='translate(0 0)' d='M179.8 243.2Q188.2 275.3 191.3 307.1' stroke-width='0.56' stroke-opacity='0.106'/%3E%3Cpath transform='translate(0 0)' d='M144.8 170.7Q130.0 183.3 105.7 177.9' stroke-width='0.77' stroke-opacity='0.072'/%3E%3Cpath transform='translate(0 -320)' d='M179.0 301.8Q197.5 313.1 234.2 327.2' stroke-width='0.34' stroke-opacity='0.071'/%3E%3Cpath transform='translate(0 0)' d='M179.0 301.8Q197.5 313.1 234.2 327.2' stroke-width='0.34' stroke-opacity='0.071'/%3E%3Cpath transform='translate(0 0)' d='M23.4 214.2Q-12.1 228.6 -31.1 232.5' stroke-width='0.63' stroke-opacity='0.063'/%3E%3Cpath transform='translate(320 0)' d='M23.4 214.2Q-12.1 228.6 -31.1 232.5' stroke-width='0.63' stroke-opacity='0.063'/%3E%3Cpath transform='translate(0 0)' d='M282.5 309.6Q267.8 311.1 258.0 313.3' stroke-width='0.79' stroke-opacity='0.117'/%3E%3Cpath transform='translate(0 0)' d='M51.7 138.1Q54.5 152.1 72.0 174.8' stroke-width='0.66' stroke-opacity='0.054'/%3E%3Cpath transform='translate(0 0)' d='M177.3 140.9Q183.6 146.9 183.9 152.2' stroke-width='0.33' stroke-opacity='0.129'/%3E%3Cpath transform='translate(0 -320)' d='M252.3 310.9Q247.3 324.3 264.4 324.3' stroke-width='0.44' stroke-opacity='0.062'/%3E%3Cpath transform='translate(0 0)' d='M252.3 310.9Q247.3 324.3 264.4 324.3' stroke-width='0.44' stroke-opacity='0.062'/%3E%3Cpath transform='translate(0 -320)' d='M135.1 291.7Q147.2 323.3 176.0 334.8' stroke-width='0.59' stroke-opacity='0.107'/%3E%3Cpath transform='translate(0 0)' d='M135.1 291.7Q147.2 323.3 176.0 334.8' stroke-width='0.59' stroke-opacity='0.107'/%3E%3Cpath transform='translate(0 0)' d='M28.6 18.4Q24.4 54.2 40.7 68.9' stroke-width='0.62' stroke-opacity='0.115'/%3E%3Cpath transform='translate(0 0)' d='M26.8 274.0Q18.5 273.4 12.4 280.6' stroke-width='0.58' stroke-opacity='0.124'/%3E%3Cpath transform='translate(0 0)' d='M85.7 41.4Q91.9 47.7 116.9 70.3' stroke-width='0.33' stroke-opacity='0.068'/%3E%3Cpath transform='translate(0 0)' d='M99.8 97.6Q117.0 112.0 134.2 141.9' stroke-width='0.47' stroke-opacity='0.053'/%3E%3Cpath transform='translate(0 0)' d='M80.1 4.9Q68.3 31.2 71.4 58.7' stroke-width='0.77' stroke-opacity='0.060'/%3E%3Cpath transform='translate(0 0)' d='M262.1 138.3Q241.8 148.6 226.7 158.5' stroke-width='0.64' stroke-opacity='0.129'/%3E%3Cpath transform='translate(0 0)' d='M109.7 266.3Q96.4 286.8 87.7 314.6' stroke-width='0.33' stroke-opacity='0.062'/%3E%3Cpath transform='translate(0 0)' d='M22.6 237.1Q24.3 251.9 46.0 250.2' stroke-width='0.74' stroke-opacity='0.104'/%3E%3Cpath transform='translate(0 0)' d='M90.2 77.5Q83.8 90.6 93.9 106.3' stroke-width='0.43' stroke-opacity='0.127'/%3E%3Cpath transform='translate(0 0)' d='M311.2 175.1Q293.7 173.0 285.2 177.9' stroke-width='0.30' stroke-opacity='0.082'/%3E%3Cpath transform='translate(0 0)' d='M151.9 160.9Q139.8 167.1 151.5 184.5' stroke-width='0.34' stroke-opacity='0.083'/%3E%3Cpath transform='translate(0 0)' d='M13.3 7.2Q26.4 17.8 35.4 27.0' stroke-width='0.68' stroke-opacity='0.103'/%3E%3Cpath transform='translate(0 0)' d='M229.1 281.3Q249.7 287.7 247.1 310.9' stroke-width='0.66' stroke-opacity='0.102'/%3E%3Cpath transform='translate(0 -320)' d='M14.0 267.3Q7.2 304.1 -10.8 326.0' stroke-width='0.37' stroke-opacity='0.093'/%3E%3Cpath transform='translate(0 0)' d='M14.0 267.3Q7.2 304.1 -10.8 326.0' stroke-width='0.37' stroke-opacity='0.093'/%3E%3Cpath transform='translate(320 -320)' d='M14.0 267.3Q7.2 304.1 -10.8 326.0' stroke-width='0.37' stroke-opacity='0.093'/%3E%3Cpath transform='translate(320 0)' d='M14.0 267.3Q7.2 304.1 -10.8 326.0' stroke-width='0.37' stroke-opacity='0.093'/%3E%3Cpath transform='translate(0 0)' d='M161.4 267.2Q138.3 291.8 111.2 297.6' stroke-width='0.64' stroke-opacity='0.106'/%3E%3Cpath transform='translate(0 0)' d='M73.6 10.0Q68.3 27.0 81.9 27.8' stroke-width='0.58' stroke-opacity='0.101'/%3E%3Cpath transform='translate(0 0)' d='M200.4 217.8Q227.7 224.0 240.8 218.2' stroke-width='0.55' stroke-opacity='0.094'/%3E%3Cpath transform='translate(0 0)' d='M211.0 21.1Q220.0 35.0 249.4 60.1' stroke-width='0.66' stroke-opacity='0.068'/%3E%3Cpath transform='translate(0 -320)' d='M236.7 312.2Q243.6 335.6 251.4 350.1' stroke-width='0.68' stroke-opacity='0.100'/%3E%3Cpath transform='translate(0 0)' d='M236.7 312.2Q243.6 335.6 251.4 350.1' stroke-width='0.68' stroke-opacity='0.100'/%3E%3Cpath transform='translate(0 0)' d='M205.7 24.8Q218.7 27.5 220.0 39.5' stroke-width='0.58' stroke-opacity='0.053'/%3E%3Cpath transform='translate(0 0)' d='M19.4 86.0Q9.2 102.0 -9.5 128.0' stroke-width='0.56' stroke-opacity='0.088'/%3E%3Cpath transform='translate(320 0)' d='M19.4 86.0Q9.2 102.0 -9.5 128.0' stroke-width='0.56' stroke-opacity='0.088'/%3E%3Cpath transform='translate(0 0)' d='M149.2 37.9Q186.6 67.1 201.0 75.3' stroke-width='0.31' stroke-opacity='0.088'/%3E%3Cpath transform='translate(0 -320)' d='M262.4 309.8Q268.1 334.7 287.7 338.2' stroke-width='0.41' stroke-opacity='0.097'/%3E%3Cpath transform='translate(0 0)' d='M262.4 309.8Q268.1 334.7 287.7 338.2' stroke-width='0.41' stroke-opacity='0.097'/%3E%3Cpath transform='translate(0 0)' d='M45.4 167.7Q83.8 181.5 106.9 194.9' stroke-width='0.74' stroke-opacity='0.107'/%3E%3Cpath transform='translate(0 0)' d='M74.0 287.3Q82.2 288.6 114.1 290.4' stroke-width='0.53' stroke-opacity='0.076'/%3E%3Cpath transform='translate(0 0)' d='M45.0 110.1Q19.8 123.4 18.4 124.7' stroke-width='0.72' stroke-opacity='0.061'/%3E%3Cpath transform='translate(-320 0)' d='M296.4 228.2Q313.1 251.0 335.9 278.9' stroke-width='0.80' stroke-opacity='0.098'/%3E%3Cpath transform='translate(0 0)' d='M296.4 228.2Q313.1 251.0 335.9 278.9' stroke-width='0.80' stroke-opacity='0.098'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+@layer base {
+  html.text-large {
+    font-size: 115%;
+  }
+  html.text-larger {
+    font-size: 130%;
+  }
+  html.text-largest {
+    font-size: 150%;
+  }
+
+  * {
+    border-color: var(--color-border);
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    font-feature-settings: "ss01", "cv11";
+  }
+
+  /* Fields are pressed slightly into the paper. */
+  input:not([type="checkbox"], [type="radio"], [type="range"], [type="color"]),
+  textarea,
+  select {
+    box-shadow: var(--depth-well);
+  }
+
+  /* Ink buttons stand a little proud of the sheet and sink when pressed.
+     Base layer, so any explicit shadow-* utility on a button still wins. */
+  button.bg-primary,
+  a.bg-primary {
+    box-shadow: var(--depth-press);
+    transition:
+      background-color 150ms,
+      box-shadow 150ms,
+      translate 100ms;
+  }
+  button.bg-primary:active:not(:disabled),
+  a.bg-primary:active {
+    translate: 0 1px;
+    box-shadow: 0 0 0 transparent;
+  }
+
+  /* Browser default placeholders fall to ~3:1 on washi; use the readable secondary ink. */
+  ::placeholder {
+    /* The raw variable, not --color-*, so ColorScope's tinted value applies. */
+    color: var(--muted-foreground);
+    opacity: 1;
+  }
+
+  :lang(ja),
+  .jp {
+    font-family: var(--font-jp);
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-display);
+    font-weight: 500;
+    letter-spacing: -0.01em;
+  }
+
+  /* Accessibility: consistent, visible focus ring on every interactive
+     element. Uses focus-visible so mouse clicks don't leave a lingering
+     ring, only keyboard navigation does. */
+  a,
+  button,
+  input,
+  select,
+  textarea,
+  summary,
+  [role="button"],
+  [tabindex]:not([tabindex="-1"]) {
+    outline: none;
+  }
+  a:focus-visible,
+  button:focus-visible,
+  input:focus-visible,
+  select:focus-visible,
+  textarea:focus-visible,
+  summary:focus-visible,
+  [role="button"]:focus-visible,
+  [tabindex]:not([tabindex="-1"]):focus-visible {
+    outline: 2px solid var(--color-ring);
+    outline-offset: 2px;
+    border-radius: calc(var(--radius) - 2px);
+  }
+}
+
+/* Textured paper band with a deckled lower edge; its shadow follows the tear. */
+@utility obi {
+  background-color: var(--obi);
+  background-image: var(--paper-texture);
+  filter: drop-shadow(0 3px 5px var(--obi-shadow));
+
+  &::after {
+    content: "";
+    position: absolute;
+    inset-inline: 0;
+    top: 100%;
+    height: 8px;
+    background: inherit;
+    mask: var(--deckle) repeat-x 0 0 / 160px 8px;
+  }
+}
+
+@utility paper {
+  background-image: var(--paper-texture);
+}
+
+@utility no-spin {
+  appearance: textfield;
+  -moz-appearance: textfield;
+
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    appearance: none;
+    margin: 0;
+  }
+}

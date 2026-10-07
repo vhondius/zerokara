@@ -1,0 +1,164 @@
+{
+  "book_id": "jfz-1",
+  "reference_sections": [
+    {
+      "id": "jfz-1-everyday-phrases",
+      "title": "Everyday Phrases",
+      "categories": [
+        {
+          "category": "Greetings",
+          "entries": [
+            { "english": "Good morning.", "japanese": "Ohayou gozaimasu. / Ohayou." },
+            { "english": "Good afternoon.", "japanese": "Konnichiwa." },
+            { "english": "Good evening.", "japanese": "Konbanwa." },
+            { "english": "Good night.", "japanese": "Oyasuminasai. / Oyasumi." },
+            { "english": "Goodbye.", "japanese": "Sayounara." },
+            { "english": "Thank you.", "japanese": "Doumo arigatou. / Arigatou." },
+            { "english": "Thank you very much.", "japanese": "Doumo arigatou gozaimasu." },
+            { "english": "You are welcome.", "japanese": "Dou itashimashite." },
+            { "english": "It's been a long time. / Long time no see.", "japanese": "Ohisashiburi desu. (the standard version)" },
+            { "english": "It's been a long time. (formal)", "japanese": "Gobusata shite orimasu." },
+            { "english": "Happy Birthday.", "japanese": "Tanjoubi omedetou." },
+            { "english": "Happy New Year.", "japanese": "Akemashite omedetou." },
+            { "english": "Bye.", "japanese": "Bai bai." },
+            { "english": "See you.", "japanese": "Jaa ne. / Jaa." },
+            { "english": "See you again.", "japanese": "Jaa mata. / De wa mata." }
+          ]
+        },
+        {
+          "category": "Self Introductions",
+          "entries": [
+            { "english": "Nice to meet you.", "japanese": "Hajimemashite." },
+            { "english": "What is your name?", "japanese": "Onamae wa nan desu ka." },
+            { "english": "I am ___. (polite and humble)", "japanese": "___ to moushimasu." },
+            { "english": "I am ___. (simple but correct)", "japanese": "___ desu." },
+            {
+              "english": "Best regards.",
+              "japanese": "Yoroshiku onegai shimasu.",
+              "note": "There's no exact English equivalent — it's said right after introducing yourself, and more broadly whenever you're asking something of someone."
+            },
+            { "english": "Where did you come from?", "japanese": "Doko kara kimashita ka." },
+            { "english": "I came from ___.", "japanese": "___ kara kimashita." },
+            { "english": "Where do you live?", "japanese": "Doko ni sundeimasu ka." },
+            { "english": "I live in ___.", "japanese": "___ ni sundeimasu." },
+            { "english": "How old are you?", "japanese": "Nansai desu ka." },
+            { "english": "I am 25 years old.", "japanese": "Nijuu go sai desu." },
+            { "english": "How old do I look?", "japanese": "Nansai ni miemasu ka." },
+            { "english": "You look ___.", "japanese": "___ ni miemasu." }
+          ]
+        },
+        {
+          "category": "Communication",
+          "entries": [
+            { "english": "I am studying Japanese.", "japanese": "Nihongo wo benkyou shiteimasu." },
+            { "english": "Do you understand?", "japanese": "Wakarimasu ka." },
+            { "english": "Yes, I understand.", "japanese": "Hai, wakarimasu." },
+            { "english": "No, I don't understand.", "japanese": "Iie, wakarimasen." },
+            { "english": "Can you speak Japanese?", "japanese": "Nihongo ga hanasemasu ka." },
+            { "english": "Can you speak English?", "japanese": "Eigo ga hanasemasu ka." },
+            { "english": "A little.", "japanese": "Sukoshi." },
+            { "english": "Not at all.", "japanese": "Zenzen." },
+            { "english": "Please say it once again.", "japanese": "Mou ichido itte kudasai." },
+            { "english": "Please speak more slowly.", "japanese": "Motto yukkuri itte kudasai." },
+            {
+              "english": "Please speak more clearly.",
+              "japanese": "Motto hakkiri itte kudasai.",
+              "note": "This can come across as blunt or rude, so use it carefully."
+            },
+            { "english": "Wait a moment, please.", "japanese": "Chotto matte kudasai." },
+            { "english": "Go ahead. / Please.", "japanese": "Douzo." },
+            { "english": "Excuse me.", "japanese": "Sumimasen." },
+            { "english": "I am sorry. / Please forgive me.", "japanese": "Gomen nasai." },
+            { "english": "What is it in Japanese?", "japanese": "Nihongo de nan desu ka." },
+            { "english": "What is it in English?", "japanese": "Eigo de nan desu ka." }
+          ]
+        },
+        {
+          "category": "Shopping",
+          "entries": [
+            { "english": "How much is it?", "japanese": "Ikura desu ka." },
+            { "english": "It's 400 yen.", "japanese": "Yonhyaku en desu." },
+            { "english": "It's 22 dollars.", "japanese": "Nijuu ni doru desu." },
+            { "english": "It's ___ dollars.", "japanese": "___ doru desu." },
+            { "english": "It's ___ yen.", "japanese": "___ en desu." },
+            { "english": "It's expensive.", "japanese": "Takai desu." },
+            { "english": "It's cheap.", "japanese": "Yasui desu." }
+          ]
+        },
+        {
+          "category": "At a Restaurant / Eating",
+          "entries": [
+            { "english": "A menu, please.", "japanese": "Menyuu wo kudasai." },
+            { "english": "Water, please.", "japanese": "Mizu wo kudasai." },
+            { "english": "More, please.", "japanese": "Motto kudasai." },
+            { "english": "___, please.", "japanese": "___ wo kudasai." },
+            { "english": "It's delicious.", "japanese": "Oishii desu." },
+            { "english": "It doesn't taste good.", "japanese": "Oishikunai desu." },
+            { "english": "I am hungry.", "japanese": "Onaka ga sukimashita." },
+            { "english": "I am thirsty.", "japanese": "Nodo ga kawakimashita." },
+            { "english": "I am full.", "japanese": "Onaka ga ippai desu." },
+            {
+              "english": "I will receive. (said right before eating)",
+              "japanese": "Itadakimasu.",
+              "note": "A set phrase said just before starting a meal, roughly acknowledging the food and effort behind it."
+            },
+            {
+              "english": "It was a good meal.",
+              "japanese": "Gochisou sama deshita.",
+              "note": "Said after finishing a meal, typically to whoever cooked it or paid for it."
+            }
+          ]
+        },
+        {
+          "category": "Entering and Exiting",
+          "entries": [
+            {
+              "english": "I'm going and I will come back.",
+              "japanese": "Ittekimasu.",
+              "note": "Said by the person who is leaving but will return."
+            },
+            {
+              "english": "Go and be careful.",
+              "japanese": "Itterasshai.",
+              "note": "Said to the person who is leaving, as the natural reply to Ittekimasu."
+            },
+            { "english": "I'm home.", "japanese": "Tadaima." },
+            { "english": "Welcome home.", "japanese": "Okaerinasai." },
+            {
+              "english": "Sorry to disturb you.",
+              "japanese": "Ojama shimasu.",
+              "note": "Said upon entering someone else's home."
+            },
+            {
+              "english": "Sorry to have disturbed you.",
+              "japanese": "Ojama shimashita.",
+              "note": "Said upon leaving someone else's home."
+            }
+          ]
+        },
+        {
+          "category": "On the Phone",
+          "entries": [
+            { "english": "Hello. (on the phone only)", "japanese": "Moshi moshi." },
+            { "english": "Is Mr. Honda there?", "japanese": "Honda san wa irasshaimasu ka." },
+            { "english": "Is ___ there?", "japanese": "___ san wa irasshaimasu ka." }
+          ]
+        },
+        {
+          "category": "Commands / Requests",
+          "entries": [
+            { "english": "Please show me.", "japanese": "Misete kudasai." },
+            { "english": "Please guide me.", "japanese": "Annai shite kudasai." },
+            { "english": "Please eat it.", "japanese": "Tabete kudasai." },
+            { "english": "Please read it.", "japanese": "Yonde kudasai." },
+            { "english": "Please say it.", "japanese": "Itte kudasai." },
+            { "english": "Please write it.", "japanese": "Kaite kudasai." },
+            { "english": "Please look at it.", "japanese": "Mite kudasai." },
+            { "english": "Please come.", "japanese": "Kite kudasai." },
+            { "english": "Please stop it.", "japanese": "Yamete kudasai." }
+          ]
+        }
+      ]
+    }
+  ]
+}
