@@ -227,8 +227,11 @@ export function StatusBadge({ result }: { result: ExerciseResult }) {
   };
   const m = map[result.status] ?? map.done;
   return (
+    // Keyed on the check's timestamp so it pops in again on every Check/Resubmit —
+    // otherwise resubmitting a still-wrong answer looks like nothing happened.
     <span
-      className={`inline-flex items-center rounded-full px-2 py-0.5 text-xs font-medium ${m.cls}`}
+      key={result.at}
+      className={`inline-flex items-center rounded-full px-2 py-0.5 text-xs font-medium motion-safe:animate-in motion-safe:zoom-in-75 motion-safe:fade-in ${m.cls}`}
     >
       {m.label}
     </span>
@@ -369,7 +372,7 @@ export function ExerciseInput({
         />
       );
     case "writing_practice":
-      return <WritingDone result={result} onRecord={onRecord} />;
+      return <WritingDone exercise={exercise} result={result} onRecord={onRecord} />;
     case "reading_comprehension":
       return (
         <ReadingComprehension
@@ -466,9 +469,18 @@ function TextAnswer({
 }: InputProps & { mode: "exact" | "lenient"; multiline?: boolean }) {
   const [value, setValue] = useState(result?.answer ?? "");
   const done = locked && !!result;
+  // "Isu ___ terebi ___ aida" with answer "to / no": one box per blank,
+  // joined back into the " / " form the grader expects.
+  const blanks =
+    exercise.kind === "fill_blank" &&
+    typeof exercise.answer === "string" &&
+    (exercise.prompt ?? "").split("___").length - 1 === exercise.answer.split(" / ").length
+      ? exercise.answer.split(" / ").length
+      : 1;
+  const parts = value.split(" / ");
 
   const submit = () => {
-    if (!value.trim()) return;
+    if (!value.trim() || (blanks > 1 && parts.slice(0, blanks).some((p) => !p?.trim()))) return;
     if (exercise.answer == null) {
       onRecord(value, "done");
       return;
@@ -500,6 +512,27 @@ function TextAnswer({
             rows={4}
             className="jp w-full rounded-md border border-input bg-background px-3 py-2 text-sm text-foreground outline-none focus:border-accent disabled:opacity-70"
           />
+        ) : blanks > 1 ? (
+          Array.from({ length: blanks }, (_, i) => (
+            <input
+              key={i}
+              type="text"
+              value={parts[i] ?? ""}
+              onChange={(e) => {
+                const next = Array.from({ length: blanks }, (_, j) => parts[j] ?? "");
+                next[i] = e.target.value;
+                setValue(next.join(" / "));
+              }}
+              onKeyDown={(e) => {
+                if (e.key === "Enter") submit();
+              }}
+              disabled={done}
+              autoFocus={locked && !result && i === 0}
+              placeholder={`Blank ${i + 1}`}
+              aria-label={`Blank ${i + 1}`}
+              className="jp min-w-0 flex-1 basis-24 rounded-md border border-input bg-background px-3 py-2 text-sm text-foreground outline-none focus:border-accent disabled:opacity-70"
+            />
+          ))
         ) : (
           <input
             type="text"
@@ -803,15 +836,25 @@ function Matching({ exercise, result, onRecord, locked, advanceLabel, onAdvance 
 
 /* ---------- writing_practice ---------- */
 
+/** "Write サ、シ、ス、セ、ソ in order…" — a kana-row drill that the kana practice page covers. */
+function kanaPracticeLink(prompt: string): "/practice/hiragana" | "/practice/katakana" | null {
+  if (/[ァ-ヶー](、[ァ-ヶー])+/.test(prompt)) return "/practice/katakana";
+  if (/[ぁ-ゖ](、[ぁ-ゖ])+/.test(prompt)) return "/practice/hiragana";
+  return null;
+}
+
 function WritingDone({
+  exercise,
   result,
   onRecord,
 }: {
+  exercise: Exercise;
   result: ExerciseResult | undefined;
   onRecord: (answer: string, status: ExerciseStatus) => void;
 }) {
+  const practice = kanaPracticeLink(exercise.prompt ?? "");
   return (
-    <div className="flex items-center gap-3">
+    <div className="flex flex-wrap items-center gap-3">
       <button
         type="button"
         onClick={() => onRecord("", "done")}
@@ -823,6 +866,11 @@ function WritingDone({
       <span className="text-xs text-muted-foreground">
         Writing practice — do it on paper, then mark done.
       </span>
+      {practice ? (
+        <Link to={practice} className="text-xs text-accent underline-offset-2 hover:underline">
+          Practice {practice.endsWith("katakana") ? "katakana" : "hiragana"} →
+        </Link>
+      ) : null}
     </div>
   );
 }

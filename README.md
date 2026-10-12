@@ -2,8 +2,8 @@
 
 A Japanese-learning app built around the *Japanese From Zero* book series (books 1–5), packaged as an Android app (Capacitor) with a React/TanStack Start web front end. All progress is stored locally on-device — no account or server required.
 
-**Current version:** 1.0.0
-**Download:** [Zerokara_v1.0.0.apk](https://github.com/vhondius/zerokara/releases/latest/download/Zerokara_v1.0.0.apk) — grab it straight from the [Releases page](https://github.com/vhondius/zerokara/releases/latest) and sideload it on Android.
+**Current version:** 1.0.1
+**Download:** [Zerokara_v1.0.1.apk](https://github.com/vhondius/zerokara/releases/latest/download/Zerokara_v1.0.1.apk) — grab it straight from the [Releases page](https://github.com/vhondius/zerokara/releases/latest) and sideload it on Android.
 
 ## Features
 

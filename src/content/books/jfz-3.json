@@ -1041,15 +1041,24 @@
               "questions": [
                 {
                   "prompt": "When did Emi move to Tokyo?",
-                  "answer": "Ninen mae ni hikkoshimashita."
+                  "answer": [
+                    "Two years ago (ninen mae).",
+                    "2 years ago."
+                  ]
                 },
                 {
                   "prompt": "Where does Emi work?",
-                  "answer": "Eki no chikaku no kaisha de hatarakimasu."
+                  "answer": [
+                    "At a company near the station.",
+                    "A company near the station."
+                  ]
                 },
                 {
                   "prompt": "How does Emi get to work every day?",
-                  "answer": "Densha de ikimasu."
+                  "answer": [
+                    "By train (densha).",
+                    "She takes the train."
+                  ]
                 }
               ]
             },
@@ -1988,15 +1997,25 @@
               "questions": [
                 {
                   "prompt": "How does Sato commute?",
-                  "answer": "Basu de ikimasu."
+                  "answer": [
+                    "By bus (basu).",
+                    "He takes the bus."
+                  ]
                 },
                 {
                   "prompt": "How long does the commute take?",
-                  "answer": "Sanjuppun gurai kakarimasu."
+                  "answer": [
+                    "About 30 minutes (sanjuppun gurai).",
+                    "Around 30 minutes.",
+                    "30 minutes."
+                  ]
                 },
                 {
                   "prompt": "How much does the commute cost one way?",
-                  "answer": "Sanbyaku en kakarimasu."
+                  "answer": [
+                    "300 yen (sanbyaku en).",
+                    "300 yen one way."
+                  ]
                 }
               ]
             },
@@ -3086,15 +3105,28 @@
               "questions": [
                 {
                   "prompt": "What is the first instruction?",
-                  "answer": "Hon wo akete kudasai."
+                  "answer": [
+                    "Open your books (hon wo akete kudasai).",
+                    "Please open your books.",
+                    "Open the book.",
+                    "Please open the book."
+                  ]
                 },
                 {
                   "prompt": "What is the second instruction?",
-                  "answer": "Hanasanaide kudasai."
+                  "answer": [
+                    "Don't talk (hanasanaide kudasai).",
+                    "Please don't talk.",
+                    "Don't speak.",
+                    "Please don't speak."
+                  ]
                 },
                 {
                   "prompt": "What is the third instruction?",
-                  "answer": "Namae wo kaite kudasai."
+                  "answer": [
+                    "Write your name (namae wo kaite kudasai).",
+                    "Please write your name."
+                  ]
                 }
               ]
             },
@@ -4895,15 +4927,27 @@
               "questions": [
                 {
                   "prompt": "What is Mai doing right now?",
-                  "answer": "Souji wo shite imasu."
+                  "answer": [
+                    "Cleaning her room (souji).",
+                    "She's cleaning her room.",
+                    "Cleaning the room."
+                  ]
                 },
                 {
                   "prompt": "What is her brother doing?",
-                  "answer": "Sentaku wo shite imasu."
+                  "answer": [
+                    "Doing the laundry (sentaku).",
+                    "He's doing the laundry.",
+                    "Laundry."
+                  ]
                 },
                 {
                   "prompt": "What does their mother think?",
-                  "answer": "Souji no hou ga taihen da to omoimasu."
+                  "answer": [
+                    "That cleaning is harder than laundry.",
+                    "Cleaning is harder than doing the laundry.",
+                    "Cleaning is more work than laundry."
+                  ]
                 }
               ]
             },
@@ -5764,15 +5808,24 @@
               "questions": [
                 {
                   "prompt": "Where does Yuki live now?",
-                  "answer": "Oosaka ni sunde imasu."
+                  "answer": [
+                    "In Osaka (Oosaka).",
+                    "Osaka."
+                  ]
                 },
                 {
                   "prompt": "Where did Yuki meet her best friend?",
-                  "answer": "Shougakkou de aimashita."
+                  "answer": [
+                    "At elementary school (shougakkou).",
+                    "In elementary school."
+                  ]
                 },
                 {
                   "prompt": "How often do they still play together?",
-                  "answer": "Maishuu asonde imasu."
+                  "answer": [
+                    "Every week (maishuu).",
+                    "Every week."
+                  ]
                 }
               ]
             },
@@ -7347,15 +7400,28 @@
               "questions": [
                 {
                   "prompt": "When did Kenta's father start the restaurant?",
-                  "answer": "Gonen mae ni hajimemashita."
+                  "answer": [
+                    "Five years ago (gonen mae).",
+                    "5 years ago."
+                  ]
                 },
                 {
                   "prompt": "What time does it open?",
-                  "answer": "Juuichiji ni hajimarimasu."
+                  "answer": [
+                    "At 11 AM (juuichiji).",
+                    "11 AM.",
+                    "At 11 in the morning.",
+                    "11 o'clock."
+                  ]
                 },
                 {
                   "prompt": "What time does it close?",
-                  "answer": "Kuji ni owarimasu."
+                  "answer": [
+                    "At 9 PM (kuji).",
+                    "9 PM.",
+                    "At 9 at night.",
+                    "9 o'clock."
+                  ]
                 }
               ]
             },
@@ -8290,11 +8356,20 @@
               "questions": [
                 {
                   "prompt": "What does Mika want to become?",
-                  "answer": "Isha ni naritai desu."
+                  "answer": [
+                    "A doctor (isha).",
+                    "She wants to become a doctor.",
+                    "Doctor."
+                  ]
                 },
                 {
                   "prompt": "What doesn't Mika want to do?",
-                  "answer": "Tabako wo suu koto to osake wo nomu koto."
+                  "answer": [
+                    "Smoke or drink alcohol.",
+                    "Smoke and drink alcohol.",
+                    "Smoke or drink.",
+                    "She doesn't want to smoke or drink alcohol."
+                  ]
                 }
               ]
             },
@@ -9120,11 +9195,18 @@
               "questions": [
                 {
                   "prompt": "Where did Sora live when he was young?",
-                  "answer": "Chiisai mura ni sunde imashita."
+                  "answer": [
+                    "In a small village (chiisai mura).",
+                    "A small village."
+                  ]
                 },
                 {
                   "prompt": "Where does he live now?",
-                  "answer": "Ookii machi ni sunde imasu."
+                  "answer": [
+                    "In a big city (ookii machi).",
+                    "A big city.",
+                    "In a big town."
+                  ]
                 }
               ]
             },
@@ -9925,11 +10007,20 @@
               "questions": [
                 {
                   "prompt": "Why did Mr. Sato move?",
-                  "answer": "Tenkin ni natta kara desu."
+                  "answer": [
+                    "He was transferred for work (tenkin).",
+                    "Because he was transferred.",
+                    "A job transfer.",
+                    "Because of a job transfer."
+                  ]
                 },
                 {
                   "prompt": "What kind of apartment is he looking for?",
-                  "answer": "Eki no chikaku no wanruumu manshon desu."
+                  "answer": [
+                    "A one-room apartment near the station.",
+                    "A studio near the station.",
+                    "A one-room near the station."
+                  ]
                 }
               ]
             },
@@ -10700,11 +10791,19 @@
               "questions": [
                 {
                   "prompt": "What does Rio do first every morning?",
-                  "answer": "Ranningu wo shimasu."
+                  "answer": [
+                    "Goes running (ranningu).",
+                    "She goes running.",
+                    "Running."
+                  ]
                 },
                 {
                   "prompt": "What does she do after breakfast?",
-                  "answer": "Shigoto ni ikimasu."
+                  "answer": [
+                    "Goes to work (shigoto).",
+                    "She goes to work.",
+                    "Work."
+                  ]
                 }
               ]
             },
@@ -11580,11 +11679,19 @@
               "questions": [
                 {
                   "prompt": "Could Amelia swim last year?",
-                  "answer": "Iie, oyogemasen deshita."
+                  "answer": [
+                    "No, she couldn't (oyogemasen deshita).",
+                    "No.",
+                    "No, she couldn't swim."
+                  ]
                 },
                 {
                   "prompt": "What happened to her old swimsuit?",
-                  "answer": "Nakushimashita. Demo, kinou mitsukarimashita."
+                  "answer": [
+                    "She lost it, but found it yesterday.",
+                    "She lost it but found it again yesterday.",
+                    "Lost it, then found it yesterday."
+                  ]
                 }
               ]
             },

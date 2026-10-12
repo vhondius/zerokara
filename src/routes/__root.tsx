@@ -15,6 +15,7 @@ import { createPortal } from "react-dom";
 import appCss from "../styles.css?url";
 import { ThemeProvider, themeBootstrapScript } from "@/components/theme/ThemeProvider";
 import { SettingsDialog } from "@/components/theme/SettingsDialog";
+import { AppUpdateDialog } from "@/components/AppUpdateDialog";
 import { UpdateNotesDialog } from "@/components/UpdateNotesDialog";
 import { Toaster } from "@/components/ui/sonner";
 import { Logo } from "@/components/Logo";
@@ -259,6 +260,7 @@ function AppFrame() {
         <Outlet />
       </main>
       <UpdateNotesDialog />
+      <AppUpdateDialog />
     </div>
   );
 }

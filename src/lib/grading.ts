@@ -287,13 +287,17 @@ function englishNorm(s: string): string {
   return normalizeTimes(
     expandContractions(s.normalize("NFKC").toLowerCase())
       .replace(NUMBER_WORDS_RE, (w) => NUMBER_WORDS[w])
-      .replace(BRITISH_RE, (w) => BRITISH_MAP.get(w) ?? w),
+      .replace(BRITISH_RE, (w) => BRITISH_MAP.get(w) ?? w)
+      // Same place, different preposition: ue = "on (top of)", naka = "in(side)".
+      .replace(/\bon top of\b/g, "on")
+      .replace(/\binside(?: of)?\b/g, "in"),
   )
     .replace(/(\d):(\d)/g, "$1∶$2") // keep the time colon (as ∶) through punctuation stripping
     .replace(/[.,!?;:'"“”‘’()[\]{}\-–—_/\\]/g, " ")
     .replace(/[。、！？；：「」『』（）・]/g, " ")
     .replace(/∶/g, ":")
     .replace(/\s+/g, " ")
+    .replace(/(\d) (?=\d)/g, "$1") // phone numbers: 02-9345-6781 = 02 9345 6781 = 0293456781
     .trim();
 }
 

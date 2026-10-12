@@ -122,3 +122,19 @@ describe("every reference in the books accepts itself", () => {
   }
   it("has no reference that grades itself wrong", () => expect(failures).toEqual([]));
 });
+
+describe("same place, different preposition; phone-number grouping", () => {
+  it.each([
+    ["It's on the sofa", "It's on top of the sofa."],
+    ["It's on top of the desk.", "It's on the desk."],
+    ["Are they on the desk?", "Are they on top of the desk?"],
+    [
+      "Where is the stapler? It's in the drawer.",
+      "Where is the stapler? — It's inside the drawer.",
+    ],
+    ["It's 0293456781.", "It's 02-9345-6781."],
+    ["It's 02 9345 6781", "It's 02-9345-6781."],
+  ])("%s = %s", (answer, ref) => expect(lenient(answer, ref)).toBe(true));
+  it("a different place is still wrong", () =>
+    expect(lenient("It's under the desk.", "It's on top of the desk.")).toBe(false));
+});

@@ -63,6 +63,29 @@ export function glossAlternatives(english: string): string[] {
   return [...out];
 }
 
+/**
+ * A counter word glossed as a bare number ("7") also accepts the number with
+ * what it counts, taken from its theme: "counter: nanko (round/general
+ * objects, 1-10)" → "7 round objects", "7 general objects", "7 objects".
+ */
+function counted(word: VocabEntry): string[] {
+  const inner = word.theme.match(/^counter\b.*\(([^)]*)\)/i)?.[1];
+  if (!inner || !/^\d+$/.test(word.english.trim())) return [];
+  const nouns = new Set<string>();
+  for (const group of inner.split(/,|\band\b/).map((g) => g.trim())) {
+    if (!group || /^\d/.test(group)) continue; // "1-10"
+    const parts = group.split("/").map((p) => p.trim());
+    const head = parts[parts.length - 1].split(" ").pop() ?? "";
+    for (const p of parts) {
+      for (const n of [p.includes(" ") ? p : `${p} ${head}`.trim(), head]) {
+        nouns.add(n);
+        nouns.add(n.replace(/([^s])s$/, "$1")); // "1 round object"
+      }
+    }
+  }
+  return [...nouns].map((n) => `${word.english.trim()} ${n}`);
+}
+
 let byGloss: Map<string, VocabEntry[]> | null = null;
 const glossKey = (english: string) => english.trim().toLowerCase();
 
@@ -73,7 +96,7 @@ const glossKey = (english: string) => english.trim().toLowerCase();
  * "to open"), in kana, kanji or romaji.
  */
 export function vocabAnswers(word: VocabEntry, direction: "jp-to-en" | "en-to-jp"): string[] {
-  if (direction === "jp-to-en") return glossAlternatives(word.english);
+  if (direction === "jp-to-en") return [...glossAlternatives(word.english), ...counted(word)];
   if (!byGloss) {
     byGloss = new Map();
     for (const w of allVocabulary()) {

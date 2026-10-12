@@ -22,4 +22,14 @@ describe("vocab quiz answers (R12)", () => {
     const accepted = vocabAnswers(opens[0], "en-to-jp");
     for (const w of opens) expect(accepted.some((a) => isLenientlyCorrect(w.kana, a))).toBe(true);
   });
+
+  it("accepts a counter's number with what it counts", () => {
+    const ok = (kana: string, typed: string) =>
+      vocabAnswers(word(kana), "jp-to-en").some((a) => isLenientlyCorrect(typed, a));
+    expect(ok("ななこ", "seven round objects")).toBe(true);
+    expect(ok("ななこ", "7 objects")).toBe(true);
+    expect(ok("ななこ", "7")).toBe(true);
+    expect(ok("ななこ", "seven people")).toBe(false);
+    expect(ok("いっぴき", "1 small animal")).toBe(true);
+  });
 });

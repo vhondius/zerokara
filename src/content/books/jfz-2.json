@@ -198,9 +198,15 @@
             },
             {
               "id": "prelesson-a-act-7",
-              "kind": "translate",
-              "prompt": "'hoteru' is the Japanese pronunciation of an English word. Why should you say 'hoteru' instead of an English accent when in Japan?",
-              "answer": "Because katakana words are their own Japanese words with fixed pronunciations — using the English pronunciation is likely to not be understood."
+              "kind": "multiple_choice",
+              "prompt": "'Hoteru' is the Japanese pronunciation of the English word 'hotel'. Why should you say 'hoteru' rather than 'hotel' with an English accent in Japan?",
+              "answer": "Katakana words are Japanese words with their own pronunciation, so the English pronunciation may not be understood.",
+              "options": [
+                "Katakana words are Japanese words with their own pronunciation, so the English pronunciation may not be understood.",
+                "English words are not allowed in Japan.",
+                "'Hoteru' is more polite than 'hotel'.",
+                "'Hotel' means something different in Japanese."
+              ]
             }
           ]
         },
@@ -729,7 +735,11 @@
               "id": "jfz2-lesson1-act-12",
               "kind": "translate",
               "prompt": "Is わかる a regular verb or an いる/える verb? Explain briefly using the rhyme rule.",
-              "answer": "Regular — the two syllables before る (わか) don't rhyme with い or え."
+              "answer": [
+                "Regular — the two syllables before る (わか) don't rhyme with い or え.",
+                "Regular",
+                "A regular verb"
+              ]
             },
             {
               "id": "jfz2-lesson1-act-13",
@@ -765,7 +775,12 @@
               "id": "jfz2-lesson1-act-16",
               "kind": "translate",
               "prompt": "How would you say 'My dog is always at the park, but sometimes at home'?",
-              "answer": "Inu wa itsumo kouen ni imasu. Demo, tokidoki uchi ni imasu."
+              "answer": [
+                "Inu wa itsumo kouen ni imasu. Demo, tokidoki uchi ni imasu.",
+                "Watashi no inu wa itsumo kouen ni imasu. Demo, tokidoki uchi ni imasu.",
+                "Inu wa itsumo kouen ni imasu. Demo, tokidoki ie ni imasu.",
+                "Watashi no inu wa itsumo kouen ni imasu. Demo, tokidoki ie ni imasu."
+              ]
             },
             {
               "id": "jfz2-lesson1-act-17",
@@ -780,7 +795,12 @@
                 {
                   "speaker": "B",
                   "japanese": "Itsumo heya ni imasu. Demo, tokidoki niwa ni imasu.",
-                  "english": "It's always in the room. But sometimes it's in the yard."
+                  "english": [
+                    "It's always in the room. But sometimes it's in the yard.",
+                    "It's always in the room. But sometimes it's in the garden.",
+                    "It's always in the room, but sometimes in the yard.",
+                    "It's always in the room, but sometimes in the garden."
+                  ]
                 }
               ],
               "direction": "j-to-e"
@@ -797,18 +817,18 @@
                 },
                 {
                   "speaker": "B",
-                  "japanese": "Ginkou no soba ni arimasu.",
-                  "english": "It's near the bank."
+                  "japanese": "Asoko ni arimasu.",
+                  "english": "It's over there."
                 },
                 {
                   "speaker": "A",
-                  "japanese": "Soko no soba ni kouen mo arimasu ka.",
-                  "english": "Is there a park near there too?"
+                  "japanese": "Kouen mo asoko ni arimasu ka.",
+                  "english": "Is the park over there too?"
                 },
                 {
                   "speaker": "B",
                   "japanese": "Hai, arimasu.",
-                  "english": "Yes, there is."
+                  "english": "Yes, it is."
                 }
               ],
               "direction": "e-to-j"
@@ -838,11 +858,17 @@
               "questions": [
                 {
                   "prompt": "Where does Aiko go every week?",
-                  "answer": "Depaato ni ikimasu."
+                  "answer": [
+                    "To the department store (depaato).",
+                    "The department store."
+                  ]
                 },
                 {
                   "prompt": "Where does Aiko go every month?",
-                  "answer": "Honya ni ikimasu."
+                  "answer": [
+                    "To the bookstore (honya).",
+                    "The bookstore."
+                  ]
                 }
               ]
             },
@@ -897,7 +923,10 @@
             {
               "kind": "translate",
               "prompt": "Translate: 'Maishuu, honya ni ikimasu.'",
-              "answer": "I go to the bookstore every week.",
+              "answer": [
+                "I go to the bookstore every week.",
+                "Every week, I go to the bookstore."
+              ],
               "id": "jfz2-lesson1-act-27"
             },
             {
@@ -921,42 +950,42 @@
             {
               "id": "jfz2-lesson1-act-30",
               "kind": "fill_blank",
-              "prompt": "What is this? (ta_ru)",
+              "prompt": "What is this?",
               "image_ref": "/images/jfz-2/jfz2-l1-towel.png",
               "answer": "taoru"
             },
             {
               "id": "jfz2-lesson1-act-31",
               "kind": "fill_blank",
-              "prompt": "What is this? (ku_zu)",
+              "prompt": "What is this?",
               "image_ref": "/images/jfz-2/jfz2-l1-quiz.png",
               "answer": "kuizu"
             },
             {
               "id": "jfz2-lesson1-act-32",
               "kind": "fill_blank",
-              "prompt": "What is this? (_su)",
+              "prompt": "What is this?",
               "image_ref": "/images/jfz-2/jfz2-l1-ace.png",
               "answer": "eesu"
             },
             {
               "id": "jfz2-lesson1-act-33",
               "kind": "fill_blank",
-              "prompt": "What is this? (o_on)",
+              "prompt": "What is this?",
               "image_ref": "/images/jfz-2/jfz2-l1-onion.png",
               "answer": "onion"
             },
             {
               "id": "jfz2-lesson1-act-34",
               "kind": "fill_blank",
-              "prompt": "What is this? (a_su)",
+              "prompt": "What is this?",
               "image_ref": "/images/jfz-2/jfz2-l1-icecream.png",
               "answer": "aisu"
             },
             {
               "id": "jfz2-lesson1-act-35",
               "kind": "fill_blank",
-              "prompt": "What is this? (sa_koro)",
+              "prompt": "What is this?",
               "image_ref": "/images/jfz-2/jfz2-l1-dice.png",
               "answer": "saikoro"
             }
@@ -968,7 +997,7 @@
             "neko / wa / heya / ni / imasu",
             "hon / wa / tsukue / no / ue / ni / arimasu",
             "inu / wa / itsumo / kouen / ni / imasu",
-            "keisatsu / wa / hoteru / no / soba / ni / imasu"
+            "keisatsu / wa / hoteru / ni / imasu"
           ]
         },
         {
@@ -1549,9 +1578,21 @@
             },
             {
               "id": "jfz2-lesson2-act-11",
-              "kind": "translate",
-              "prompt": "Translate: 'Hocchikisu wa doko desu ka. — Hikidashi no naka ni arimasu.' (identify hikidashi from context — a drawer)",
-              "answer": "Where is the stapler? — It's inside the drawer."
+              "kind": "mini_conversation",
+              "prompt": "Translate each line into English. (Work out hikidashi from context: it's a drawer.)",
+              "lines": [
+                {
+                  "speaker": "A",
+                  "japanese": "Hocchikisu wa doko desu ka.",
+                  "english": "Where is the stapler?"
+                },
+                {
+                  "speaker": "B",
+                  "japanese": "Hikidashi no naka ni arimasu.",
+                  "english": "It's inside the drawer."
+                }
+              ],
+              "direction": "j-to-e"
             },
             {
               "id": "jfz2-lesson2-act-12",
@@ -1609,7 +1650,10 @@
                 },
                 {
                   "speaker": "B",
-                  "japanese": "Kouen no chikaku ni arimasu. (soba also works instead of chikaku)",
+                  "japanese": [
+                    "Kouen no chikaku ni arimasu.",
+                    "Kouen no soba ni arimasu."
+                  ],
                   "english": "It's near the park."
                 }
               ],
@@ -1624,8 +1668,8 @@
             {
               "id": "jfz2-lesson2-act-16",
               "kind": "translate",
-              "prompt": "How would you ask 'Is the meeting room behind the office?'",
-              "answer": "Kaigishitsu wa kaisha no ushiro ni arimasu ka."
+              "prompt": "How would you ask 'Is the bank behind the company?'",
+              "answer": "Ginkou wa kaisha no ushiro ni arimasu ka."
             },
             {
               "id": "jfz2-lesson2-act-17",
@@ -1640,11 +1684,19 @@
               "questions": [
                 {
                   "prompt": "Where is the eraser, relative to the stapler?",
-                  "answer": "Hocchikisu no migi ni arimasu."
+                  "answer": [
+                    "To the right of the stapler (hocchikisu no migi).",
+                    "On the right of the stapler.",
+                    "To the right."
+                  ]
                 },
                 {
                   "prompt": "Describe the full arrangement in one sentence.",
-                  "answer": "Monosashi, hocchikisu, keshigomu no jun de narande imasu."
+                  "answer": [
+                    "Ruler, stapler, eraser, from left to right.",
+                    "From left to right: ruler, stapler, eraser.",
+                    "Ruler, stapler, eraser."
+                  ]
                 }
               ]
             },
@@ -2063,7 +2115,7 @@
             {
               "id": "K3-1",
               "title": "Stroke order differences for シ (shi) and ソ (so)",
-              "body": "シ and ソ are near-mirror images of each other and are frequently confused. The distinguishing detail is stroke direction: シ's two short strokes angle from upper-left toward lower-right, while ソ's strokes angle from upper-right toward lower-left. Writing them at speed with the correct stroke order — not just the correct final shape — is what makes the difference stick."
+              "body": "シ and ソ are easy to mix up (so are ツ and ン), and the direction of the strokes is what tells them apart. シ: two short dots stacked on the left, both slanting down to the right, then a long stroke that sweeps UP from the bottom left toward the top right. ソ: one short dot at the top left, slanting down to the right, then a long stroke that comes DOWN from the top right toward the bottom left. Write them with the right stroke direction, not just the right final shape, and the difference sticks."
             }
           ]
         },
@@ -2139,8 +2191,8 @@
             {
               "id": "jfz2-lesson3-act-11",
               "kind": "translate",
-              "prompt": "Translate: 'Sono kabocha wa ookii desu ne.'",
-              "answer": "That pumpkin is big, isn't it."
+              "prompt": "Translate: 'Sono kabocha wa ookii desu.'",
+              "answer": "That pumpkin is big."
             },
             {
               "id": "jfz2-lesson3-act-12",
@@ -2160,8 +2212,8 @@
                 },
                 {
                   "speaker": "B",
-                  "japanese": "Sono ringo wa oishikunai desu. Kono ringo no hou ga oishii desu.",
-                  "english": "That apple isn't delicious. This apple (here) is more delicious."
+                  "japanese": "Sono ringo wa oishikunai desu. Kono ringo wa oishii desu.",
+                  "english": "That apple isn't delicious. This apple is delicious."
                 }
               ],
               "direction": "j-to-e"
@@ -2203,11 +2255,19 @@
               "questions": [
                 {
                   "prompt": "Which banana is cheaper, kono or ano?",
-                  "answer": "Kono banana desu."
+                  "answer": [
+                    "This banana (kono banana).",
+                    "This one.",
+                    "Kono."
+                  ]
                 },
                 {
-                  "prompt": "Which banana would you likely choose, and why (answer using kono or ano)?",
-                  "answer": "Kono banana wo erabimasu. Yasui kara desu."
+                  "prompt": "Which banana is expensive?",
+                  "answer": [
+                    "That banana over there (ano banana).",
+                    "That one over there.",
+                    "Ano."
+                  ]
                 }
               ]
             },
@@ -2267,7 +2327,7 @@
             },
             {
               "kind": "multiple_choice",
-              "prompt": "Which of kono/sono/ano/dono is used to ask a question?",
+              "prompt": "Which one is the question word ('which')?",
               "answer": "dono",
               "options": [
                 "kono",
@@ -2617,7 +2677,7 @@
         {
           "type": "cool_tools",
           "title": "A counting song for the people counter",
-          "body": "Some learners find it easier to memorize the people counter (ひとり、ふたり、さんにん...) by setting it to a simple, familiar counting-song rhythm — the same trick used for memorizing multiplication tables or the alphabet. Any tune with a steady, repetitive beat works; the goal is just muscle memory through repetition, not the specific song itself."
+          "body": "Some learners memorize the people counter by singing it. For example, use the tune of \"Twinkle, Twinkle, Little Star\" (the same melody as the ABC song): 「ひとり、ふたり、さんにん、よにん / ごにん、ろくにん、しちにん / はちにん、きゅうにん、じゅうにん」. Stretch or squeeze the syllables to fit; the steady beat is what does the work, the same trick used for the alphabet or multiplication tables."
         },
         {
           "type": "grammar",
@@ -2876,13 +2936,19 @@
               "id": "jfz2-lesson4-act-8",
               "kind": "translate",
               "prompt": "Translate: 'Okyakusan wa nannin desu ka.'",
-              "answer": "How many guests are there?"
+              "answer": [
+                "How many guests are there?",
+                "How many customers are there?"
+              ]
             },
             {
               "id": "jfz2-lesson4-act-9",
               "kind": "translate",
               "prompt": "Translate: 'Petto ga sanbiki imasu.'",
-              "answer": "I have three pets."
+              "answer": [
+                "I have three pets.",
+                "There are three pets."
+              ]
             },
             {
               "id": "jfz2-lesson4-act-10",
@@ -2928,7 +2994,7 @@
             {
               "id": "jfz2-lesson4-act-14",
               "kind": "writing_practice",
-              "prompt": "Write out the people counter from 1 to 5 (ひとり through ごにん) and the small-animal counter from 1 to 5 (いっぴき through ごひき).",
+              "prompt": "Write out the people counter from 1 to 10 (ひとり through じゅうにん) and the small-animal counter from 1 to 10 (いっぴき through じゅっぴき).",
               "answer": null
             },
             {
@@ -2938,11 +3004,20 @@
               "questions": [
                 {
                   "prompt": "How many students are in Ken's class?",
-                  "answer": "Nijuunin imasu."
+                  "answer": [
+                    "Twenty (nijuunin).",
+                    "20 students.",
+                    "Twenty students."
+                  ]
                 },
                 {
                   "prompt": "How many pets does Ken have in total?",
-                  "answer": "Sanbiki imasu."
+                  "answer": [
+                    "Three (sanbiki).",
+                    "3 pets.",
+                    "Three pets.",
+                    "Two dogs and a cat."
+                  ]
                 }
               ]
             },
@@ -2960,7 +3035,10 @@
                 {
                   "speaker": "B",
                   "japanese": "Gonin desu. Kyoudai wa sannin imasu.",
-                  "english": "There are five of us. I have three siblings."
+                  "english": [
+                    "There are five. I have three siblings.",
+                    "There are five of us. I have three siblings."
+                  ]
                 }
               ]
             },
@@ -3612,11 +3690,17 @@
               "questions": [
                 {
                   "prompt": "Where does Emi buy clothes?",
-                  "answer": "Depaato de kaimasu."
+                  "answer": [
+                    "At the department store (depaato).",
+                    "The department store."
+                  ]
                 },
                 {
                   "prompt": "Where does Emi drink tea?",
-                  "answer": "Uchi de nomimasu."
+                  "answer": [
+                    "At home (uchi).",
+                    "Home."
+                  ]
                 }
               ]
             },
@@ -4295,11 +4379,19 @@
               "questions": [
                 {
                   "prompt": "How many novels has Kenji already read?",
-                  "answer": "Sansatsu yomimashita."
+                  "answer": [
+                    "Three (sansatsu).",
+                    "3 novels.",
+                    "Three novels."
+                  ]
                 },
                 {
                   "prompt": "What does Kenji want to do?",
-                  "answer": "Mou issatsu yomitai desu."
+                  "answer": [
+                    "Read one more novel by the end of the month.",
+                    "Read one more (mou issatsu).",
+                    "Read one more novel."
+                  ]
                 }
               ]
             },
@@ -4927,11 +5019,18 @@
               "questions": [
                 {
                   "prompt": "Who does Yuki often talk with?",
-                  "answer": "Oniisan to hanashimasu."
+                  "answer": [
+                    "Her older brother (oniisan).",
+                    "With her older brother."
+                  ]
                 },
                 {
                   "prompt": "How often does Yuki talk with her younger sister?",
-                  "answer": "Amari hanashimasen."
+                  "answer": [
+                    "Not very often (amari).",
+                    "Not much.",
+                    "Not often."
+                  ]
                 }
               ]
             },
@@ -5661,11 +5760,20 @@
               "questions": [
                 {
                   "prompt": "What was Rina's old apartment like?",
-                  "answer": "Furukute semakatta desu."
+                  "answer": [
+                    "Old and small (furukute semakatta).",
+                    "It was old and small.",
+                    "Old and cramped."
+                  ]
                 },
                 {
                   "prompt": "What is Rina's new apartment like?",
-                  "answer": "Hirokute atarashii desu."
+                  "answer": [
+                    "Spacious and new (hirokute atarashii).",
+                    "It's spacious and new.",
+                    "Big and new.",
+                    "New and spacious."
+                  ]
                 }
               ]
             },
@@ -6164,11 +6272,17 @@
               "questions": [
                 {
                   "prompt": "Did Kenta wash his car yesterday?",
-                  "answer": "Un, aratta."
+                  "answer": [
+                    "Yes, he finally washed it.",
+                    "Yes."
+                  ]
                 },
                 {
                   "prompt": "Does Kenta usually wash his car often?",
-                  "answer": "Uun, amari arawanai."
+                  "answer": [
+                    "No, not very often.",
+                    "No."
+                  ]
                 }
               ]
             },
@@ -7017,11 +7131,18 @@
               "questions": [
                 {
                   "prompt": "Why didn't Nao go to school?",
-                  "answer": "Kaze wo hiita kara desu."
+                  "answer": [
+                    "Because Nao caught a cold (kaze).",
+                    "Nao caught a cold.",
+                    "A cold."
+                  ]
                 },
                 {
                   "prompt": "What is Nao doing today?",
-                  "answer": "Uchi de yasunde imasu."
+                  "answer": [
+                    "Resting at home (uchi de yasunde iru).",
+                    "Resting at home."
+                  ]
                 }
               ]
             },
@@ -7717,11 +7838,19 @@
               "questions": [
                 {
                   "prompt": "What does the team do every week?",
-                  "answer": "Issho ni yakyuu wo renshuu shimasu."
+                  "answer": [
+                    "Practice baseball together (yakyuu).",
+                    "They practice baseball together.",
+                    "Practice baseball."
+                  ]
                 },
                 {
                   "prompt": "Why didn't Kota practice today?",
-                  "answer": "Byouki datta kara desu."
+                  "answer": [
+                    "Because he was sick (byouki).",
+                    "He was sick.",
+                    "Because he was ill."
+                  ]
                 }
               ]
             },
@@ -8100,11 +8229,19 @@
               "questions": [
                 {
                   "prompt": "What time does Sora normally finish work?",
-                  "answer": "Rokuji gurai desu."
+                  "answer": [
+                    "Around 6 (rokuji gurai).",
+                    "Around six o'clock.",
+                    "At about 6."
+                  ]
                 },
                 {
                   "prompt": "How does Sora usually arrive?",
-                  "answer": "Itsumo sukoshi osoi desu."
+                  "answer": [
+                    "A little late (sukoshi osoi).",
+                    "Always a little late.",
+                    "Slightly late."
+                  ]
                 }
               ]
             },
