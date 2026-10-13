@@ -88,7 +88,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
   head: () => ({
     meta: [
       { charSet: "utf-8" },
-      { name: "viewport", content: "width=device-width, initial-scale=1" },
+      { name: "viewport", content: "width=device-width, initial-scale=1, viewport-fit=cover" },
       { title: SITE_NAME },
       { name: "description", content: SITE_DESC },
       { property: "og:site_name", content: SITE_NAME },
@@ -178,7 +178,7 @@ function TopNav() {
   });
   const area = hydrated ? routeArea : undefined;
   return (
-    <header className="obi sticky top-0 z-40">
+    <header className="obi sticky top-0 z-40 pt-[env(safe-area-inset-top)]">
       <div className="mx-auto grid max-w-6xl grid-cols-[minmax(0,1fr)_auto] items-center gap-3 px-4 py-4 sm:px-6">
         <Link to="/" className="flex min-w-0 items-center gap-2">
           <Logo className="h-8 w-8 shrink-0" />
@@ -256,7 +256,7 @@ function AppFrame() {
   return (
     <div className="paper min-h-screen overflow-x-clip bg-background text-foreground">
       <TopNav />
-      <main>
+      <main className="pb-[env(safe-area-inset-bottom)]">
         <Outlet />
       </main>
       <UpdateNotesDialog />

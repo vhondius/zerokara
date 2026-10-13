@@ -1,7 +1,7 @@
 apply plugin: 'com.android.application'
 
 // Self-incrementing build number, persisted in version.properties. Every
-// Gradle run bumps it, so each APK gets a distinct filename/version instead
+// successful assemble bumps it, so each APK gets a distinct filename/version instead
 // of silently overwriting app-debug.apk — a file-transfer tool that dedupes
 // by name can otherwise skip copying a "same-named" file to the device,
 // leaving a stale build installed with no visible sign anything changed.
@@ -18,7 +18,11 @@ def buildNumber = (versionProps.getProperty('buildNumber', '0')).toInteger() + 1
 def minorBuildNumber = (versionProps.getProperty('minorBuildNumber', '-1')).toInteger() + 1
 versionProps.setProperty('buildNumber', buildNumber.toString())
 versionProps.setProperty('minorBuildNumber', minorBuildNumber.toString())
-versionPropsFile.withOutputStream { versionProps.store(it, null) }
+// Persisted only once an APK is actually built, so a failed build (e.g. the
+// changelog check below) doesn't burn a version number and leave a gap.
+tasks.matching { it.name in ['assembleDebug', 'assembleRelease'] }.configureEach {
+    doLast { versionPropsFile.withOutputStream { versionProps.store(it, null) } }
+}
 
 // Fails the build unless the in-app "What's New" changelog (src/lib/changelog.ts,
 // shown on first launch after an update — see UpdateNotesDialog.tsx) has an entry

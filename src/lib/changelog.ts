@@ -16,6 +16,13 @@ export function newestChangelogId(): number {
  */
 export const CHANGELOG: ChangelogEntry[] = [
   {
+    id: 3,
+    date: "2026-10-13",
+    notes: [
+      "The app now fills the whole screen: the header runs up behind the status bar and the gray band at the bottom is gone.",
+    ],
+  },
+  {
     id: 2,
     date: "2026-10-12",
     notes: [

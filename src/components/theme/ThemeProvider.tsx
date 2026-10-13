@@ -7,6 +7,7 @@ import {
   useState,
   type ReactNode,
 } from "react";
+import { Capacitor, SystemBars, SystemBarsStyle } from "@capacitor/core";
 
 export const THEME_STORAGE_KEY = "zerokara.theme.v1";
 
@@ -150,6 +151,11 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
   useEffect(() => {
     if (!hydrated) return;
     document.documentElement.classList.toggle("dark", state.dark);
+    // The app draws under the system bars, so their icons must follow the app theme, not the OS one.
+    if (Capacitor.isNativePlatform())
+      void SystemBars.setStyle({
+        style: state.dark ? SystemBarsStyle.Dark : SystemBarsStyle.Light,
+      });
     for (const size of TEXT_SIZES) {
       if (size !== "normal")
         document.documentElement.classList.toggle(`text-${size}`, state.textSize === size);

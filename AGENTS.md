@@ -26,7 +26,7 @@ android` → `gradlew assembleDebug` as one atomic sequence, not three independe
 After every APK build intended for release (not just local testing), verify — don't
 assume — before calling it done:
 1. The built APK's filename/`versionName` (from `android/app/version.properties`,
-   auto-incremented by Gradle on every invocation, including failed ones) matches
+   auto-incremented by Gradle on every successful assemble) matches
    `README.md`'s "Current version" line and download link.
 2. The GitHub release actually exists at that exact tag with the APK attached —
    `gh release view vX.X.X --json assets` (state `"uploaded"`, size matches the local
