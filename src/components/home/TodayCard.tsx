@@ -5,7 +5,7 @@ import { useTheme } from "@/components/theme/ThemeProvider";
 import { buildReviewSession } from "@/hooks/use-srs";
 import { bookStatus, currentBook } from "@/lib/book-progress";
 import { getState } from "@/lib/progress-store";
-import { allHiragana, allKanji, allKatakana } from "@/lib/kana-index";
+import { allHiragana, allKatakana } from "@/lib/kana-index";
 import { allVocabulary, vocabId } from "@/lib/vocab-index";
 import { daysAway, planFor } from "@/lib/study-plan";
 
@@ -79,27 +79,10 @@ export function TodayCard() {
 
   const done = (e: { bookId: string; unitId: string }) =>
     !!state.units[`${e.bookId}:${e.unitId}`]?.completed;
-  const decks = [
-    {
-      to: "/practice/hiragana" as const,
-      n: buildReviewSession(allHiragana().filter(done), "kana", (k) => k.char, study).cards.length,
-    },
-    {
-      to: "/practice/katakana" as const,
-      n: buildReviewSession(allKatakana().filter(done), "kana", (k) => k.char, study).cards.length,
-    },
-    {
-      to: "/practice/kanji" as const,
-      n: buildReviewSession(allKanji().filter(done), "kanji", (k) => k.char, study).cards.length,
-    },
-    {
-      to: "/practice/vocabulary" as const,
-      n: buildReviewSession(allVocabulary().filter(done), "vocabulary", vocabId, study).cards
-        .length,
-    },
-  ];
-  const reviewTotal = decks.reduce((a, d) => a + d.n, 0);
-  const reviewDeck = [...decks].sort((a, b) => b.n - a.n)[0];
+  const reviewTotal =
+    buildReviewSession(allHiragana().filter(done), "kana", (k) => k.char, study).cards.length +
+    buildReviewSession(allKatakana().filter(done), "kana", (k) => k.char, study).cards.length +
+    buildReviewSession(allVocabulary().filter(done), "vocabulary", vocabId, study).cards.length;
 
   const book = currentBook();
   const next = book ? bookStatus(book).firstIncomplete : undefined;
@@ -131,7 +114,7 @@ export function TodayCard() {
   const reviewLink =
     reviewTotal > 0 ? (
       <Link
-        to={reviewDeck.to}
+        to="/review"
         className="inline-block rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground hover:bg-primary/90"
       >
         Review {reviewTotal} card{reviewTotal === 1 ? "" : "s"} →

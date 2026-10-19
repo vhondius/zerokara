@@ -13,6 +13,7 @@ import { Route as IndexRouteImport } from './routes/index'
 import { Route as LearnRouteImport } from './routes/learn'
 import { Route as PracticeRouteImport } from './routes/practice'
 import { Route as ProgressRouteImport } from './routes/progress'
+import { Route as ReviewRouteImport } from './routes/review'
 import { Route as LearnIndexRouteImport } from './routes/learn.index'
 import { Route as LearnOverviewRouteImport } from './routes/learn.overview'
 import { Route as PracticeIndexRouteImport } from './routes/practice.index'
@@ -42,6 +43,11 @@ const PracticeRoute = PracticeRouteImport.update({
 const ProgressRoute = ProgressRouteImport.update({
   id: '/progress',
   path: '/progress',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ReviewRoute = ReviewRouteImport.update({
+  id: '/review',
+  path: '/review',
   getParentRoute: () => rootRouteImport,
 } as any)
 const LearnIndexRoute = LearnIndexRouteImport.update({
@@ -100,6 +106,7 @@ export interface FileRoutesByFullPath {
   '/learn': typeof LearnRouteWithChildren
   '/practice': typeof PracticeRouteWithChildren
   '/progress': typeof ProgressRoute
+  '/review': typeof ReviewRoute
   '/learn/overview': typeof LearnOverviewRoute
   '/practice/hiragana': typeof PracticeHiraganaRoute
   '/practice/kanji': typeof PracticeKanjiRoute
@@ -114,6 +121,7 @@ export interface FileRoutesByFullPath {
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/progress': typeof ProgressRoute
+  '/review': typeof ReviewRoute
   '/learn/overview': typeof LearnOverviewRoute
   '/practice/hiragana': typeof PracticeHiraganaRoute
   '/practice/kanji': typeof PracticeKanjiRoute
@@ -131,6 +139,7 @@ export interface FileRoutesById {
   '/learn': typeof LearnRouteWithChildren
   '/practice': typeof PracticeRouteWithChildren
   '/progress': typeof ProgressRoute
+  '/review': typeof ReviewRoute
   '/learn/overview': typeof LearnOverviewRoute
   '/practice/hiragana': typeof PracticeHiraganaRoute
   '/practice/kanji': typeof PracticeKanjiRoute
@@ -149,6 +158,7 @@ export interface FileRouteTypes {
     | '/learn'
     | '/practice'
     | '/progress'
+    | '/review'
     | '/learn/overview'
     | '/practice/hiragana'
     | '/practice/kanji'
@@ -163,6 +173,7 @@ export interface FileRouteTypes {
   to:
     | '/'
     | '/progress'
+    | '/review'
     | '/learn/overview'
     | '/practice/hiragana'
     | '/practice/kanji'
@@ -179,6 +190,7 @@ export interface FileRouteTypes {
     | '/learn'
     | '/practice'
     | '/progress'
+    | '/review'
     | '/learn/overview'
     | '/practice/hiragana'
     | '/practice/kanji'
@@ -196,6 +208,7 @@ export interface RootRouteChildren {
   LearnRoute: typeof LearnRouteWithChildren
   PracticeRoute: typeof PracticeRouteWithChildren
   ProgressRoute: typeof ProgressRoute
+  ReviewRoute: typeof ReviewRoute
   ReferencePhrasesRoute: typeof ReferencePhrasesRoute
 }
 
@@ -227,6 +240,13 @@ declare module '@tanstack/react-router' {
       path: '/progress'
       fullPath: '/progress'
       preLoaderRoute: typeof ProgressRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/review': {
+      id: '/review'
+      path: '/review'
+      fullPath: '/review'
+      preLoaderRoute: typeof ReviewRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/learn/': {
@@ -343,6 +363,7 @@ const rootRouteChildren: RootRouteChildren = {
   LearnRoute: LearnRouteWithChildren,
   PracticeRoute: PracticeRouteWithChildren,
   ProgressRoute: ProgressRoute,
+  ReviewRoute: ReviewRoute,
   ReferencePhrasesRoute: ReferencePhrasesRoute,
 }
 export const routeTree = rootRouteImport

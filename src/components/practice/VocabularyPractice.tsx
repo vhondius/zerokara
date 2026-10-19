@@ -9,56 +9,8 @@ import { isLenientlyCorrect } from "@/lib/grading";
 import { recordMistake, recordMistakeCorrect } from "@/lib/progress-store";
 import { ReportButton } from "@/components/lesson/ReportButton";
 import { useCoarsePointer } from "@/hooks/use-coarse-pointer";
-import { useReviewSession } from "@/hooks/use-srs";
-import { ReviewFlashcards, type ReviewCard } from "./ReviewFlashcards";
 
-/** Review cards for vocabulary: the Japanese on the front, meaning and reading on the back. */
-function vocabReviewCards(words: VocabEntry[]): ReviewCard[] {
-  return words.map((w) => {
-    const face = w.kanji || w.kana;
-    return {
-      id: vocabId(w),
-      front: <span className="jp text-6xl text-foreground">{face}</span>,
-      back: (
-        <span className="flex flex-col items-center gap-2 text-center">
-          <span className="font-display text-3xl text-accent">{w.english}</span>
-          <span className="jp text-base text-muted-foreground">
-            {w.kanji ? `${w.kana} · ` : ""}
-            {w.romaji}
-          </span>
-        </span>
-      ),
-      frontLabel: face,
-      backLabel: w.english,
-      footerLeft: w.theme,
-      footerRight: (
-        <>
-          Introduced in{" "}
-          <span className="text-foreground">
-            {w.unitLabel} — {w.unitTitle}
-          </span>
-        </>
-      ),
-      report: (
-        <ReportButton
-          sectionType="practice_vocabulary_review"
-          itemType="vocabulary_word"
-          itemId={vocabId(w)}
-          label={`${face} · ${w.english}`}
-          snapshot={w}
-          context={{
-            bookId: w.bookId,
-            unitId: w.unitId,
-            unitLabel: w.unitLabel,
-            unitTitle: w.unitTitle,
-          }}
-        />
-      ),
-    };
-  });
-}
-
-type Mode = "flashcards" | "review" | "quiz" | "mistakes";
+type Mode = "flashcards" | "quiz" | "mistakes";
 type Scope = "all" | "introduced";
 
 export function VocabularyPractice() {
@@ -78,8 +30,6 @@ export function VocabularyPractice() {
     [all, scope, book, completed],
   );
   const mistakeItems = useMistakeItems(scoped, "vocabulary", vocabId);
-  const session = useReviewSession(scoped, "vocabulary", vocabId);
-  const [sessionKey, setSessionKey] = useState(0);
 
   const cards = useMemo(
     () =>
@@ -138,7 +88,6 @@ export function VocabularyPractice() {
           {(
             [
               { v: "flashcards", label: "Flashcards" },
-              { v: "review", label: `Review (${session.cards.length})` },
               { v: "quiz", label: "Quiz" },
               { v: "mistakes", label: `Mistakes (${mistakeItems.length})` },
             ] as { v: Mode; label: string }[]
@@ -211,13 +160,6 @@ export function VocabularyPractice() {
           </div>
         ) : mode === "flashcards" ? (
           <FlashcardDeck cards={cards} />
-        ) : mode === "review" ? (
-          <ReviewFlashcards
-            key={sessionKey}
-            cards={vocabReviewCards(session.cards)}
-            itemType="vocabulary"
-            onRestart={() => setSessionKey((k) => k + 1)}
-          />
         ) : (
           <VocabQuiz pool={scoped} direction={direction} />
         )}

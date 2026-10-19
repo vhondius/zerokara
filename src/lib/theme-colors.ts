@@ -25,6 +25,7 @@ export const SECTION_COLORS = {
   kanji: "#A9C4DF",
   reference: "#FFE79C",
   progress: "#FFDFBA",
+  review: "#A8D5BA",
 } as const;
 
 export function bookColor(bookId: string): string {

@@ -38,7 +38,7 @@ function Landing() {
       <FirstRunCard />
       <TodayCard />
 
-      <div className="mt-10 grid gap-4 md:grid-cols-2">
+      <div className="mt-10 grid gap-4 md:grid-cols-3">
         <Link
           to="/learn"
           className="group rounded-xl border border-border bg-card shadow-sheet p-6 transition-[border-color,box-shadow,translate] hover:border-accent hover:shadow-lift active:translate-y-px"
@@ -53,6 +53,23 @@ function Landing() {
           </p>
           <span className="mt-4 inline-block text-sm font-medium text-accent group-hover:underline">
             Start learning →
+          </span>
+        </Link>
+
+        <Link
+          to="/review"
+          className="group rounded-xl border border-border bg-card shadow-sheet p-6 transition-[border-color,box-shadow,translate] hover:border-accent hover:shadow-lift active:translate-y-px"
+        >
+          <div className="flex items-baseline justify-between">
+            <h2 className="font-display text-2xl text-foreground">Review</h2>
+            <span className="jp text-3xl text-accent">復</span>
+          </div>
+          <p className="mt-2 text-sm text-muted-foreground">
+            Spaced review for vocabulary, hiragana, and katakana you've already learned — Anki-style
+            flashcards that know what's due.
+          </p>
+          <span className="mt-4 inline-block text-sm font-medium text-accent group-hover:underline">
+            Start reviewing →
           </span>
         </Link>
 

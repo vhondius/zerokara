@@ -126,8 +126,9 @@ function RootShell({ children }: { children: ReactNode }) {
 }
 
 const NAV_ITEMS = [
-  { to: "/learn", label: "Learn" },
+  { to: "/learn", label: "Course" },
   { to: "/practice", label: "Practice" },
+  { to: "/review", label: "Review" },
   { to: "/reference/phrases", label: "Reference" },
   { to: "/progress", label: "Progress" },
 ] as const;

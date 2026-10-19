@@ -2,21 +2,17 @@ import { useMemo, useState } from "react";
 import { Link } from "@tanstack/react-router";
 import { allKanji, type KanaEntry } from "@/lib/kana-index";
 import { useCompletedUnits } from "@/hooks/use-completed-units";
-import { useReviewSession } from "@/hooks/use-srs";
 import { useMistakeItems } from "@/hooks/use-mistakes";
 import { Flashcards } from "./Flashcards";
-import { ReviewFlashcards, kanaReviewCards } from "./ReviewFlashcards";
 import { KanaQuiz } from "./KanaQuiz";
 import { StrokeTrace } from "./StrokeTrace";
 
-type Mode = "flashcards" | "quiz" | "trace" | "mistakes";
+type Mode = "flashcards" | "quiz" | "mistakes" | "trace";
 type Scope = "all" | "introduced";
-type FlashMode = "browse" | "review";
 
 export function KanjiPractice() {
   const [mode, setMode] = useState<Mode>("flashcards");
   const [scope, setScope] = useState<Scope>("introduced");
-  const [flashMode, setFlashMode] = useState<FlashMode>("browse");
   const completed = useCompletedUnits();
 
   const all = useMemo(() => allKanji(), []);
@@ -25,8 +21,6 @@ export function KanjiPractice() {
     [all, completed],
   );
   const pool = scope === "all" ? all : introduced;
-  const session = useReviewSession(pool, "kanji", (k) => k.char);
-  const [sessionKey, setSessionKey] = useState(0);
   const mistakeItems = useMistakeItems(pool, "kanji", (e) => e.char);
 
   return (
@@ -52,8 +46,8 @@ export function KanjiPractice() {
             [
               { v: "flashcards", label: "Flashcards" },
               { v: "quiz", label: "Quiz" },
-              { v: "trace", label: "Stroke tracing" },
               { v: "mistakes", label: `Mistakes (${mistakeItems.length})` },
+              { v: "trace", label: "Stroke tracing" },
             ] as { v: Mode; label: string }[]
           ).map((o) => (
             <button
@@ -85,26 +79,6 @@ export function KanjiPractice() {
         </div>
       </div>
 
-      {mode === "flashcards" ? (
-        <div className="mt-4 inline-flex rounded-md border border-border bg-background p-0.5 text-xs">
-          {(
-            [
-              { v: "browse", label: "Browse" },
-              { v: "review", label: `Review (${session.cards.length})` },
-            ] as { v: FlashMode; label: string }[]
-          ).map((o) => (
-            <button
-              key={o.v}
-              type="button"
-              onClick={() => setFlashMode(o.v)}
-              className={`rounded px-3 py-1.5 transition-colors ${flashMode === o.v ? "bg-primary text-primary-foreground" : "text-muted-foreground hover:text-foreground"}`}
-            >
-              {o.label}
-            </button>
-          ))}
-        </div>
-      ) : null}
-
       {scope === "introduced" && introduced.length === 0 ? (
         <div className="mt-8 rounded-lg border border-dashed border-border bg-card/40 p-8 text-center text-sm text-muted-foreground">
           No kanji unlocked yet. Finish a lesson that introduces kanji in{" "}
@@ -115,18 +89,7 @@ export function KanjiPractice() {
         </div>
       ) : (
         <div className="mt-8">
-          {mode === "flashcards" ? (
-            flashMode === "review" ? (
-              <ReviewFlashcards
-                key={sessionKey}
-                cards={kanaReviewCards(session.cards, "kanji")}
-                itemType="kanji"
-                onRestart={() => setSessionKey((k) => k + 1)}
-              />
-            ) : (
-              <Flashcards cards={pool} />
-            )
-          ) : null}
+          {mode === "flashcards" ? <Flashcards cards={pool} /> : null}
           {mode === "quiz" ? <KanaQuiz pool={pool} /> : null}
           {mode === "trace" ? <StrokeTrace entries={pool} /> : null}
           {mode === "mistakes" ? (

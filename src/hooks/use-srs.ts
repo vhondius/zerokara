@@ -62,8 +62,3 @@ export function useReviewSession<T>(
   if (!hydrated) return { cards: [], due: 0, fresh: 0 };
   return buildReviewSession(pool, itemType, idOf, study);
 }
-
-/** Number of cards in today's review session for a kana/kanji deck. */
-export function useDueCount(pool: { char: string }[], itemType: SrsItemType): number {
-  return useReviewSession(pool, itemType, (k) => k.char).cards.length;
-}

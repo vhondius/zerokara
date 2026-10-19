@@ -2,21 +2,17 @@ import { useMemo, useState } from "react";
 import { Link } from "@tanstack/react-router";
 import { allHiragana, type KanaEntry } from "@/lib/kana-index";
 import { useCompletedUnits } from "@/hooks/use-completed-units";
-import { useReviewSession } from "@/hooks/use-srs";
 import { useMistakeItems } from "@/hooks/use-mistakes";
 import { Flashcards } from "./Flashcards";
-import { ReviewFlashcards, kanaReviewCards } from "./ReviewFlashcards";
 import { KanaQuiz } from "./KanaQuiz";
 import { StrokeTrace } from "./StrokeTrace";
 
-type Mode = "flashcards" | "quiz" | "trace" | "mistakes";
+type Mode = "flashcards" | "quiz" | "mistakes" | "trace";
 type Scope = "all" | "introduced";
-type FlashMode = "browse" | "review";
 
 export function HiraganaPractice({ initialChars }: { initialChars?: string } = {}) {
   const [mode, setMode] = useState<Mode>(initialChars ? "trace" : "flashcards");
   const [scope, setScope] = useState<Scope>(initialChars ? "all" : "introduced");
-  const [flashMode, setFlashMode] = useState<FlashMode>("browse");
   const [charFilter, setCharFilter] = useState<string | null>(initialChars ?? null);
   const completed = useCompletedUnits();
 
@@ -27,8 +23,6 @@ export function HiraganaPractice({ initialChars }: { initialChars?: string } = {
   );
   const basePool = scope === "all" ? all : introduced;
   const pool = charFilter ? basePool.filter((e) => charFilter.includes(e.char)) : basePool;
-  const session = useReviewSession(pool, "kana", (k) => k.char);
-  const [sessionKey, setSessionKey] = useState(0);
   const mistakeItems = useMistakeItems(pool, "kana", (e) => e.char);
 
   return (
@@ -50,8 +44,8 @@ export function HiraganaPractice({ initialChars }: { initialChars?: string } = {
             [
               { v: "flashcards", label: "Flashcards" },
               { v: "quiz", label: "Quiz" },
-              { v: "trace", label: "Stroke tracing" },
               { v: "mistakes", label: `Mistakes (${mistakeItems.length})` },
+              { v: "trace", label: "Stroke tracing" },
             ] as { v: Mode; label: string }[]
           ).map((o) => (
             <button
@@ -83,26 +77,6 @@ export function HiraganaPractice({ initialChars }: { initialChars?: string } = {
         </div>
       </div>
 
-      {mode === "flashcards" ? (
-        <div className="mt-4 inline-flex rounded-md border border-border bg-background p-0.5 text-xs">
-          {(
-            [
-              { v: "browse", label: "Browse" },
-              { v: "review", label: `Review (${session.cards.length})` },
-            ] as { v: FlashMode; label: string }[]
-          ).map((o) => (
-            <button
-              key={o.v}
-              type="button"
-              onClick={() => setFlashMode(o.v)}
-              className={`rounded px-3 py-1.5 transition-colors ${flashMode === o.v ? "bg-primary text-primary-foreground" : "text-muted-foreground hover:text-foreground"}`}
-            >
-              {o.label}
-            </button>
-          ))}
-        </div>
-      ) : null}
-
       {charFilter ? (
         <div className="mt-4 flex items-center gap-2 text-xs text-muted-foreground">
           <span>
@@ -128,18 +102,7 @@ export function HiraganaPractice({ initialChars }: { initialChars?: string } = {
         </div>
       ) : (
         <div className="mt-8">
-          {mode === "flashcards" ? (
-            flashMode === "review" ? (
-              <ReviewFlashcards
-                key={sessionKey}
-                cards={kanaReviewCards(session.cards, "kana")}
-                itemType="kana"
-                onRestart={() => setSessionKey((k) => k + 1)}
-              />
-            ) : (
-              <Flashcards cards={pool} />
-            )
-          ) : null}
+          {mode === "flashcards" ? <Flashcards cards={pool} /> : null}
           {mode === "quiz" ? <KanaQuiz pool={pool} /> : null}
           {mode === "trace" ? <StrokeTrace entries={pool} /> : null}
           {mode === "mistakes" ? (

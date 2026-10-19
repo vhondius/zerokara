@@ -2,6 +2,7 @@ import { useCallback, useEffect, useRef, useState, type ReactNode } from "react"
 import type { KanaEntry } from "@/lib/kana-index";
 import { entryAnswer, entryReadings } from "@/lib/kana-index";
 import { rateSrsItem, type SrsItemType, type SrsRating } from "@/lib/progress-store";
+import { type VocabEntry, vocabId } from "@/lib/vocab-index";
 import { ReportButton } from "@/components/lesson/ReportButton";
 import { ExampleWords } from "@/components/lesson/ExampleWords";
 import { useTheme } from "@/components/theme/ThemeProvider";
@@ -12,6 +13,8 @@ import { shortcutTargetOk } from "@/lib/shortcuts";
 export type ReviewCard = {
   /** The SRS item id (the character, or the vocabulary id). */
   id: string;
+  /** Which SRS deck this card rates into — cards from different decks can share one session. */
+  itemType: SrsItemType;
   front: ReactNode;
   back: ReactNode;
   frontLabel: string;
@@ -25,6 +28,7 @@ export type ReviewCard = {
 export function kanaReviewCards(entries: KanaEntry[], itemType: SrsItemType): ReviewCard[] {
   return entries.map((card) => ({
     id: card.char,
+    itemType,
     front: <span className="jp text-8xl text-foreground">{card.char}</span>,
     back: (
       <span className="flex flex-col items-center gap-2">
@@ -66,6 +70,53 @@ export function kanaReviewCards(entries: KanaEntry[], itemType: SrsItemType): Re
       />
     ),
   }));
+}
+
+/** Review cards for vocabulary: the Japanese on the front, meaning and reading on the back. */
+export function vocabReviewCards(words: VocabEntry[]): ReviewCard[] {
+  return words.map((w) => {
+    const face = w.kanji || w.kana;
+    return {
+      id: vocabId(w),
+      itemType: "vocabulary" as const,
+      front: <span className="jp text-6xl text-foreground">{face}</span>,
+      back: (
+        <span className="flex flex-col items-center gap-2 text-center">
+          <span className="font-display text-3xl text-accent">{w.english}</span>
+          <span className="jp text-base text-muted-foreground">
+            {w.kanji ? `${w.kana} · ` : ""}
+            {w.romaji}
+          </span>
+        </span>
+      ),
+      frontLabel: face,
+      backLabel: w.english,
+      footerLeft: w.theme,
+      footerRight: (
+        <>
+          Introduced in{" "}
+          <span className="text-foreground">
+            {w.unitLabel} — {w.unitTitle}
+          </span>
+        </>
+      ),
+      report: (
+        <ReportButton
+          sectionType="review_vocabulary"
+          itemType="vocabulary_word"
+          itemId={vocabId(w)}
+          label={`${face} · ${w.english}`}
+          snapshot={w}
+          context={{
+            bookId: w.bookId,
+            unitId: w.unitId,
+            unitLabel: w.unitLabel,
+            unitTitle: w.unitTitle,
+          }}
+        />
+      ),
+    };
+  });
 }
 
 const RATINGS: {
@@ -116,11 +167,9 @@ const MAX_REQUEUES = 2;
  */
 export function ReviewFlashcards({
   cards,
-  itemType,
   onRestart,
 }: {
   cards: ReviewCard[];
-  itemType: SrsItemType;
   onRestart?: () => void;
 }) {
   const { study } = useTheme();
@@ -151,7 +200,7 @@ export function ReviewFlashcards({
     (r: SrsRating) => {
       if (!card) return;
       started.current = true;
-      rateSrsItem(itemType, card.id, r);
+      rateSrsItem(card.itemType, card.id, r);
       setTally((t) => ({ ...t, [r]: t[r] + 1 }));
       if (r === "again" && study.requeueAgain && (requeued.current[card.id] ?? 0) < MAX_REQUEUES) {
         requeued.current[card.id] = (requeued.current[card.id] ?? 0) + 1;
@@ -160,7 +209,7 @@ export function ReviewFlashcards({
       setFlipped(false);
       setI((n) => n + 1);
     },
-    [card, itemType, study.requeueAgain],
+    [card, study.requeueAgain],
   );
 
   // Each new card takes focus, so Space/Enter flip it straight away.
@@ -196,7 +245,7 @@ export function ReviewFlashcards({
   if (queue.length === 0) {
     return (
       <div className="rounded-lg border border-dashed border-border bg-card/40 p-8 text-center text-sm text-muted-foreground">
-        Nothing to review right now. Check back later, or use Browse mode to keep practicing.
+        Nothing due for review right now — check back later.
       </div>
     );
   }

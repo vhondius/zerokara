@@ -1,7 +1,4 @@
 import { Link, createFileRoute } from "@tanstack/react-router";
-import { useMemo } from "react";
-import { allHiragana, allKatakana, allKanji } from "@/lib/kana-index";
-import { useDueCount } from "@/hooks/use-srs";
 import { ColorBlock } from "@/components/theme/ColorScope";
 import { SECTION_COLORS } from "@/lib/theme-colors";
 
@@ -57,13 +54,6 @@ const scripts = [
 ];
 
 function PracticeIndex() {
-  const hiragana = useMemo(() => allHiragana(), []);
-  const katakana = useMemo(() => allKatakana(), []);
-  const hiraganaDue = useDueCount(hiragana, "kana");
-  const katakanaDue = useDueCount(katakana, "kana");
-  const kanji = useMemo(() => allKanji(), []);
-  const kanjiDue = useDueCount(kanji, "kanji");
-
   return (
     <div className="mx-auto max-w-4xl px-6 py-12">
       <h1 className="font-display text-4xl text-foreground">Practice</h1>
@@ -93,21 +83,6 @@ function PracticeIndex() {
                 {!s.ready ? (
                   <span className="rounded-full bg-muted px-2 py-0.5 text-[0.65rem] uppercase tracking-wide text-muted-foreground">
                     Later
-                  </span>
-                ) : null}
-                {s.ready && s.to === "/practice/hiragana" && hiraganaDue > 0 ? (
-                  <span className="rounded-full bg-primary/15 px-2 py-0.5 text-[0.65rem] font-medium uppercase tracking-wide text-primary">
-                    {hiraganaDue} due
-                  </span>
-                ) : null}
-                {s.ready && s.to === "/practice/kanji" && kanjiDue > 0 ? (
-                  <span className="rounded-full bg-primary/15 px-2 py-0.5 text-[0.65rem] font-medium uppercase tracking-wide text-primary">
-                    {kanjiDue} due
-                  </span>
-                ) : null}
-                {s.ready && s.to === "/practice/katakana" && katakanaDue > 0 ? (
-                  <span className="rounded-full bg-primary/15 px-2 py-0.5 text-[0.65rem] font-medium uppercase tracking-wide text-primary">
-                    {katakanaDue} due
                   </span>
                 ) : null}
               </div>
