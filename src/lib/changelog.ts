@@ -16,6 +16,15 @@ export function newestChangelogId(): number {
  */
 export const CHANGELOG: ChangelogEntry[] = [
   {
+    id: 4,
+    date: "2026-10-19",
+    notes: [
+      "Navigation is now Course, Practice, and Review instead of Course and Practice.",
+      "Review is a dedicated, Anki-style deck blending vocabulary, hiragana, and katakana you've already learned, picked up where you left off each day.",
+      "Practice no longer has a separate review mode inside each category — it's flashcards, quizzes, and stroke tracing only; spaced review now lives in the new Review tab.",
+    ],
+  },
+  {
     id: 3,
     date: "2026-10-13",
     notes: [
