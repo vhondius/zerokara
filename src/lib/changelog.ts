@@ -16,6 +16,17 @@ export function newestChangelogId(): number {
  */
 export const CHANGELOG: ChangelogEntry[] = [
   {
+    id: 5,
+    date: "2026-11-05",
+    notes: [
+      "Clearing a number box in Settings no longer saves 0, so you can't turn off new cards by accident while typing a new value.",
+      "Review now tells you why it's empty: new cards are set to 0 per day, or you've reached today's limit.",
+      'The Today card now shows what\'s left in a part-done lesson, such as "Finish Lesson 5: 1 exercise left".',
+      'The particle を now reads "o" in lesson text. The kana chart keeps "wo", and you can type either spelling in answers.',
+      "Reminders now use the Zerokara torii and ensō as their notification icon instead of a generic bell.",
+    ],
+  },
+  {
     id: 4,
     date: "2026-10-19",
     notes: [
