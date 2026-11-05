@@ -4,6 +4,7 @@ import { allVocabulary, vocabId } from "@/lib/vocab-index";
 import { useCompletedUnits } from "@/hooks/use-completed-units";
 import { useReviewSession } from "@/hooks/use-srs";
 import { ColorScope } from "@/components/theme/ColorScope";
+import { useTheme } from "@/components/theme/ThemeProvider";
 import { SECTION_COLORS } from "@/lib/theme-colors";
 import {
   ReviewFlashcards,
@@ -19,6 +20,7 @@ import {
  */
 export function ReviewPractice() {
   const completed = useCompletedUnits();
+  const { study } = useTheme();
 
   const vocab = useMemo(
     () => allVocabulary().filter((w) => completed.has(`${w.bookId}:${w.unitId}`)),
@@ -45,6 +47,13 @@ export function ReviewPractice() {
   ];
   const due = vocabSession.due + hiraganaSession.due + katakanaSession.due;
   const fresh = vocabSession.fresh + hiraganaSession.fresh + katakanaSession.fresh;
+  // Cards exist but the daily limits hold them back: say so, rather than "nothing due".
+  const emptyMessage =
+    due + fresh === 0
+      ? undefined
+      : due === 0 && study.newPerDay === 0
+        ? "New cards are set to 0 per day. Change this in Settings → Study."
+        : `You've reached today's limit. ${due + fresh} card${due + fresh === 1 ? " is" : "s are"} waiting and more open tomorrow. You can raise the limit in Settings → Study.`;
 
   return (
     <ColorScope color={SECTION_COLORS.review}>
@@ -65,6 +74,7 @@ export function ReviewPractice() {
             key={sessionKey}
             cards={cards}
             onRestart={() => setSessionKey((k) => k + 1)}
+            emptyMessage={emptyMessage}
           />
         </div>
       </div>

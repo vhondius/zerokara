@@ -168,9 +168,11 @@ const MAX_REQUEUES = 2;
 export function ReviewFlashcards({
   cards,
   onRestart,
+  emptyMessage = "Nothing due for review right now — check back later.",
 }: {
   cards: ReviewCard[];
   onRestart?: () => void;
+  emptyMessage?: string;
 }) {
   const { study } = useTheme();
   const touch = useCoarsePointer();
@@ -245,7 +247,7 @@ export function ReviewFlashcards({
   if (queue.length === 0) {
     return (
       <div className="rounded-lg border border-dashed border-border bg-card/40 p-8 text-center text-sm text-muted-foreground">
-        Nothing due for review right now — check back later.
+        {emptyMessage}
       </div>
     );
   }

@@ -48,6 +48,13 @@ describe("fill-in-the-blank", () => {
     expect(isCorrect("de", ["ni", "e"])).toBe(false);
   });
   it("still rejects a wrong word", () => expect(isCorrect("ga", "wo")).toBe(false));
+  it("takes either spelling of the particle を on its own", () => {
+    expect(isCorrect("wo", "o")).toBe(true);
+    expect(isCorrect("を", "o")).toBe(true);
+    expect(isCorrect("Hon wo yomu.", "Hon o yomu.")).toBe(true);
+  });
+  it("doesn't read English o'clock as Japanese", () =>
+    expect(isCorrect("9 o'clock", "9 o'clock.")).toBe(true));
 });
 
 describe("reference notes and alternatives (R13)", () => {

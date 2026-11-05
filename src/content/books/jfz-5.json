@@ -71,7 +71,7 @@
               "examples": [
                 {
                   "japanese": "お風呂をいれたよ。",
-                  "romaji": "Ofuro wo iretayo. (lit. \"I put in the bath\")",
+                  "romaji": "Ofuro o iretayo. (lit. \"I put in the bath\")",
                   "english": "I drew a bath."
                 },
                 {
@@ -100,7 +100,7 @@
             {
               "id": "jfz5-b-act-1",
               "kind": "translate",
-              "prompt": "Translate naturally (not word-for-word): 'Ofuro wo iretayo.'",
+              "prompt": "Translate naturally (not word-for-word): 'Ofuro o iretayo.'",
               "answer": "I drew a bath. / I ran a bath."
             },
             {
@@ -1351,7 +1351,7 @@
                 {
                   "kana": "ふりをする",
                   "kanji": null,
-                  "romaji": "furi wo suru",
+                  "romaji": "furi o suru",
                   "english": "to act as; to pretend like"
                 },
                 {
@@ -1381,7 +1381,7 @@
                 {
                   "kana": "あせをかく",
                   "kanji": "汗をかく",
-                  "romaji": "ase wo kaku",
+                  "romaji": "ase o kaku",
                   "english": "to sweat"
                 },
                 {
@@ -1467,7 +1467,7 @@
                 },
                 {
                   "japanese": "何とか時間をつくります。",
-                  "romaji": "Nantoka jikan wo tsukurimasu.",
+                  "romaji": "Nantoka jikan o tsukurimasu.",
                   "english": "I'll manage to make time somehow."
                 }
               ]
@@ -1518,7 +1518,7 @@
                 },
                 {
                   "japanese": "新しいアプリをつかってみた。",
-                  "romaji": "Atarashii apuri wo tsukatte mita.",
+                  "romaji": "Atarashii apuri o tsukatte mita.",
                   "english": "I tried using a new app."
                 }
               ]
@@ -1535,7 +1535,7 @@
                 },
                 {
                   "japanese": "週末は本をよんだり、テレビをみたりします。",
-                  "romaji": "Shuumatsu wa hon wo yondari, terebi wo mitari shimasu.",
+                  "romaji": "Shuumatsu wa hon o yondari, terebi o mitari shimasu.",
                   "english": "On weekends I do things like read books and watch TV."
                 }
               ]
@@ -2407,7 +2407,7 @@
               "examples": [
                 {
                   "japanese": "風邪をひいたんです。",
-                  "romaji": "Kaze wo hiita ndesu.",
+                  "romaji": "Kaze o hiita ndesu.",
                   "english": "(That's why) I caught a cold."
                 },
                 {
@@ -2441,7 +2441,7 @@
               "examples": [
                 {
                   "japanese": "寒いから、窓をしめた。",
-                  "romaji": "Samui kara, mado wo shimeta.",
+                  "romaji": "Samui kara, mado o shimeta.",
                   "english": "Because it's cold, I closed the window."
                 },
                 {
@@ -2458,12 +2458,12 @@
               "examples": [
                 {
                   "japanese": "音楽をききながら勉強します。",
-                  "romaji": "Ongaku wo kikinagara benkyou shimasu.",
+                  "romaji": "Ongaku o kikinagara benkyou shimasu.",
                   "english": "I study while listening to music."
                 },
                 {
                   "japanese": "テレビをみながらご飯をたべた。",
-                  "romaji": "Terebi wo minagara gohan wo tabeta.",
+                  "romaji": "Terebi o minagara gohan o tabeta.",
                   "english": "I ate dinner while watching TV."
                 }
               ]
@@ -2495,7 +2495,7 @@
             {
               "id": "jfz5-l2-act-2",
               "kind": "translate",
-              "prompt": "Translate: 'Ongaku wo kikinagara ryouri shimasu.'",
+              "prompt": "Translate: 'Ongaku o kikinagara ryouri shimasu.'",
               "answer": "I cook while listening to music."
             },
             {
@@ -2901,7 +2901,7 @@
             {
               "id": "jfz5-wb2-2",
               "kind": "translate",
-              "prompt": "Translate: 'Terebi wo minagara gohan wo tabemasu.'",
+              "prompt": "Translate: 'Terebi o minagara gohan o tabemasu.'",
               "answer": "I eat dinner while watching TV."
             },
             {
@@ -3285,12 +3285,12 @@
               "examples": [
                 {
                   "japanese": "電気をつけっぱなしにした。",
-                  "romaji": "Denki wo tsukeppanashi ni shita.",
+                  "romaji": "Denki o tsukeppanashi ni shita.",
                   "english": "I left the light on."
                 },
                 {
                   "japanese": "ドアをあけっぱなしにしないでください。",
-                  "romaji": "Doa wo akeppanashi ni shinaide kudasai.",
+                  "romaji": "Doa o akeppanashi ni shinaide kudasai.",
                   "english": "Please don't leave the door open."
                 }
               ]
@@ -3336,7 +3336,7 @@
               "examples": [
                 {
                   "japanese": "妹は新しい靴をほしがっている。",
-                  "romaji": "Imouto wa atarashii kutsu wo hoshigatte iru.",
+                  "romaji": "Imouto wa atarashii kutsu o hoshigatte iru.",
                   "english": "My little sister wants new shoes."
                 },
                 {
@@ -3358,7 +3358,7 @@
                 },
                 {
                   "japanese": "息子は犬をかいたがっている。",
-                  "romaji": "Musuko wa inu wo kaitagatte iru.",
+                  "romaji": "Musuko wa inu o kaitagatte iru.",
                   "english": "My son seems to want to get a dog."
                 }
               ]
@@ -4122,7 +4122,7 @@
                 },
                 {
                   "japanese": "子供のあそびをみているのが好きです。",
-                  "romaji": "Kodomo no asobi wo mite iru no ga suki desu.",
+                  "romaji": "Kodomo no asobi o mite iru no ga suki desu.",
                   "english": "I like watching children's play."
                 }
               ]
@@ -4757,7 +4757,7 @@
                 {
                   "kana": "あくびをする",
                   "kanji": null,
-                  "romaji": "akubi wo suru",
+                  "romaji": "akubi o suru",
                   "english": "to yawn"
                 }
               ]
@@ -4807,7 +4807,7 @@
                 },
                 {
                   "japanese": "宿題をおわらせてしまった。",
-                  "romaji": "Shukudai wo owarasete shimatta.",
+                  "romaji": "Shukudai o owarasete shimatta.",
                   "english": "I finished the homework completely."
                 }
               ]
@@ -4819,12 +4819,12 @@
               "examples": [
                 {
                   "japanese": "財布をなくしてしまった。",
-                  "romaji": "Saifu wo nakushite shimatta.",
+                  "romaji": "Saifu o nakushite shimatta.",
                   "english": "I ended up losing my wallet."
                 },
                 {
                   "japanese": "約束をわすれてしまった。",
-                  "romaji": "Yakusoku wo wasurete shimatta.",
+                  "romaji": "Yakusoku o wasurete shimatta.",
                   "english": "I ended up forgetting the promise."
                 }
               ]
@@ -4870,12 +4870,12 @@
               "examples": [
                 {
                   "japanese": "このボタンをおすと、ドアがあきます。",
-                  "romaji": "Kono botan wo osu to, doa ga akimasu.",
+                  "romaji": "Kono botan o osu to, doa ga akimasu.",
                   "english": "If you press this button, the door opens."
                 },
                 {
                   "japanese": "この道をまっすぐいくと、駅があります。",
-                  "romaji": "Kono michi wo massugu iku to, eki ga arimasu.",
+                  "romaji": "Kono michi o massugu iku to, eki ga arimasu.",
                   "english": "If you go straight down this road, there's the station."
                 }
               ]
@@ -5268,7 +5268,7 @@
             {
               "id": "jfz5-wb5-2",
               "kind": "translate",
-              "prompt": "Translate: 'Yakusoku no jikan wo wasurechatta.'",
+              "prompt": "Translate: 'Yakusoku no jikan o wasurechatta.'",
               "answer": "I totally forgot the time of the appointment."
             },
             {
@@ -5493,7 +5493,7 @@
                 {
                   "kana": "おとをたてる",
                   "kanji": "音を立てる",
-                  "romaji": "oto wo tateru",
+                  "romaji": "oto o tateru",
                   "english": "to make a sound"
                 },
                 {
@@ -5552,12 +5552,12 @@
               "examples": [
                 {
                   "japanese": "ラーメンというものをたべたことがありますか。",
-                  "romaji": "Ramen to iu mono wo tabeta koto ga arimasu ka.",
+                  "romaji": "Ramen to iu mono o tabeta koto ga arimasu ka.",
                   "english": "Have you ever eaten something called ramen?"
                 },
                 {
                   "japanese": "かっぱといういきものをしっていますか。",
-                  "romaji": "Kappa to iu ikimono wo shitte imasu ka.",
+                  "romaji": "Kappa to iu ikimono o shitte imasu ka.",
                   "english": "Do you know a creature called a kappa?"
                 }
               ]
@@ -5586,7 +5586,7 @@
               "examples": [
                 {
                   "japanese": "本をよみおわった。",
-                  "romaji": "Hon wo yomiowatta.",
+                  "romaji": "Hon o yomiowatta.",
                   "english": "I finished reading the book."
                 },
                 {
@@ -5608,7 +5608,7 @@
                 },
                 {
                   "japanese": "電車の中で足をふまれた。",
-                  "romaji": "Densha no naka de ashi wo fumareta.",
+                  "romaji": "Densha no naka de ashi o fumareta.",
                   "english": "My foot got stepped on on the train."
                 },
                 {
@@ -5993,7 +5993,7 @@
             {
               "id": "jfz5-wb6-2",
               "kind": "translate",
-              "prompt": "Translate: 'Tomodachi ni damasarete, okane wo nakushita.'",
+              "prompt": "Translate: 'Tomodachi ni damasarete, okane o nakushita.'",
               "answer": "I was deceived by my friend and lost money."
             },
             {
@@ -6304,7 +6304,7 @@
                 },
                 {
                   "japanese": "ごみをへらさないといけません。",
-                  "romaji": "Gomi wo herasanai to ikemasen.",
+                  "romaji": "Gomi o herasanai to ikemasen.",
                   "english": "We have to reduce trash."
                 }
               ]
@@ -6994,7 +6994,7 @@
               "examples": [
                 {
                   "japanese": "ドアをあけようとしたが、あかなかった。",
-                  "romaji": "Doa wo akeyou to shita ga, akanakatta.",
+                  "romaji": "Doa o akeyou to shita ga, akanakatta.",
                   "english": "I tried to open the door, but it wouldn't open."
                 },
                 {
@@ -7011,12 +7011,12 @@
               "examples": [
                 {
                   "japanese": "家をでたとたんに、雨がふりだした。",
-                  "romaji": "Ie wo deta totan ni, ame ga furidashita.",
+                  "romaji": "Ie o deta totan ni, ame ga furidashita.",
                   "english": "The moment I left the house, it started raining."
                 },
                 {
                   "japanese": "彼の顔をみたとたんに、誰かわかった。",
-                  "romaji": "Kare no kao wo mita totan ni, dare ka wakatta.",
+                  "romaji": "Kare no kao o mita totan ni, dare ka wakatta.",
                   "english": "The moment I saw his face, I knew who he was."
                 }
               ]
@@ -7060,7 +7060,7 @@
             {
               "id": "jfz5-l8-act-2",
               "kind": "translate",
-              "prompt": "Translate: 'Ie wo deta totan ni, denwa ga natta.'",
+              "prompt": "Translate: 'Ie o deta totan ni, denwa ga natta.'",
               "answer": "The moment I left the house, the phone rang."
             },
             {
@@ -7681,7 +7681,7 @@
                 {
                   "kana": "うそをつく",
                   "kanji": "嘘をつく",
-                  "romaji": "uso wo tsuku",
+                  "romaji": "uso o tsuku",
                   "english": "to tell a lie"
                 }
               ]
@@ -7737,7 +7737,7 @@
                 },
                 {
                   "japanese": "この犯人、うそをつきそうですね。",
-                  "romaji": "Kono hannin, uso wo tsukisou desu ne.",
+                  "romaji": "Kono hannin, uso o tsukisou desu ne.",
                   "english": "This suspect looks like they're about to lie, doesn't it."
                 }
               ]
@@ -7749,7 +7749,7 @@
               "examples": [
                 {
                   "japanese": "つかれそうな顔をしているね。",
-                  "romaji": "Tsukaresou na kao wo shite iru ne.",
+                  "romaji": "Tsukaresou na kao o shite iru ne.",
                   "english": "You look tired."
                 }
               ]
@@ -8397,7 +8397,7 @@
               "examples": [
                 {
                   "japanese": "家でゲームをしてばかりいる。",
-                  "romaji": "Ie de geemu wo shite bakari iru.",
+                  "romaji": "Ie de geemu o shite bakari iru.",
                   "english": "All he does is play video games at home."
                 }
               ]
@@ -8426,7 +8426,7 @@
               "examples": [
                 {
                   "japanese": "明日、会社をやすむかもしれない。",
-                  "romaji": "Ashita, kaisha wo yasumu kamoshirenai.",
+                  "romaji": "Ashita, kaisha o yasumu kamoshirenai.",
                   "english": "I might take tomorrow off work."
                 },
                 {
@@ -9043,7 +9043,7 @@
                 {
                   "kana": "もんくをいう",
                   "kanji": "文句を言う",
-                  "romaji": "monku wo iu",
+                  "romaji": "monku o iu",
                   "english": "to complain"
                 },
                 {
@@ -9805,7 +9805,7 @@
               "examples": [
                 {
                   "japanese": "子供に部屋をかたづけさせた。",
-                  "romaji": "Kodomo ni heya wo katazukesaseta.",
+                  "romaji": "Kodomo ni heya o katazukesaseta.",
                   "english": "I made my child tidy their room."
                 }
               ]
@@ -9817,12 +9817,12 @@
               "examples": [
                 {
                   "japanese": "子供をはしらせた。",
-                  "romaji": "Kodomo wo hashiraseta.",
+                  "romaji": "Kodomo o hashiraseta.",
                   "english": "I made the child run. (intransitive: 走る)"
                 },
                 {
                   "japanese": "子供に本をよませた。",
-                  "romaji": "Kodomo ni hon wo yomaseta.",
+                  "romaji": "Kodomo ni hon o yomaseta.",
                   "english": "I had the child read the book. (transitive: 読む)"
                 }
               ]
@@ -9834,12 +9834,12 @@
               "examples": [
                 {
                   "japanese": "りょうりをつくらされた。",
-                  "romaji": "Ryouri wo tsukurasareta.",
+                  "romaji": "Ryouri o tsukurasareta.",
                   "english": "I was made to cook (against my will)."
                 },
                 {
                   "japanese": "靴をぬがされた。",
-                  "romaji": "Kutsu wo nugasareta.",
+                  "romaji": "Kutsu o nugasareta.",
                   "english": "I was made to take off my shoes."
                 }
               ]
@@ -10249,7 +10249,7 @@
             {
               "id": "jfz5-wb12-2",
               "kind": "translate",
-              "prompt": "Translate: 'Sensei ni sakubun wo kakaseta.'",
+              "prompt": "Translate: 'Sensei ni sakubun o kakaseta.'",
               "answer": "The teacher had the students write an essay."
             },
             {
@@ -10581,7 +10581,7 @@
               "examples": [
                 {
                   "japanese": "このはさみは紙を切るのにつかいます。",
-                  "romaji": "Kono hasami wa kami wo kiru no ni tsukaimasu.",
+                  "romaji": "Kono hasami wa kami o kiru no ni tsukaimasu.",
                   "english": "These scissors are used for cutting paper."
                 }
               ]
@@ -10593,7 +10593,7 @@
               "examples": [
                 {
                   "japanese": "このアプリは日本語を勉強するのに便利です。",
-                  "romaji": "Kono apuri wa Nihongo wo benkyou suru no ni benri desu.",
+                  "romaji": "Kono apuri wa Nihongo o benkyou suru no ni benri desu.",
                   "english": "This app is convenient for studying Japanese."
                 }
               ]
@@ -10649,7 +10649,7 @@
                 },
                 {
                   "japanese": "はずかしくても、お礼を言うべきです。",
-                  "romaji": "Hazukashikute mo, orei wo iu beki desu.",
+                  "romaji": "Hazukashikute mo, orei o iu beki desu.",
                   "english": "Even if it's embarrassing, you should say thank you."
                 }
               ]

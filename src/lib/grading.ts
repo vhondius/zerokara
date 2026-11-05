@@ -307,7 +307,7 @@ function englishNorm(s: string): string {
 
 const KANA_OR_KANJI = /[぀-ヿ㐀-鿿]/;
 const ROMAJI_MARKERS =
-  /\b(desu|deshita|masu|mashita|masen|mashou|kudasai|imasu|arimasu|wa|ga|wo|ni|de|ka|ne|yo|da|datta|janai|ja|nai)\b/;
+  /\b(desu|deshita|masu|mashita|masen|mashou|kudasai|imasu|arimasu|wa|ga|wo|o(?!')|ni|de|ka|ne|yo|da|datta|janai|ja|nai)\b/;
 
 /** Whether a reference is Japanese (in kana/kanji or in romaji). */
 function looksJapanese(ref: string): boolean {

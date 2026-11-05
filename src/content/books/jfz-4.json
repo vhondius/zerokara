@@ -233,12 +233,12 @@
             },
             {
               "japanese": "なにをめしあがりますか。",
-              "romaji": "Nani wo meshiagarimasu ka.",
+              "romaji": "Nani o meshiagarimasu ka.",
               "english": "What will you have (to eat)?"
             },
             {
               "japanese": "このしゃしんをごらんになりましたか。",
-              "romaji": "Kono shashin wo goran ni narimashita ka.",
+              "romaji": "Kono shashin o goran ni narimashita ka.",
               "english": "Did you see this photo?"
             },
             {
@@ -248,7 +248,7 @@
             },
             {
               "japanese": "しゅくだいをもうなさいましたか。",
-              "romaji": "Shukudai wo mou nasaimashita ka.",
+              "romaji": "Shukudai o mou nasaimashita ka.",
               "english": "Have you already done your homework?"
             },
             {
@@ -285,7 +285,7 @@
                 },
                 {
                   "japanese": "なにをめしあがりますか。— サラダをたべます。",
-                  "romaji": "Nani wo meshiagarimasu ka. — Sarada wo tabemasu.",
+                  "romaji": "Nani o meshiagarimasu ka. — Sarada o tabemasu.",
                   "english": "What will you have? — I'll have salad. (plain たべる for yourself, not the respectful 召し上がる)"
                 }
               ]
@@ -486,7 +486,7 @@
             {
               "id": "jfz4-l1-act-6",
               "kind": "translate",
-              "prompt": "Translate: 'Sensei wa nani wo meshiagarimasu ka.'",
+              "prompt": "Translate: 'Sensei wa nani o meshiagarimasu ka.'",
               "answer": "What will the teacher have (to eat)?"
             },
             {
@@ -539,7 +539,7 @@
             {
               "id": "jfz4-l1-act-14",
               "kind": "translate",
-              "prompt": "If a teacher asks you 'Nani wo meshiagarimasu ka,' should you answer using 召し上がる or たべる? Explain briefly.",
+              "prompt": "If a teacher asks you 'Nani o meshiagarimasu ka,' should you answer using 召し上がる or たべる? Explain briefly.",
               "answer": "たべる — respectful verbs are never used for your own actions."
             },
             {
@@ -560,7 +560,7 @@
                 },
                 {
                   "speaker": "B",
-                  "japanese": "Daburu chiizubaagaa wo onegaishimasu.",
+                  "japanese": "Daburu chiizubaagaa o onegaishimasu.",
                   "english": "A double cheeseburger, please."
                 },
                 {
@@ -570,7 +570,7 @@
                 },
                 {
                   "speaker": "B",
-                  "japanese": "Aisu tii wo onegaishimasu.",
+                  "japanese": "Aisu tii o onegaishimasu.",
                   "english": "Ice tea, please."
                 }
               ],
@@ -589,7 +589,7 @@
                 },
                 {
                   "speaker": "Customer",
-                  "japanese": "Hai, kuroi kaban wo sagashite imasu.",
+                  "japanese": "Hai, kuroi kaban o sagashite imasu.",
                   "english": "Yes, I'm looking for a black bag."
                 }
               ]
@@ -641,7 +641,7 @@
             },
             {
               "kind": "fill_blank",
-              "prompt": "Sensei wa nani wo ___ ka. (respectful: will have/eat)",
+              "prompt": "Sensei wa nani o ___ ka. (respectful: will have/eat)",
               "answer": "meshiagarimasu",
               "id": "jfz4-l1-act-23"
             }
@@ -653,7 +653,7 @@
             "kore / wa / ikura / deshou / ka",
             "sensei / wa / kyoushitsu / ni / irasshaimasu",
             "okyakusama / wa / dochira / kara / irasshaimashita / ka",
-            "nani / wo / meshiagarimasu / ka"
+            "nani / o / meshiagarimasu / ka"
           ]
         },
         {
@@ -1233,7 +1233,7 @@
             },
             {
               "japanese": "かさをもっていますか。",
-              "romaji": "Kasa wo motte imasu ka.",
+              "romaji": "Kasa o motte imasu ka.",
               "english": "Do you have an umbrella?"
             },
             {
@@ -1243,17 +1243,17 @@
             },
             {
               "japanese": "ゆうしょくをつくります。",
-              "romaji": "Yuushoku wo tsukurimasu.",
+              "romaji": "Yuushoku o tsukurimasu.",
               "english": "I'll make dinner."
             },
             {
               "japanese": "その人のなまえをおぼえています。",
-              "romaji": "Sono hito no namae wo oboete imasu.",
+              "romaji": "Sono hito no namae o oboete imasu.",
               "english": "I remember that person's name."
             },
             {
               "japanese": "このペンをつかってもいいですか。",
-              "romaji": "Kono pen wo tsukatte mo ii desu ka.",
+              "romaji": "Kono pen o tsukatte mo ii desu ka.",
               "english": "May I use this pen?"
             }
           ]
@@ -1268,7 +1268,7 @@
               "examples": [
                 {
                   "japanese": "いまだにかれのなまえをおぼえています。",
-                  "romaji": "Imadani kare no namae wo oboete imasu.",
+                  "romaji": "Imadani kare no namae o oboete imasu.",
                   "english": "Even now, I remember his name."
                 }
               ]
@@ -1309,7 +1309,7 @@
               "examples": [
                 {
                   "japanese": "えんぴつをごほん、もっています。",
-                  "romaji": "Enpitsu wo gohon, motte imasu.",
+                  "romaji": "Enpitsu o gohon, motte imasu.",
                   "english": "I have 5 pencils. (を on enpitsu, not on gohon)"
                 }
               ]
@@ -1321,7 +1321,7 @@
               "examples": [
                 {
                   "japanese": "車をもっていますか。— はい、にだいもっています。",
-                  "romaji": "Kuruma wo motte imasu ka. — Hai, nidai motte imasu.",
+                  "romaji": "Kuruma o motte imasu ka. — Hai, nidai motte imasu.",
                   "english": "Do you own a car? — Yes, I own two."
                 }
               ]
@@ -1387,7 +1387,7 @@
             {
               "id": "jfz4-l2-act-1",
               "kind": "translate",
-              "prompt": "Translate: 'Imadani, ano hito no namae wo oboete imasu.'",
+              "prompt": "Translate: 'Imadani, ano hito no namae o oboete imasu.'",
               "answer": "Even now, I remember that person's name."
             },
             {
@@ -1417,7 +1417,7 @@
             {
               "id": "jfz4-l2-act-4",
               "kind": "fill_blank",
-              "prompt": "Kuruma wo motte imasu ka. — Hai, ni___, motte imasu. (I own two — use the machine counter)",
+              "prompt": "Kuruma o motte imasu ka. — Hai, ni___, motte imasu. (I own two — use the machine counter)",
               "answer": "dai"
             },
             {
@@ -1442,13 +1442,13 @@
               "id": "jfz4-l2-act-6",
               "kind": "translate",
               "prompt": "How would you say 'I want to make a lot of friends'?",
-              "answer": "Tomodachi wo takusan tsukuritai desu."
+              "answer": "Tomodachi o takusan tsukuritai desu."
             },
             {
               "id": "jfz4-l2-act-7",
               "kind": "translate",
               "prompt": "How would you say 'Please remember my name'?",
-              "answer": "Watashi no namae wo oboete kudasai. (informal recall preview: oboete ite kudasai)"
+              "answer": "Watashi no namae o oboete kudasai. (informal recall preview: oboete ite kudasai)"
             },
             {
               "id": "jfz4-l2-act-8",
@@ -1457,7 +1457,7 @@
               "lines": [
                 {
                   "speaker": "A",
-                  "japanese": "Hashi wo tsukaemasu ka.",
+                  "japanese": "Hashi o tsukaemasu ka.",
                   "english": "Can you use chopsticks?"
                 },
                 {
@@ -1508,7 +1508,7 @@
               "id": "jfz4-l2-act-14",
               "kind": "matching",
               "prompt": "Match each verb to the particle that marks its object: motsu, tariru, tsukuru, tsukau",
-              "answer": "motsu=wo, tariru=ga, tsukuru=wo, tsukau=wo"
+              "answer": "motsu=o, tariru=ga, tsukuru=o, tsukau=o"
             },
             {
               "id": "jfz4-l2-act-15",
@@ -1536,7 +1536,7 @@
               "lines": [
                 {
                   "speaker": "A",
-                  "japanese": "Sumaatofon wo nandai motte imasu ka.",
+                  "japanese": "Sumaatofon o nandai motte imasu ka.",
                   "english": "How many smartphones do you have?"
                 },
                 {
@@ -1611,7 +1611,7 @@
             },
             {
               "kind": "fill_blank",
-              "prompt": "Kuruma wo ni___, motte imasu. (machine counter)",
+              "prompt": "Kuruma o ni___, motte imasu. (machine counter)",
               "answer": "dai",
               "id": "jfz4-l2-act-25"
             }
@@ -1620,10 +1620,10 @@
         {
           "type": "sentence_building",
           "prompts": [
-            "kuruma / wo / nandai / motte / imasu / ka",
-            "sumaatofon / wo / nidai / motte / imasu",
+            "kuruma / o / nandai / motte / imasu / ka",
+            "sumaatofon / o / nidai / motte / imasu",
             "okane / ga / tarimasen",
-            "kono / webusaito / wo / yoku / tsukaimasu"
+            "kono / webusaito / o / yoku / tsukaimasu"
           ]
         },
         {
@@ -1800,7 +1800,7 @@
           "examples": [
             {
               "japanese": "ともだちに本をあげました。",
-              "romaji": "Tomodachi ni hon wo agemashita.",
+              "romaji": "Tomodachi ni hon o agemashita.",
               "english": "I gave my friend a book."
             },
             {
@@ -1820,17 +1820,17 @@
               "examples": [
                 {
                   "japanese": "シャツをきます。",
-                  "romaji": "Shatsu wo kimasu.",
+                  "romaji": "Shatsu o kimasu.",
                   "english": "I put on a shirt. (きる — torso)"
                 },
                 {
                   "japanese": "くつをはきます。",
-                  "romaji": "Kutsu wo hakimasu.",
+                  "romaji": "Kutsu o hakimasu.",
                   "english": "I put on shoes. (はく — feet/legs)"
                 },
                 {
                   "japanese": "ぼうしをかぶります。",
-                  "romaji": "Boushi wo kaburimasu.",
+                  "romaji": "Boushi o kaburimasu.",
                   "english": "I put on a hat. (かぶる — head)"
                 }
               ]
@@ -1842,12 +1842,12 @@
               "examples": [
                 {
                   "japanese": "さむいから、ジャケットをきます。",
-                  "romaji": "Samui kara, jaketto wo kimasu.",
+                  "romaji": "Samui kara, jaketto o kimasu.",
                   "english": "I will wear a jacket because it is cold."
                 },
                 {
                   "japanese": "ドレスをぜんぜんきません。",
-                  "romaji": "Doresu wo zenzen kimasen.",
+                  "romaji": "Doresu o zenzen kimasen.",
                   "english": "I don't wear dresses at all."
                 }
               ]
@@ -1859,12 +1859,12 @@
               "examples": [
                 {
                   "japanese": "あたらしいくつをはいていますね。",
-                  "romaji": "Atarashii kutsu wo haite imasu ne.",
+                  "romaji": "Atarashii kutsu o haite imasu ne.",
                   "english": "You are wearing new shoes, aren't you?"
                 },
                 {
                   "japanese": "きのう、くろいスカートをはきました。",
-                  "romaji": "Kinou, kuroi sukaato wo hakimashita.",
+                  "romaji": "Kinou, kuroi sukaato o hakimashita.",
                   "english": "I wore a black skirt yesterday."
                 }
               ]
@@ -1876,7 +1876,7 @@
               "examples": [
                 {
                   "japanese": "外はあついから、ぼうしをかぶります。",
-                  "romaji": "Soto wa atsui kara, boushi wo kaburimasu.",
+                  "romaji": "Soto wa atsui kara, boushi o kaburimasu.",
                   "english": "It is hot outside, so I will wear a hat."
                 }
               ]
@@ -2215,13 +2215,13 @@
             {
               "id": "jfz4-l3-act-1",
               "kind": "translate",
-              "prompt": "Translate: 'Kinou katta fuku wo kite imasu.'",
+              "prompt": "Translate: 'Kinou katta fuku o kite imasu.'",
               "answer": "I am wearing the clothes I bought yesterday."
             },
             {
               "id": "jfz4-l3-act-2",
               "kind": "translate",
-              "prompt": "Translate: 'Ototo ni furui kutsu wo agemashita.'",
+              "prompt": "Translate: 'Ototo ni furui kutsu o agemashita.'",
               "answer": "I gave my little brother old shoes."
             },
             {
@@ -2233,19 +2233,19 @@
             {
               "id": "jfz4-l3-act-4",
               "kind": "fill_blank",
-              "prompt": "Samui kara, jaketto wo ___. (I will wear a jacket)",
+              "prompt": "Samui kara, jaketto o ___. (I will wear a jacket)",
               "answer": "kimasu"
             },
             {
               "id": "jfz4-l3-act-5",
               "kind": "fill_blank",
-              "prompt": "Atarashii kutsu wo ___ imasu. (wearing shoes — correct verb for below the waist)",
+              "prompt": "Atarashii kutsu o ___ imasu. (wearing shoes — correct verb for below the waist)",
               "answer": "haite"
             },
             {
               "id": "jfz4-l3-act-6",
               "kind": "fill_blank",
-              "prompt": "Atsui kara, boushi wo ___. (I will wear a hat)",
+              "prompt": "Atsui kara, boushi o ___. (I will wear a hat)",
               "answer": "kaburimasu"
             },
             {
@@ -2408,7 +2408,7 @@
             },
             {
               "kind": "fill_blank",
-              "prompt": "Boushi wo ___. (put on, かぶる)",
+              "prompt": "Boushi o ___. (put on, かぶる)",
               "answer": "kaburimasu",
               "id": "jfz4-l3-act-25"
             },
@@ -2437,8 +2437,8 @@
           "prompts": [
             "watashi / ga / katta / kaban / wa / kore / desu",
             "aruite / iru / hito / wa / tomodachi / desu",
-            "boushi / wo / kabutte / iru / hito / wa / dare / desu / ka",
-            "kutsu / wo / haite / kudasai"
+            "boushi / o / kabutte / iru / hito / wa / dare / desu / ka",
+            "kutsu / o / haite / kudasai"
           ]
         },
         {
@@ -2685,17 +2685,17 @@
           "examples": [
             {
               "japanese": "家をでました。",
-              "romaji": "Ie wo demashita.",
+              "romaji": "Ie o demashita.",
               "english": "I left the house."
             },
             {
               "japanese": "その人をしっています。",
-              "romaji": "Sono hito wo shitte imasu.",
+              "romaji": "Sono hito o shitte imasu.",
               "english": "I know that person."
             },
             {
               "japanese": "車をうんてんします。",
-              "romaji": "Kuruma wo untenshimasu.",
+              "romaji": "Kuruma o untenshimasu.",
               "english": "I drive a car."
             },
             {
@@ -2761,7 +2761,7 @@
               "examples": [
                 {
                   "japanese": "みそしるをのんだことがありますか。",
-                  "romaji": "Misoshiru wo nonda koto ga arimasu ka.",
+                  "romaji": "Misoshiru o nonda koto ga arimasu ka.",
                   "english": "Have you ever drunk miso soup?"
                 },
                 {
@@ -2778,7 +2778,7 @@
               "examples": [
                 {
                   "japanese": "日本のえいがをみたことがありません。",
-                  "romaji": "Nihon no eiga wo mita koto ga arimasen.",
+                  "romaji": "Nihon no eiga o mita koto ga arimasen.",
                   "english": "I have never seen a Japanese movie."
                 },
                 {
@@ -2795,7 +2795,7 @@
               "examples": [
                 {
                   "japanese": "なんでそれほどパンをかいましたか。",
-                  "romaji": "Nande sorehodo pan wo kaimashita ka.",
+                  "romaji": "Nande sorehodo pan o kaimashita ka.",
                   "english": "Why did you buy so much bread?"
                 }
               ]
@@ -2807,12 +2807,12 @@
               "examples": [
                 {
                   "japanese": "休みをたのしみにしています。",
-                  "romaji": "Yasumi wo tanoshimi ni shite imasu.",
+                  "romaji": "Yasumi o tanoshimi ni shite imasu.",
                   "english": "I am looking forward to a vacation."
                 },
                 {
                   "japanese": "日本にいくことをたのしみにしています。",
-                  "romaji": "Nihon ni iku koto wo tanoshimi ni shite imasu.",
+                  "romaji": "Nihon ni iku koto o tanoshimi ni shite imasu.",
                   "english": "I am looking forward to going to Japan."
                 },
                 {
@@ -3075,7 +3075,7 @@
             {
               "id": "jfz4-l4-act-1",
               "kind": "translate",
-              "prompt": "Translate: 'Hebi wo tabeta koto ga arimasu ka.'",
+              "prompt": "Translate: 'Hebi o tabeta koto ga arimasu ka.'",
               "answer": "Have you ever eaten a snake?"
             },
             {
@@ -3093,7 +3093,7 @@
             {
               "id": "jfz4-l4-act-4",
               "kind": "fill_blank",
-              "prompt": "Sashimi wo tabeta ___ ga arimasu ka. (Have you ever eaten sashimi?)",
+              "prompt": "Sashimi o tabeta ___ ga arimasu ka. (Have you ever eaten sashimi?)",
               "answer": "koto"
             },
             {
@@ -3106,7 +3106,7 @@
               "id": "jfz4-l4-act-6",
               "kind": "translate",
               "prompt": "How would you say 'I have never seen a Japanese movie'?",
-              "answer": "Nihon no eiga wo mita koto ga arimasen."
+              "answer": "Nihon no eiga o mita koto ga arimasen."
             },
             {
               "id": "jfz4-l4-act-7",
@@ -3115,7 +3115,7 @@
               "lines": [
                 {
                   "speaker": "A",
-                  "japanese": "Nakamura san no denwabangou wo shitte imasu ka.",
+                  "japanese": "Nakamura san no denwabangou o shitte imasu ka.",
                   "english": "Do you know Nakamura's phone number?"
                 },
                 {
@@ -3140,7 +3140,7 @@
             {
               "id": "jfz4-l4-act-9",
               "kind": "translate",
-              "prompt": "Translate: 'Kuruma wo unten dekimasu ka.'",
+              "prompt": "Translate: 'Kuruma o unten dekimasu ka.'",
               "answer": "Can you drive a car?"
             },
             {
@@ -3164,26 +3164,26 @@
             {
               "id": "jfz4-l4-act-13",
               "kind": "translate",
-              "prompt": "Translate: 'Yasumi wo tanoshimi ni shite imasu.'",
+              "prompt": "Translate: 'Yasumi o tanoshimi ni shite imasu.'",
               "answer": "I am looking forward to my day off."
             },
             {
               "id": "jfz4-l4-act-14",
               "kind": "translate",
               "prompt": "How would you say 'I am looking forward to meeting my friends' using the こと-nominalized verb pattern?",
-              "answer": "Tomodachi ni au koto wo tanoshimi ni shite imasu."
+              "answer": "Tomodachi ni au koto o tanoshimi ni shite imasu."
             },
             {
               "id": "jfz4-l4-act-15",
               "kind": "translate",
               "prompt": "How would you say 'Why did you use so much shampoo?' using これほど／それほど group?",
-              "answer": "Nande sorehodo shanpuu wo tsukaimashita ka."
+              "answer": "Nande sorehodo shanpuu o tsukaimashita ka."
             },
             {
               "id": "jfz4-l4-act-16",
               "kind": "matching",
               "prompt": "Match each verb to its object-marking particle: deru, shiru, unten suru, noru",
-              "answer": "deru=ga (or kara/wo for place left), shiru=wo, unten suru=wo, noru=ni"
+              "answer": "deru=ga (or kara/o for place left), shiru=o, unten suru=o, noru=ni"
             },
             {
               "id": "jfz4-l4-act-17",
@@ -3301,13 +3301,13 @@
             },
             {
               "kind": "fill_blank",
-              "prompt": "Sushi wo tabeta koto ga ___. (never)",
+              "prompt": "Sushi o tabeta koto ga ___. (never)",
               "answer": "arimasen",
               "id": "jfz4-l4-act-27"
             },
             {
               "kind": "translate",
-              "prompt": "Translate: 'Fujisan wo mita koto ga arimasu ka.'",
+              "prompt": "Translate: 'Fujisan o mita koto ga arimasu ka.'",
               "answer": "Have you ever seen Mt. Fuji?",
               "id": "jfz4-l4-act-28"
             }
@@ -3318,8 +3318,8 @@
           "prompts": [
             "nihon / ni / itta / koto / ga / arimasu / ka",
             "kyouto / ni / itta / koto / ga / arimasu",
-            "sushi / wo / tabeta / koto / ga / arimasen",
-            "fujisan / wo / mita / koto / ga / arimasu / ka"
+            "sushi / o / tabeta / koto / ga / arimasen",
+            "fujisan / o / mita / koto / ga / arimasu / ka"
           ]
         },
         {
@@ -3532,7 +3532,7 @@
               "examples": [
                 {
                   "japanese": "かいだんをあがりましょう。",
-                  "romaji": "Kaidan wo agarimashou.",
+                  "romaji": "Kaidan o agarimashou.",
                   "english": "Let's go up the stairs."
                 },
                 {
@@ -3583,7 +3583,7 @@
               "examples": [
                 {
                   "japanese": "それをどうやってたべますか。— フォークでたべます。",
-                  "romaji": "Sore wo dou yatte tabemasu ka. — Fooku de tabemasu.",
+                  "romaji": "Sore o dou yatte tabemasu ka. — Fooku de tabemasu.",
                   "english": "How do you eat that? — You eat it with a fork."
                 }
               ]
@@ -3600,7 +3600,7 @@
                 },
                 {
                   "japanese": "そうやってきっぷをかいます。",
-                  "romaji": "Souyatte kippu wo kaimasu.",
+                  "romaji": "Souyatte kippu o kaimasu.",
                   "english": "You buy tickets like that."
                 }
               ]
@@ -3875,13 +3875,13 @@
             {
               "id": "jfz4-l5-act-2",
               "kind": "translate",
-              "prompt": "Translate: 'Tsugi no kado wo magarimasu.'",
+              "prompt": "Translate: 'Tsugi no kado o magarimasu.'",
               "answer": "I will turn at the next corner."
             },
             {
               "id": "jfz4-l5-act-3",
               "kind": "translate",
-              "prompt": "Translate: 'Kaidan wo agatte kara, hidari ni magatte kudasai.'",
+              "prompt": "Translate: 'Kaidan o agatte kara, hidari ni magatte kudasai.'",
               "answer": "After going up the stairs, please turn left."
             },
             {
@@ -3900,12 +3900,12 @@
               "id": "jfz4-l5-act-6",
               "kind": "translate",
               "prompt": "How would you ask 'How do you write your name?'",
-              "answer": "Onamae wo dou yatte kakimasu ka."
+              "answer": "Onamae o dou yatte kakimasu ka."
             },
             {
               "id": "jfz4-l5-act-7",
               "kind": "translate",
-              "prompt": "Translate: 'Kouyatte kanji wo kakimasu.'",
+              "prompt": "Translate: 'Kouyatte kanji o kakimasu.'",
               "answer": "You write the kanji like this. (demonstrating)"
             },
             {
@@ -3946,14 +3946,14 @@
             {
               "id": "jfz4-l5-act-13",
               "kind": "translate",
-              "prompt": "Translate: 'Koosokudouro wo kita ni itte kara, kuukou no deguchi de orite kudasai.'",
+              "prompt": "Translate: 'Koosokudouro o kita ni itte kara, kuukou no deguchi de orite kudasai.'",
               "answer": "Go north on the freeway, then please get off at the airport exit."
             },
             {
               "id": "jfz4-l5-act-14",
               "kind": "matching",
               "prompt": "Match each phrase to its particle: kado ___ magaru (turn the corner), nikai ___ agaru (go up to the 2nd floor), densha ___ oriru (get off the train)",
-              "answer": "kado ___ magaru=wo, nikai ___ agaru=ni, densha ___ oriru=kara"
+              "answer": "kado ___ magaru=o, nikai ___ agaru=ni, densha ___ oriru=kara"
             },
             {
               "id": "jfz4-l5-act-15",
@@ -4001,7 +4001,7 @@
                 },
                 {
                   "speaker": "A",
-                  "japanese": "Koosokudouro wo kita ni itte, sorekara kuukou no deguchi de orimasu.",
+                  "japanese": "Koosokudouro o kita ni itte, sorekara kuukou no deguchi de orimasu.",
                   "english": "I'll go north on the highway, then get off at the airport exit."
                 }
               ]
@@ -4090,8 +4090,8 @@
           "type": "sentence_building",
           "prompts": [
             "migi / ni / magatte / kara / massugu / itte / kudasai",
-            "kono / michi / wo / massugu / itte / kudasai",
-            "kado / wo / hidari / ni / magatte / kudasai",
+            "kono / michi / o / massugu / itte / kudasai",
+            "kado / o / hidari / ni / magatte / kudasai",
             "sangai / made / erebeetaa / de / ikimasu"
           ]
         },
@@ -4160,7 +4160,7 @@
                   "english": "that's not the case"
                 },
                 {
-                  "romaji": "ki wo tsukete",
+                  "romaji": "ki o tsukete",
                   "kana": "きをつけて",
                   "kanji": "気をつけて",
                   "english": "be careful (please)"
@@ -4189,7 +4189,7 @@
               "examples": [
                 {
                   "japanese": "これをたべてもいいですか。",
-                  "romaji": "Kore wo tabete mo iidesu ka.",
+                  "romaji": "Kore o tabete mo iidesu ka.",
                   "english": "Is it all right if I eat this?"
                 },
                 {
@@ -4218,7 +4218,7 @@
               "examples": [
                 {
                   "japanese": "これをのんではだめです。",
-                  "romaji": "Kore wo nonde wa dame desu.",
+                  "romaji": "Kore o nonde wa dame desu.",
                   "english": "No, it's not all right if you drink it."
                 },
                 {
@@ -4503,7 +4503,7 @@
             {
               "id": "jfz4-l6-act-1",
               "kind": "translate",
-              "prompt": "Translate: 'Kono keeki wo tabete mo iidesu ka.'",
+              "prompt": "Translate: 'Kono keeki o tabete mo iidesu ka.'",
               "answer": "Is it all right if I eat this cake?"
             },
             {
@@ -4513,7 +4513,7 @@
               "lines": [
                 {
                   "speaker": "A",
-                  "japanese": "Mado wo akete mo iidesu ka.",
+                  "japanese": "Mado o akete mo iidesu ka.",
                   "english": "Is it all right if I open the window?"
                 },
                 {
@@ -4533,13 +4533,13 @@
             {
               "id": "jfz4-l6-act-4",
               "kind": "fill_blank",
-              "prompt": "Kono jusu wo nonde ___ iidesu ka. (Is it okay if I drink this juice?)",
+              "prompt": "Kono jusu o nonde ___ iidesu ka. (Is it okay if I drink this juice?)",
               "answer": "mo"
             },
             {
               "id": "jfz4-l6-act-5",
               "kind": "translate",
-              "prompt": "Translate: 'Kono mizu wo nonde wa dame desu.'",
+              "prompt": "Translate: 'Kono mizu o nonde wa dame desu.'",
               "answer": "It's not all right if you drink this water."
             },
             {
@@ -4722,7 +4722,7 @@
             },
             {
               "kind": "fill_blank",
-              "prompt": "Tabako wo sutte wa ___. (not allowed)",
+              "prompt": "Tabako o sutte wa ___. (not allowed)",
               "answer": "ikemasen",
               "id": "jfz4-l6-act-23"
             },
@@ -4734,7 +4734,7 @@
             },
             {
               "kind": "translate",
-              "prompt": "Translate: 'Koko de shashin wo totte mo iidesu ka.'",
+              "prompt": "Translate: 'Koko de shashin o totte mo iidesu ka.'",
               "answer": "Is it okay if I take a photo here?",
               "id": "jfz4-l6-act-25"
             }
@@ -4743,10 +4743,10 @@
         {
           "type": "sentence_building",
           "prompts": [
-            "kore / wo / tabete / mo / iidesu / ka",
-            "koko / de / shashin / wo / totte / mo / ii / desu / ka",
-            "kono / pen / wo / tsukatte / mo / ii / desu / ka",
-            "tabako / wo / sutte / wa / ikemasen"
+            "kore / o / tabete / mo / iidesu / ka",
+            "koko / de / shashin / o / totte / mo / ii / desu / ka",
+            "kono / pen / o / tsukatte / mo / ii / desu / ka",
+            "tabako / o / sutte / wa / ikemasen"
           ]
         },
         {
@@ -4956,12 +4956,12 @@
               "examples": [
                 {
                   "japanese": "きょう、しごとをやめました。",
-                  "romaji": "Kyou, shigoto wo yamemashita.",
+                  "romaji": "Kyou, shigoto o yamemashita.",
                   "english": "I quit my job today."
                 },
                 {
                   "japanese": "いそがしいので、テニスクラブをやめます。",
-                  "romaji": "Isogashii node, tenisu kurabu wo yamemasu.",
+                  "romaji": "Isogashii node, tenisu kurabu o yamemasu.",
                   "english": "I am busy, so I am going to leave the tennis club."
                 }
               ]
@@ -4973,12 +4973,12 @@
               "examples": [
                 {
                   "japanese": "たばこをやめました。",
-                  "romaji": "Tabako wo yamemashita.",
+                  "romaji": "Tabako o yamemashita.",
                   "english": "I quit smoking."
                 },
                 {
                   "japanese": "どうやってしゃっくりをやめますか。",
-                  "romaji": "Dou yatte shakkuri wo yamemasu ka.",
+                  "romaji": "Dou yatte shakkuri o yamemasu ka.",
                   "english": "How do you stop the hiccups?"
                 }
               ]
@@ -4995,7 +4995,7 @@
                 },
                 {
                   "japanese": "ドレスをきめたいです。",
-                  "romaji": "Doresu wo kimetai desu.",
+                  "romaji": "Doresu o kimetai desu.",
                   "english": "I want to choose a dress."
                 },
                 {
@@ -5051,7 +5051,7 @@
                 },
                 {
                   "japanese": "早くしにたくないので、まいにちエクササイズをしています。",
-                  "romaji": "Hayaku shinitakunai node, mainichi ekusasaizu wo shite imasu.",
+                  "romaji": "Hayaku shinitakunai node, mainichi ekusasaizu o shite imasu.",
                   "english": "Since I don't want to die early, I exercise every day."
                 }
               ]
@@ -5323,13 +5323,13 @@
             {
               "id": "jfz4-l7-act-1",
               "kind": "translate",
-              "prompt": "Translate: 'Kaisha wo yamemashita.'",
+              "prompt": "Translate: 'Kaisha o yamemashita.'",
               "answer": "I quit the company."
             },
             {
               "id": "jfz4-l7-act-2",
               "kind": "translate",
-              "prompt": "Translate: 'Osake wo yamemasu.'",
+              "prompt": "Translate: 'Osake o yamemasu.'",
               "answer": "I will quit drinking alcohol."
             },
             {
@@ -5439,7 +5439,7 @@
               "lines": [
                 {
                   "speaker": "A",
-                  "japanese": "Kaisha wo yameru to kikimashita. Hontou desu ka.",
+                  "japanese": "Kaisha o yameru to kikimashita. Hontou desu ka.",
                   "english": "I heard you're quitting the company. Is it true?"
                 },
                 {
@@ -5496,7 +5496,7 @@
             },
             {
               "kind": "fill_blank",
-              "prompt": "Kaisha wo yameru koto ni ___. (decided)",
+              "prompt": "Kaisha o yameru koto ni ___. (decided)",
               "answer": "shimashita",
               "id": "jfz4-l7-act-22"
             },
@@ -5530,9 +5530,9 @@
           "type": "sentence_building",
           "prompts": [
             "ryokou / no / hi / ga / mada / kimatte / imasen",
-            "raishuu / kaisha / wo / yameru / koto / ni / shimashita",
+            "raishuu / kaisha / o / yameru / koto / ni / shimashita",
             "ryokou / no / hi / wa / mada / kimatte / imasen",
-            "nani / wo / taberu / ka / mada / kimete / imasen"
+            "nani / o / taberu / ka / mada / kimete / imasen"
           ]
         },
         {
@@ -5710,12 +5710,12 @@
             },
             {
               "japanese": "みちをおしえてください。",
-              "romaji": "Michi wo oshiete kudasai.",
+              "romaji": "Michi o oshiete kudasai.",
               "english": "Please tell me the way."
             },
             {
               "japanese": "ごみをすてました。",
-              "romaji": "Gomi wo sutemashita.",
+              "romaji": "Gomi o sutemashita.",
               "english": "I threw away the trash."
             },
             {
@@ -6043,7 +6043,7 @@
             {
               "id": "jfz4-l8-act-2",
               "kind": "translate",
-              "prompt": "Translate: 'Kono shiai wo makemashita.'",
+              "prompt": "Translate: 'Kono shiai o makemashita.'",
               "answer": "I lost this match."
             },
             {
@@ -6085,25 +6085,25 @@
             {
               "id": "jfz4-l8-act-9",
               "kind": "translate",
-              "prompt": "Translate: 'Onamae wo oshiete kudasai.'",
+              "prompt": "Translate: 'Onamae o oshiete kudasai.'",
               "answer": "Please tell me your name."
             },
             {
               "id": "jfz4-l8-act-10",
               "kind": "translate",
-              "prompt": "Translate: 'Ani ni Nihongo wo oshiete moraimashita.' (preview もらう — identify meaning generally)",
+              "prompt": "Translate: 'Ani ni Nihongo o oshiete moraimashita.' (preview もらう — identify meaning generally)",
               "answer": "My older brother taught me Japanese. (I received the favor of being taught)"
             },
             {
               "id": "jfz4-l8-act-11",
               "kind": "translate",
-              "prompt": "Translate: 'Furui shinbun wo sutete kudasai.'",
+              "prompt": "Translate: 'Furui shinbun o sutete kudasai.'",
               "answer": "Please throw away the old newspaper."
             },
             {
               "id": "jfz4-l8-act-12",
               "kind": "translate",
-              "prompt": "Translate: 'Kono sofuto wo suteru koto ni shimashita.'",
+              "prompt": "Translate: 'Kono sofuto o suteru koto ni shimashita.'",
               "answer": "I decided to throw away this software."
             },
             {
@@ -6116,13 +6116,13 @@
               "id": "jfz4-l8-act-14",
               "kind": "translate",
               "prompt": "How would you say 'I am undecided about the job' using 迷う?",
-              "answer": "Shigoto no koto wo mayotte imasu."
+              "answer": "Shigoto no koto o mayotte imasu."
             },
             {
               "id": "jfz4-l8-act-15",
               "kind": "translate",
               "prompt": "How would you ask 'How do you use this tool?' using the かた suffix?",
-              "answer": "Kono dougu no tsukaikata wa nan desu ka. / Kono dougu wo dou tsukaimasu ka."
+              "answer": "Kono dougu no tsukaikata wa nan desu ka. / Kono dougu o dou tsukaimasu ka."
             },
             {
               "id": "jfz4-l8-act-16",
@@ -6178,12 +6178,12 @@
               "lines": [
                 {
                   "speaker": "A",
-                  "japanese": "Michi ni mayotte imasu. Eki made no ikikata wo oshiete kudasai.",
+                  "japanese": "Michi ni mayotte imasu. Eki made no ikikata o oshiete kudasai.",
                   "english": "I'm lost. Please tell me how to get to the station."
                 },
                 {
                   "speaker": "B",
-                  "japanese": "Massugu itte, tsugi no kado wo migi ni magatte kudasai.",
+                  "japanese": "Massugu itte, tsugi no kado o migi ni magatte kudasai.",
                   "english": "Go straight, then turn right at the next corner."
                 }
               ]
@@ -6235,7 +6235,7 @@
             },
             {
               "kind": "fill_blank",
-              "prompt": "Kono kanji no yomi___ wo oshiete kudasai. (how to read)",
+              "prompt": "Kono kanji no yomi___ o oshiete kudasai. (how to read)",
               "answer": "kata",
               "id": "jfz4-l8-act-27"
             },
@@ -6268,8 +6268,8 @@
         {
           "type": "sentence_building",
           "prompts": [
-            "eki / made / no / ikikata / wo / oshiete / kudasai",
-            "kono / kanji / no / yomikata / wo / oshiete / kudasai",
+            "eki / made / no / ikikata / o / oshiete / kudasai",
+            "kono / kanji / no / yomikata / o / oshiete / kudasai",
             "sono / michi / de / mayotte / imasu",
             "shiai / ni / kachimashita"
           ]
@@ -6445,7 +6445,7 @@
                   "english": "to cry"
                 },
                 {
-                  "romaji": "shawaa wo abiru",
+                  "romaji": "shawaa o abiru",
                   "kana": "シャワーをあびる",
                   "english": "to take a shower"
                 },
@@ -6512,17 +6512,17 @@
             },
             {
               "japanese": "あさ、シャワーをあびます。",
-              "romaji": "Asa, shawaa wo abimasu.",
+              "romaji": "Asa, shawaa o abimasu.",
               "english": "I take a shower in the morning."
             },
             {
               "japanese": "トイレをながしました。",
-              "romaji": "Toire wo nagashimashita.",
+              "romaji": "Toire o nagashimashita.",
               "english": "I flushed the toilet."
             },
             {
               "japanese": "かいしゃをくびになりました。",
-              "romaji": "Kaisha wo kubi ni narimashita.",
+              "romaji": "Kaisha o kubi ni narimashita.",
               "english": "I was fired from the company."
             }
           ]
@@ -6537,7 +6537,7 @@
               "examples": [
                 {
                   "japanese": "えいがをみにいきます。",
-                  "romaji": "Eiga wo mi ni ikimasu.",
+                  "romaji": "Eiga o mi ni ikimasu.",
                   "english": "I will go to see a movie."
                 },
                 {
@@ -6554,12 +6554,12 @@
               "examples": [
                 {
                   "japanese": "あした、ともだちの家にしょくじをしにいきます。",
-                  "romaji": "Ashita, tomodachi no ie ni shokuji wo shi ni ikimasu.",
+                  "romaji": "Ashita, tomodachi no ie ni shokuji o shi ni ikimasu.",
                   "english": "Tomorrow, I will go to my friend's house to eat."
                 },
                 {
                   "japanese": "きのう、としょかんにべんきょうをしにいきました。",
-                  "romaji": "Kinou, toshokan ni benkyou wo shi ni ikimashita.",
+                  "romaji": "Kinou, toshokan ni benkyou o shi ni ikimashita.",
                   "english": "Yesterday I went to the library to study."
                 }
               ]
@@ -6571,17 +6571,17 @@
               "examples": [
                 {
                   "japanese": "本をよんだり",
-                  "romaji": "hon wo yondari",
+                  "romaji": "hon o yondari",
                   "english": "things like reading books"
                 },
                 {
                   "japanese": "えいがをみたり",
-                  "romaji": "eiga wo mitari",
+                  "romaji": "eiga o mitari",
                   "english": "things like watching movies"
                 },
                 {
                   "japanese": "べんきょうをしなかったり",
-                  "romaji": "benkyou wo shinakattari",
+                  "romaji": "benkyou o shinakattari",
                   "english": "things like not studying"
                 }
               ]
@@ -6593,12 +6593,12 @@
               "examples": [
                 {
                   "japanese": "にちようびにテレビをみたり、かいものをしたりします。",
-                  "romaji": "Nichiyoubi ni terebi wo mitari, kaimono wo shitari shimasu.",
+                  "romaji": "Nichiyoubi ni terebi o mitari, kaimono o shitari shimasu.",
                   "english": "On Sundays I do things like watch TV and go shopping."
                 },
                 {
                   "japanese": "きのう、本をよんだり、おんがくをきいたりしました。",
-                  "romaji": "Kinou, hon wo yondari, ongaku wo kiitari shimashita.",
+                  "romaji": "Kinou, hon o yondari, ongaku o kiitari shimashita.",
                   "english": "Yesterday I did things like read books and listen to music."
                 }
               ]
@@ -6897,19 +6897,19 @@
             {
               "id": "jfz4-l9-act-5",
               "kind": "translate",
-              "prompt": "Translate: 'Ima, shawaa wo abite imasu.'",
+              "prompt": "Translate: 'Ima, shawaa o abite imasu.'",
               "answer": "I am taking a shower right now."
             },
             {
               "id": "jfz4-l9-act-6",
               "kind": "translate",
-              "prompt": "Translate: 'Toire wo nagashite kudasai.'",
+              "prompt": "Translate: 'Toire o nagashite kudasai.'",
               "answer": "Please flush the toilet."
             },
             {
               "id": "jfz4-l9-act-7",
               "kind": "translate",
-              "prompt": "Translate: 'Ureshikute, namida wo nagashimashita.'",
+              "prompt": "Translate: 'Ureshikute, namida o nagashimashita.'",
               "answer": "I shed tears because I was happy."
             },
             {
@@ -6922,7 +6922,7 @@
               "id": "jfz4-l9-act-9",
               "kind": "translate",
               "prompt": "How would you say 'I am going to the store to buy milk'?",
-              "answer": "Miruku wo kai ni mise ni ikimasu."
+              "answer": "Miruku o kai ni mise ni ikimasu."
             },
             {
               "id": "jfz4-l9-act-10",
@@ -6946,13 +6946,13 @@
               "id": "jfz4-l9-act-13",
               "kind": "translate",
               "prompt": "How would you say 'I do things like read books and watch movies' using たり?",
-              "answer": "Hon wo yondari, eiga wo mitari shimasu."
+              "answer": "Hon o yondari, eiga o mitari shimasu."
             },
             {
               "id": "jfz4-l9-act-14",
               "kind": "translate",
               "prompt": "How would you say 'Yesterday I did things like clean and do laundry'?",
-              "answer": "Kinou, souji wo shitari, sentaku wo shitari shimashita."
+              "answer": "Kinou, souji o shitari, sentaku o shitari shimashita."
             },
             {
               "id": "jfz4-l9-act-15",
@@ -6970,11 +6970,11 @@
               "id": "jfz4-l9-act-17",
               "kind": "multiple_choice",
               "prompt": "Which particle marks the item that gets flushed or washed off?",
-              "answer": "wo",
+              "answer": "o",
               "options": [
                 "ga",
                 "ni",
-                "wo",
+                "o",
                 "de"
               ]
             },
@@ -6991,12 +6991,12 @@
               "lines": [
                 {
                   "speaker": "A",
-                  "japanese": "Kinou no yoru, nani wo shitatta no?",
+                  "japanese": "Kinou no yoru, nani o shitatta no?",
                   "english": "What did you do last night?"
                 },
                 {
                   "speaker": "B",
-                  "japanese": "Terebi wo mitari, hon wo yondari shita. Sorekara, nemashita.",
+                  "japanese": "Terebi o mitari, hon o yondari shita. Sorekara, nemashita.",
                   "english": "I did things like watch TV and read books. After that, I slept."
                 }
               ],
@@ -7072,16 +7072,16 @@
             },
             {
               "kind": "fill_blank",
-              "prompt": "Hon wo yon___, eiga wo mi___ shimasu. (たり form, twice)",
+              "prompt": "Hon o yon___, eiga o mi___ shimasu. (たり form, twice)",
               "answer": "dari / tari",
               "id": "jfz4-l9-act-27"
             },
             {
               "kind": "multiple_choice",
               "prompt": "Which particle marks what gets flushed / washed off?",
-              "answer": "wo",
+              "answer": "o",
               "options": [
-                "wo",
+                "o",
                 "ga",
                 "ni",
                 "de"
@@ -7105,8 +7105,8 @@
         {
           "type": "sentence_building",
           "prompts": [
-            "nichiyoubi / ni / hon / wo / yondari / eiga / wo / mitari / shimasu",
-            "shuumatsu / wa / hon / wo / yondari / eiga / wo / mitari / shimasu",
+            "nichiyoubi / ni / hon / o / yondari / eiga / o / mitari / shimasu",
+            "shuumatsu / wa / hon / o / yondari / eiga / o / mitari / shimasu",
             "kinou / no / yoru / naitari / warattari / shimashita",
             "ashita / kuru / kana"
           ]
@@ -7208,7 +7208,7 @@
                   "english": "to take (a picture)"
                 },
                 {
-                  "romaji": "toshi wo toru",
+                  "romaji": "toshi o toru",
                   "kana": "としをとる",
                   "kanji": "年を取る",
                   "english": "to age, to get old"
@@ -7262,17 +7262,17 @@
           "examples": [
             {
               "japanese": "しゃしんをとります。",
-              "romaji": "Shashin wo torimasu.",
+              "romaji": "Shashin o torimasu.",
               "english": "I'll take a picture. (撮る — same reading as 取る)"
             },
             {
               "japanese": "ちちは年をとりました。",
-              "romaji": "Chichi wa toshi wo torimashita.",
+              "romaji": "Chichi wa toshi o torimashita.",
               "english": "My father has gotten old."
             },
             {
               "japanese": "あなたのことをしんぱいしています。",
-              "romaji": "Anata no koto wo shinpai shite imasu.",
+              "romaji": "Anata no koto o shinpai shite imasu.",
               "english": "I'm worried about you."
             },
             {
@@ -7314,7 +7314,7 @@
               "examples": [
                 {
                   "japanese": "えいがをみたくなりました。",
-                  "romaji": "Eiga wo mitaku narimashita.",
+                  "romaji": "Eiga o mitaku narimashita.",
                   "english": "Now I want to see a movie. (a change from not wanting to)"
                 },
                 {
@@ -7589,31 +7589,31 @@
             {
               "id": "jfz4-l10-act-1",
               "kind": "translate",
-              "prompt": "Translate: 'Shashin wo tottemo iidesu ka.'",
+              "prompt": "Translate: 'Shashin o tottemo iidesu ka.'",
               "answer": "Is it all right if I take a picture?"
             },
             {
               "id": "jfz4-l10-act-2",
               "kind": "translate",
-              "prompt": "Translate: 'Kono kami wo totte kudasai.'",
+              "prompt": "Translate: 'Kono kami o totte kudasai.'",
               "answer": "Please take this paper."
             },
             {
               "id": "jfz4-l10-act-3",
               "kind": "translate",
-              "prompt": "Translate: 'Sofu wa toshi wo totte imasu ga, genki desu.'",
+              "prompt": "Translate: 'Sofu wa toshi o totte imasu ga, genki desu.'",
               "answer": "My grandfather is getting on in years, but he's healthy."
             },
             {
               "id": "jfz4-l10-act-4",
               "kind": "translate",
-              "prompt": "Translate: 'Watashi no koto wo shinpai shinaide kudasai.'",
+              "prompt": "Translate: 'Watashi no koto o shinpai shinaide kudasai.'",
               "answer": "Please don't worry about me."
             },
             {
               "id": "jfz4-l10-act-5",
               "kind": "translate",
-              "prompt": "Translate: 'Chigai wo setsumei shite kudasai.'",
+              "prompt": "Translate: 'Chigai o setsumei shite kudasai.'",
               "answer": "Please explain the difference."
             },
             {
@@ -7631,14 +7631,14 @@
             {
               "id": "jfz4-l10-act-8",
               "kind": "translate",
-              "prompt": "Translate: 'Kanji wo benkyou shite kara, kanji ga suki ni narimashita.'",
+              "prompt": "Translate: 'Kanji o benkyou shite kara, kanji ga suki ni narimashita.'",
               "answer": "After studying kanji, I came to like kanji."
             },
             {
               "id": "jfz4-l10-act-9",
               "kind": "translate",
               "prompt": "How would you say 'Now I want to eat sushi' — implying you didn't want to before?",
-              "answer": "Sushi wo tabetaku narimashita."
+              "answer": "Sushi o tabetaku narimashita."
             },
             {
               "id": "jfz4-l10-act-10",
@@ -7649,7 +7649,7 @@
             {
               "id": "jfz4-l10-act-11",
               "kind": "translate",
-              "prompt": "Translate: 'Kubi ni natte kara, hataraki wo shinaku narimashita.' (identify the nuance)",
+              "prompt": "Translate: 'Kubi ni natte kara, hataraki o shinaku narimashita.' (identify the nuance)",
               "answer": "After getting fired, I stopped working. (implies a change from before — used to work, no longer does)"
             },
             {
@@ -7700,7 +7700,7 @@
               "lines": [
                 {
                   "speaker": "A",
-                  "japanese": "Kinou, atarashii pasokon wo katta.",
+                  "japanese": "Kinou, atarashii pasokon o katta.",
                   "english": "Yesterday, I bought a new computer."
                 },
                 {
@@ -7762,7 +7762,7 @@
             },
             {
               "kind": "fill_blank",
-              "prompt": "Toshi wo totte, me ga waru___ narimashita. (adjective + くなる)",
+              "prompt": "Toshi o totte, me ga waru___ narimashita. (adjective + くなる)",
               "answer": "ku",
               "id": "jfz4-l10-act-22"
             },
@@ -7796,7 +7796,7 @@
           "type": "sentence_building",
           "prompts": [
             "tomodachi / to / hanashite / kara / ryokou / ni / ikitaku / narimashita",
-            "toshi / wo / totte / kara / me / ga / waruku / narimashita",
+            "toshi / o / totte / kara / me / ga / waruku / narimashita",
             "shinpai / shinaide / kudasai",
             "kaminoke / ga / nagaku / narimashita"
           ]
@@ -7969,17 +7969,17 @@
           "examples": [
             {
               "japanese": "ともだちにお金をかりました。",
-              "romaji": "Tomodachi ni okane wo karimashita.",
+              "romaji": "Tomodachi ni okane o karimashita.",
               "english": "I borrowed money from a friend."
             },
             {
               "japanese": "本をかします。",
-              "romaji": "Hon wo kashimasu.",
+              "romaji": "Hon o kashimasu.",
               "english": "I'll lend you the book."
             },
             {
               "japanese": "かさをかえしました。",
-              "romaji": "Kasa wo kaeshimashita.",
+              "romaji": "Kasa o kaeshimashita.",
               "english": "I returned the umbrella."
             },
             {
@@ -7989,12 +7989,12 @@
             },
             {
               "japanese": "でんきをつけました。",
-              "romaji": "Denki wo tsukemashita.",
+              "romaji": "Denki o tsukemashita.",
               "english": "I turned on the light."
             },
             {
               "japanese": "テレビをけしてください。",
-              "romaji": "Terebi wo keshite kudasai.",
+              "romaji": "Terebi o keshite kudasai.",
               "english": "Please turn off the TV."
             }
           ]
@@ -8009,7 +8009,7 @@
               "examples": [
                 {
                   "japanese": "まいにち、かんじをべんきょうするべきです。",
-                  "romaji": "Mainichi, kanji wo benkyou suru beki desu.",
+                  "romaji": "Mainichi, kanji o benkyou suru beki desu.",
                   "english": "You should study kanji every day."
                 }
               ]
@@ -8072,7 +8072,7 @@
                 },
                 {
                   "japanese": "六時までにかえったら、すきなばんぐみをみます。",
-                  "romaji": "Rokuji made ni kaettara, sukina bangumi wo mimasu.",
+                  "romaji": "Rokuji made ni kaettara, sukina bangumi o mimasu.",
                   "english": "If I get home by 6 o'clock, I will watch my favorite show."
                 }
               ]
@@ -8084,12 +8084,12 @@
               "examples": [
                 {
                   "japanese": "しゅくだいをおわったら、テレビをみます。",
-                  "romaji": "Shukudai wo owattara, terebi wo mimasu.",
+                  "romaji": "Shukudai o owattara, terebi o mimasu.",
                   "english": "When I finish my homework, I will watch TV."
                 },
                 {
                   "japanese": "そうじをしていたら、ともだちがきました。",
-                  "romaji": "Souji wo shite itara, tomodachi ga kimashita.",
+                  "romaji": "Souji o shite itara, tomodachi ga kimashita.",
                   "english": "When I was cleaning, my friend came over."
                 }
               ]
@@ -8406,37 +8406,37 @@
             {
               "id": "jfz4-l11-act-1",
               "kind": "translate",
-              "prompt": "Translate: 'Tomodachi ni kasa wo karimashita.'",
+              "prompt": "Translate: 'Tomodachi ni kasa o karimashita.'",
               "answer": "I borrowed an umbrella from my friend."
             },
             {
               "id": "jfz4-l11-act-2",
               "kind": "translate",
-              "prompt": "Translate: 'Ginkou kara okane wo karitai desu.'",
+              "prompt": "Translate: 'Ginkou kara okane o karitai desu.'",
               "answer": "I want to borrow money from the bank."
             },
             {
               "id": "jfz4-l11-act-3",
               "kind": "translate",
-              "prompt": "Translate: 'Mou okane wo kashimasen.'",
+              "prompt": "Translate: 'Mou okane o kashimasen.'",
               "answer": "I won't lend money anymore."
             },
             {
               "id": "jfz4-l11-act-4",
               "kind": "translate",
-              "prompt": "Translate: 'Karita hon wo toshokan ni kaeshimashita.'",
+              "prompt": "Translate: 'Karita hon o toshokan ni kaeshimashita.'",
               "answer": "I returned the book I borrowed to the library."
             },
             {
               "id": "jfz4-l11-act-5",
               "kind": "fill_blank",
-              "prompt": "Kurai node, denki wo ___ kudasai. (Please turn on the lights since it's dark)",
+              "prompt": "Kurai node, denki o ___ kudasai. (Please turn on the lights since it's dark)",
               "answer": "tsukete"
             },
             {
               "id": "jfz4-l11-act-6",
               "kind": "translate",
-              "prompt": "Translate: 'Kokuban wo keshite kudasai.'",
+              "prompt": "Translate: 'Kokuban o keshite kudasai.'",
               "answer": "Please erase the blackboard."
             },
             {
@@ -8514,7 +8514,7 @@
               "id": "jfz4-l11-act-18",
               "kind": "matching",
               "prompt": "Match each verb to its object-marking particle: kariru, kasu, kaesu, tsukeru",
-              "answer": "kariru=wo, kasu=wo, kaesu=wo, tsukeru=wo"
+              "answer": "kariru=o, kasu=o, kaesu=o, tsukeru=o"
             },
             {
               "id": "jfz4-l11-act-19",
@@ -8528,7 +8528,7 @@
                 },
                 {
                   "speaker": "B",
-                  "japanese": "Ame nara, uchi de shigoto wo shimasu.",
+                  "japanese": "Ame nara, uchi de shigoto o shimasu.",
                   "english": "If it rains, I'll work from home."
                 },
                 {
@@ -8547,7 +8547,7 @@
               "lines": [
                 {
                   "speaker": "A",
-                  "japanese": "Denwa wo katte kudasai. Sugu kaesu kara.",
+                  "japanese": "Denwa o katte kudasai. Sugu kaesu kara.",
                   "english": "Please lend me your phone. I'll return it right away."
                 },
                 {
@@ -8791,12 +8791,12 @@
           "examples": [
             {
               "japanese": "たすけをたのみました。",
-              "romaji": "Tasuke wo tanomimashita.",
+              "romaji": "Tasuke o tanomimashita.",
               "english": "I asked for help."
             },
             {
               "japanese": "りょこうのじゅんびをします。",
-              "romaji": "Ryokou no junbi wo shimasu.",
+              "romaji": "Ryokou no junbi o shimasu.",
               "english": "I'll prepare for the trip."
             },
             {
@@ -8811,7 +8811,7 @@
             },
             {
               "japanese": "お金をためています。",
-              "romaji": "Okane wo tamete imasu.",
+              "romaji": "Okane o tamete imasu.",
               "english": "I'm saving money."
             }
           ]
@@ -8826,7 +8826,7 @@
               "examples": [
                 {
                   "japanese": "ねむくなるまで、べんきょうをしました。",
-                  "romaji": "Nemuku naru made, benkyou wo shimashita.",
+                  "romaji": "Nemuku naru made, benkyou o shimashita.",
                   "english": "I studied until I got sleepy."
                 },
                 {
@@ -8843,7 +8843,7 @@
               "examples": [
                 {
                   "japanese": "いちじかんで、ひゃくページの本をよめます。",
-                  "romaji": "Ichijikan de, hyaku peeji no hon wo yomemasu.",
+                  "romaji": "Ichijikan de, hyaku peeji no hon o yomemasu.",
                   "english": "I can read a 100-page book in one hour."
                 },
                 {
@@ -9157,7 +9157,7 @@
             {
               "id": "jfz4-l12-act-1",
               "kind": "translate",
-              "prompt": "Translate: 'Piza no haitatsu wo tanomimashita.'",
+              "prompt": "Translate: 'Piza no haitatsu o tanomimashita.'",
               "answer": "I ordered a pizza delivery."
             },
             {
@@ -9169,7 +9169,7 @@
             {
               "id": "jfz4-l12-act-3",
               "kind": "translate",
-              "prompt": "Translate: 'Ashita no ryokou no junbi wo shite imasu.'",
+              "prompt": "Translate: 'Ashita no ryokou no junbi o shite imasu.'",
               "answer": "I am preparing for tomorrow's trip."
             },
             {
@@ -9199,20 +9199,20 @@
             {
               "id": "jfz4-l12-act-8",
               "kind": "translate",
-              "prompt": "Translate: 'Kaigai ryokou no tame ni, okane wo tameteimasu.'",
+              "prompt": "Translate: 'Kaigai ryokou no tame ni, okane o tameteimasu.'",
               "answer": "I am saving money for an overseas trip."
             },
             {
               "id": "jfz4-l12-act-9",
               "kind": "fill_blank",
-              "prompt": "Nemuku naru ___, benkyou wo shimashita. (I studied until I got sleepy)",
+              "prompt": "Nemuku naru ___, benkyou o shimashita. (I studied until I got sleepy)",
               "answer": "made"
             },
             {
               "id": "jfz4-l12-act-10",
               "kind": "translate",
               "prompt": "How would you say 'I will save money until I go to Europe'?",
-              "answer": "Yooroppa ni iku made, okane wo tamemasu."
+              "answer": "Yooroppa ni iku made, okane o tamemasu."
             },
             {
               "id": "jfz4-l12-act-11",
@@ -9248,7 +9248,7 @@
               "id": "jfz4-l12-act-15",
               "kind": "matching",
               "prompt": "Match each verb to its object-marking particle: tanomu, junbi suru, tameru, kenka suru",
-              "answer": "tanomu=wo, junbi suru=wo, tameru=wo, kenka suru=to (person)"
+              "answer": "tanomu=o, junbi suru=o, tameru=o, kenka suru=to (person)"
             },
             {
               "id": "jfz4-l12-act-16",
@@ -9291,7 +9291,7 @@
                 },
                 {
                   "speaker": "B",
-                  "japanese": "Watashi no kutsu wo katte, kaesanakatta kara.",
+                  "japanese": "Watashi no kutsu o katte, kaesanakatta kara.",
                   "english": "Because he borrowed my shoes and didn't return them."
                 }
               ]
@@ -9343,7 +9343,7 @@
             },
             {
               "kind": "fill_blank",
-              "prompt": "Taiwan ni iku ___ ni, okane wo tamemasu. (by the time)",
+              "prompt": "Taiwan ni iku ___ ni, okane o tamemasu. (by the time)",
               "answer": "made",
               "id": "jfz4-l12-act-24"
             },
@@ -9376,8 +9376,8 @@
         {
           "type": "sentence_building",
           "prompts": [
-            "taiwan / ni / iku / made / okane / wo / tamemasu",
-            "taiwan / ni / iku / made / ni / okane / wo / tamemasu",
+            "taiwan / ni / iku / made / okane / o / tamemasu",
+            "taiwan / ni / iku / made / ni / okane / o / tamemasu",
             "isshuukan / gurai / junbi / ga / kakarimasu",
             "sukoshi / dake / okane / ga / hitsuyou / desu"
           ]
@@ -9517,32 +9517,32 @@
           "examples": [
             {
               "japanese": "プレゼントをいただきました。",
-              "romaji": "Purezento wo itadakimashita.",
+              "romaji": "Purezento o itadakimashita.",
               "english": "I received a present. (most polite)"
             },
             {
               "japanese": "ともだちから手紙をもらいました。",
-              "romaji": "Tomodachi kara tegami wo moraimashita.",
+              "romaji": "Tomodachi kara tegami o moraimashita.",
               "english": "I received a letter from a friend."
             },
             {
               "japanese": "ちちがお金をくれました。",
-              "romaji": "Chichi ga okane wo kuremashita.",
+              "romaji": "Chichi ga okane o kuremashita.",
               "english": "My father gave me money."
             },
             {
               "japanese": "いもうとに本をあげました。",
-              "romaji": "Imouto ni hon wo agemashita.",
+              "romaji": "Imouto ni hon o agemashita.",
               "english": "I gave my little sister a book."
             },
             {
               "japanese": "犬にえさをやります。",
-              "romaji": "Inu ni esa wo yarimasu.",
+              "romaji": "Inu ni esa o yarimasu.",
               "english": "I give the dog food."
             },
             {
               "japanese": "ははをてつだいました。",
-              "romaji": "Haha wo tetsudaimashita.",
+              "romaji": "Haha o tetsudaimashita.",
               "english": "I helped my mother."
             }
           ]
@@ -9557,7 +9557,7 @@
               "examples": [
                 {
                   "japanese": "このえいがをみてほしいです。",
-                  "romaji": "Kono eiga wo mite hoshii desu.",
+                  "romaji": "Kono eiga o mite hoshii desu.",
                   "english": "I want you to watch this movie."
                 },
                 {
@@ -9574,7 +9574,7 @@
               "examples": [
                 {
                   "japanese": "こわいえいがをひとりでみないでほしい。",
-                  "romaji": "Kowai eiga wo hitori de minaide hoshii.",
+                  "romaji": "Kowai eiga o hitori de minaide hoshii.",
                   "english": "I don't want you to watch scary movies by yourself."
                 },
                 {
@@ -9626,7 +9626,7 @@
                 },
                 {
                   "japanese": "数を数える",
-                  "romaji": "kazu wo kazoeru",
+                  "romaji": "kazu o kazoeru",
                   "english": "to count (the number)"
                 }
               ]
@@ -9841,19 +9841,19 @@
             {
               "id": "jfz4-l13-act-1",
               "kind": "translate",
-              "prompt": "Translate: 'Sensei kara hon wo itadakimashita.'",
+              "prompt": "Translate: 'Sensei kara hon o itadakimashita.'",
               "answer": "I received a book from the teacher."
             },
             {
               "id": "jfz4-l13-act-2",
               "kind": "translate",
-              "prompt": "Translate: 'Tomodachi ni tokei wo moraimashita.'",
+              "prompt": "Translate: 'Tomodachi ni tokei o moraimashita.'",
               "answer": "I received a watch from my friend."
             },
             {
               "id": "jfz4-l13-act-3",
               "kind": "translate",
-              "prompt": "Translate: 'Ane ga watashi ni purezento wo kuremashita.'",
+              "prompt": "Translate: 'Ane ga watashi ni purezento o kuremashita.'",
               "answer": "My older sister gave me a present."
             },
             {
@@ -9870,38 +9870,38 @@
             {
               "id": "jfz4-l13-act-5",
               "kind": "translate",
-              "prompt": "Translate: 'Otouto ni kono hon wo agemasu.'",
+              "prompt": "Translate: 'Otouto ni kono hon o agemasu.'",
               "answer": "I will give this book to my little brother."
             },
             {
               "id": "jfz4-l13-act-6",
               "kind": "translate",
-              "prompt": "Translate: 'Neko ni esa wo yarimashita.'",
+              "prompt": "Translate: 'Neko ni esa o yarimashita.'",
               "answer": "I fed the cat. (gave food to the cat)"
             },
             {
               "id": "jfz4-l13-act-7",
               "kind": "translate",
-              "prompt": "Correct this sentence — が or に? '___ga watashi ni okane wo kuremashita.' (My father gave me money)",
-              "answer": "Otousan ga watashi ni okane wo kuremashita."
+              "prompt": "Correct this sentence — が or に? '___ga watashi ni okane o kuremashita.' (My father gave me money)",
+              "answer": "Otousan ga watashi ni okane o kuremashita."
             },
             {
               "id": "jfz4-l13-act-8",
               "kind": "translate",
-              "prompt": "Explain why 'Tomodachi ga imouto ni hon wo kuremashita' sounds wrong.",
-              "answer": "くれる can only describe something given to you or your own group — since the recipient here is 'my little sister,' not the speaker, this needs あげる instead: Tomodachi ga imouto ni hon wo agemashita."
+              "prompt": "Explain why 'Tomodachi ga imouto ni hon o kuremashita' sounds wrong.",
+              "answer": "くれる can only describe something given to you or your own group — since the recipient here is 'my little sister,' not the speaker, this needs あげる instead: Tomodachi ga imouto ni hon o agemashita."
             },
             {
               "id": "jfz4-l13-act-9",
               "kind": "translate",
               "prompt": "How would you say 'I want you to help me with my homework' using てほしい?",
-              "answer": "Shukudai wo tetsudatte hoshii desu."
+              "answer": "Shukudai o tetsudatte hoshii desu."
             },
             {
               "id": "jfz4-l13-act-10",
               "kind": "translate",
               "prompt": "How would you say 'I don't want you to quit your job' using てほしい?",
-              "answer": "Shigoto wo yamenaide hoshii."
+              "answer": "Shigoto o yamenaide hoshii."
             },
             {
               "id": "jfz4-l13-act-11",
@@ -9934,7 +9934,7 @@
               "lines": [
                 {
                   "speaker": "A",
-                  "japanese": "Kesa, inu ni esa wo ageta?",
+                  "japanese": "Kesa, inu ni esa o ageta?",
                   "english": "Did you feed the dog this morning?"
                 },
                 {
@@ -10020,7 +10020,7 @@
             },
             {
               "kind": "fill_blank",
-              "prompt": "Chichi ga okane wo ___. (gave me, くれる)",
+              "prompt": "Chichi ga okane o ___. (gave me, くれる)",
               "answer": "kuremashita",
               "id": "jfz4-l13-act-23"
             },
@@ -10044,7 +10044,7 @@
             },
             {
               "kind": "translate",
-              "prompt": "Translate: 'Tomodachi ni hon wo agemashita.'",
+              "prompt": "Translate: 'Tomodachi ni hon o agemashita.'",
               "answer": "I gave my friend a book.",
               "id": "jfz4-l13-act-26"
             }
@@ -10053,10 +10053,10 @@
         {
           "type": "sentence_building",
           "prompts": [
-            "ane / ga / watashi / ni / purezento / wo / kuremashita",
-            "tomodachi / ni / purezento / wo / agemashita",
-            "haha / kara / tegami / wo / moraimashita",
-            "chichi / ga / kuruma / wo / kuremashita"
+            "ane / ga / watashi / ni / purezento / o / kuremashita",
+            "tomodachi / ni / purezento / o / agemashita",
+            "haha / kara / tegami / o / moraimashita",
+            "chichi / ga / kuruma / o / kuremashita"
           ]
         },
         {
@@ -10212,7 +10212,7 @@
           "examples": [
             {
               "japanese": "車をこわしました。",
-              "romaji": "Kuruma wo kowashimashita.",
+              "romaji": "Kuruma o kowashimashita.",
               "english": "I broke the car. (active, 壊す)"
             },
             {
@@ -10237,12 +10237,12 @@
               "examples": [
                 {
                   "japanese": "ともだちにやさいをかってもらいました。",
-                  "romaji": "Tomodachi ni yasai wo katte moraimashita.",
+                  "romaji": "Tomodachi ni yasai o katte moraimashita.",
                   "english": "I had my friend buy vegetables (for me)."
                 },
                 {
                   "japanese": "先生にかんじをおしえていただきました。",
-                  "romaji": "Sensei ni kanji wo oshiete itadakimashita.",
+                  "romaji": "Sensei ni kanji o oshiete itadakimashita.",
                   "english": "I had my teacher teach me kanji."
                 }
               ]
@@ -10259,7 +10259,7 @@
                 },
                 {
                   "japanese": "ともだちにお金をかしてあげました。",
-                  "romaji": "Tomodachi ni okane wo kashite agemashita.",
+                  "romaji": "Tomodachi ni okane o kashite agemashita.",
                   "english": "I lent money to my friend (as a favor)."
                 }
               ]
@@ -10271,7 +10271,7 @@
               "examples": [
                 {
                   "japanese": "手紙をかいてほしいです。",
-                  "romaji": "Tegami wo kaite hoshii desu.",
+                  "romaji": "Tegami o kaite hoshii desu.",
                   "english": "I want you to write a letter. (てほしい — what I want from someone)"
                 },
                 {
@@ -10289,7 +10289,7 @@
             {
               "id": "jfz4-l14-act-1",
               "kind": "translate",
-              "prompt": "Translate: 'Dare ga konpyuutaa wo kowashita to omoimasu ka.'",
+              "prompt": "Translate: 'Dare ga konpyuutaa o kowashita to omoimasu ka.'",
               "answer": "Who do you think broke the computer?"
             },
             {
@@ -10317,13 +10317,13 @@
             {
               "id": "jfz4-l14-act-5",
               "kind": "translate",
-              "prompt": "Translate: 'Tomodachi ni yasai wo katte moraimashita.'",
+              "prompt": "Translate: 'Tomodachi ni yasai o katte moraimashita.'",
               "answer": "I had my friend buy vegetables for me."
             },
             {
               "id": "jfz4-l14-act-6",
               "kind": "translate",
-              "prompt": "Translate: 'Sensei ni kanji wo oshiete itadakimashita.'",
+              "prompt": "Translate: 'Sensei ni kanji o oshiete itadakimashita.'",
               "answer": "I had my teacher teach me kanji. (humble)"
             },
             {
@@ -10336,13 +10336,13 @@
               "id": "jfz4-l14-act-8",
               "kind": "translate",
               "prompt": "How would you say 'I will cook dinner for you' using てあげる?",
-              "answer": "Bangohan wo tsukutte agemasu."
+              "answer": "Bangohan o tsukutte agemasu."
             },
             {
               "id": "jfz4-l14-act-9",
               "kind": "translate",
               "prompt": "Which pattern would you use to say 'I want you to fix the computer'?",
-              "answer": "Konpyuutaa wo naoshite hoshii desu. (てほしい)"
+              "answer": "Konpyuutaa o naoshite hoshii desu. (てほしい)"
             },
             {
               "id": "jfz4-l14-act-10",
@@ -10366,7 +10366,7 @@
               "id": "jfz4-l14-act-13",
               "kind": "translate",
               "prompt": "How would you ask 'What did you break?'",
-              "answer": "Nani wo kowashimashita ka."
+              "answer": "Nani o kowashimashita ka."
             },
             {
               "id": "jfz4-l14-act-14",
@@ -10387,7 +10387,7 @@
               "lines": [
                 {
                   "speaker": "A",
-                  "japanese": "Seki wo kawatte itadakemasu ka.",
+                  "japanese": "Seki o kawatte itadakemasu ka.",
                   "english": "Would you mind switching seats?"
                 },
                 {
@@ -10480,7 +10480,7 @@
         {
           "type": "sentence_building",
           "prompts": [
-            "tomodachi / ni / yasai / wo / katte / moraimashita",
+            "tomodachi / ni / yasai / o / katte / moraimashita",
             "kuruma / ga / kowarete / imasu",
             "akachan / ga / umaremashita",
             "tomodachi / ni / tetsudatte / moraimashita"

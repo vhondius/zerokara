@@ -8,6 +8,13 @@ export function isBookUnlocked(bookId: string): boolean {
   return !prev || isBookTestPassed(prev.id);
 }
 
+/** The exercises that must all be answered for a unit to complete. */
+export function unitExerciseIds(unit: Unit): string[] {
+  return unit.sections.flatMap((s) =>
+    s.type === "lesson_activities" ? s.data.exercises.map((e) => e.id) : [],
+  );
+}
+
 export type BookStatus = {
   book: Book;
   units: Unit[];

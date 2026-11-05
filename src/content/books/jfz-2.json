@@ -839,7 +839,7 @@
               "prompt": "Which particle marks the location where an animate thing exists?",
               "answer": "ni",
               "options": [
-                "wo",
+                "o",
                 "ga",
                 "ni",
                 "de"
@@ -854,7 +854,7 @@
             {
               "id": "jfz2-lesson1-act-21",
               "kind": "reading_comprehension",
-              "passage": "Aiko wa maishuu depaato ni ikimasu. Maitsuki wa honya ni ikimasu. Depaato de fuku wo kaimasu. Honya de hon wo kaimasu.",
+              "passage": "Aiko wa maishuu depaato ni ikimasu. Maitsuki wa honya ni ikimasu. Depaato de fuku o kaimasu. Honya de hon o kaimasu.",
               "questions": [
                 {
                   "prompt": "Where does Aiko go every week?",
@@ -936,7 +936,7 @@
               "options": [
                 "to",
                 "ga",
-                "wo",
+                "o",
                 "ni"
               ],
               "id": "jfz2-lesson1-act-28"
@@ -2344,7 +2344,7 @@
           "prompts": [
             "kono / neko / wa / kawaii / desu",
             "dono / hon / ga / omoshiroi / desu ka",
-            "sono / nasu / wo / kudasai",
+            "sono / nasu / o / kudasai",
             "ano / hito / wa / dare / desu ka"
           ]
         },
@@ -3390,12 +3390,12 @@
               "examples": [
                 {
                   "japanese": "おちゃをのみます。",
-                  "romaji": "Ocha wo nomimasu.",
+                  "romaji": "Ocha o nomimasu.",
                   "english": "I drink tea."
                 },
                 {
                   "japanese": "くるまをうりました。",
-                  "romaji": "Kuruma wo urimashita.",
+                  "romaji": "Kuruma o urimashita.",
                   "english": "I sold my car."
                 }
               ]
@@ -3451,12 +3451,12 @@
               "examples": [
                 {
                   "japanese": "わたしはねことさかなをたべました。",
-                  "romaji": "Watashi wa neko to sakana wo tabemashita.",
+                  "romaji": "Watashi wa neko to sakana o tabemashita.",
                   "english": "The cat and I ate fish. (と = 'and')"
                 },
                 {
                   "japanese": "わたしはねこをさかなとたべました。",
-                  "romaji": "Watashi wa neko wo sakana to tabemashita.",
+                  "romaji": "Watashi wa neko o sakana to tabemashita.",
                   "english": "I ate the cat with the fish. (と = 'with' — a very different, slightly alarming sentence!)"
                 }
               ]
@@ -3557,38 +3557,38 @@
             {
               "id": "jfz2-lesson5-act-1",
               "kind": "translate",
-              "prompt": "Translate: 'Kuukou de pasupooto wo kaimashita ka.'",
+              "prompt": "Translate: 'Kuukou de pasupooto o kaimashita ka.'",
               "answer": "Did you buy the passport at the airport?"
             },
             {
               "id": "jfz2-lesson5-act-2",
               "kind": "translate",
-              "prompt": "Translate: 'Resutoran de hotto doggu wo tabemashita.'",
+              "prompt": "Translate: 'Resutoran de hotto doggu o tabemashita.'",
               "answer": "I ate a hot dog at the restaurant."
             },
             {
               "id": "jfz2-lesson5-act-3",
               "kind": "translate",
-              "prompt": "Translate: 'Kaisha de fuku wo urimasu ka.'",
+              "prompt": "Translate: 'Kaisha de fuku o urimasu ka.'",
               "answer": "Do they sell clothes at the company (store)?"
             },
             {
               "id": "jfz2-lesson5-act-4",
               "kind": "fill_blank",
               "prompt": "Resutoran ___ hanbaagaa ___ tabemasu. (I will eat a hamburger at the restaurant)",
-              "answer": "de / wo"
+              "answer": "de / o"
             },
             {
               "id": "jfz2-lesson5-act-5",
               "kind": "translate",
               "prompt": "How would you invite someone with 'Won't you drink tea together?'",
-              "answer": "Issho ni ocha wo nomimasen ka."
+              "answer": "Issho ni ocha o nomimasen ka."
             },
             {
               "id": "jfz2-lesson5-act-6",
               "kind": "translate",
               "prompt": "How would you invite someone with 'Won't you buy a car together?' (as in shopping together)",
-              "answer": "Issho ni kuruma wo kaimasen ka."
+              "answer": "Issho ni kuruma o kaimasen ka."
             },
             {
               "id": "jfz2-lesson5-act-7",
@@ -3598,21 +3598,21 @@
               "options": [
                 "ni",
                 "de",
-                "wo",
+                "o",
                 "kara"
               ]
             },
             {
               "id": "jfz2-lesson5-act-8",
               "kind": "translate",
-              "prompt": "Translate: 'Hikouki de osake wo nomimashita.'",
+              "prompt": "Translate: 'Hikouki de osake o nomimashita.'",
               "answer": "I drank sake on the airplane."
             },
             {
               "id": "jfz2-lesson5-act-9",
               "kind": "translate",
-              "prompt": "Swap the particles in 'Watashi wa neko to sakana wo tabemashita' to change the meaning to 'I ate the cat with the fish.' What's the new sentence?",
-              "answer": "Watashi wa neko wo sakana to tabemashita."
+              "prompt": "Swap the particles in 'Watashi wa neko to sakana o tabemashita' to change the meaning to 'I ate the cat with the fish.' What's the new sentence?",
+              "answer": "Watashi wa neko o sakana to tabemashita."
             },
             {
               "id": "jfz2-lesson5-act-10",
@@ -3627,7 +3627,7 @@
               "lines": [
                 {
                   "speaker": "A",
-                  "japanese": "Doko de pen wo kaimashita ka.",
+                  "japanese": "Doko de pen o kaimashita ka.",
                   "english": "Where did you buy the pen?"
                 },
                 {
@@ -3655,7 +3655,7 @@
               "lines": [
                 {
                   "speaker": "A",
-                  "japanese": "Issho ni sushi wo tabemasen ka.",
+                  "japanese": "Issho ni sushi o tabemasen ka.",
                   "english": "Won't you eat sushi together?"
                 },
                 {
@@ -3686,7 +3686,7 @@
             {
               "id": "jfz2-lesson5-act-15",
               "kind": "reading_comprehension",
-              "passage": "Emi wa mainichi asa, uchi de ocha wo nomimasu. Gogo, depaato de fuku wo kaimasu.",
+              "passage": "Emi wa mainichi asa, uchi de ocha o nomimasu. Gogo, depaato de fuku o kaimasu.",
               "questions": [
                 {
                   "prompt": "Where does Emi buy clothes?",
@@ -3712,29 +3712,29 @@
               "lines": [
                 {
                   "speaker": "A",
-                  "japanese": "Issho ni bangohan wo tabemasen ka.",
+                  "japanese": "Issho ni bangohan o tabemasen ka.",
                   "english": "Would you like to have dinner together?"
                 },
                 {
                   "speaker": "B",
-                  "japanese": "Ii desu ne. Nani wo tabemasu ka.",
+                  "japanese": "Ii desu ne. Nani o tabemasu ka.",
                   "english": "That sounds nice. What shall we eat?"
                 }
               ]
             },
             {
               "kind": "fill_blank",
-              "prompt": "Asagohan ni pan wo ___. (eat, polite)",
+              "prompt": "Asagohan ni pan o ___. (eat, polite)",
               "answer": "tabemasu",
               "id": "jfz2-lesson5-act-17"
             },
             {
               "kind": "multiple_choice",
               "prompt": "Which particle marks the direct object of taberu/nomu/kau/uru?",
-              "answer": "wo",
+              "answer": "o",
               "options": [
                 "ga",
-                "wo",
+                "o",
                 "ni",
                 "to"
               ],
@@ -3748,13 +3748,13 @@
             },
             {
               "kind": "translate",
-              "prompt": "Translate: 'Kuukou de pasupooto wo misemasu.'",
+              "prompt": "Translate: 'Kuukou de pasupooto o misemasu.'",
               "answer": "I show my passport at the airport.",
               "id": "jfz2-lesson5-act-20"
             },
             {
               "kind": "fill_blank",
-              "prompt": "Kono fuku wo ___. (buy, polite)",
+              "prompt": "Kono fuku o ___. (buy, polite)",
               "answer": "kaimasu",
               "id": "jfz2-lesson5-act-21"
             },
@@ -3775,10 +3775,10 @@
         {
           "type": "sentence_building",
           "prompts": [
-            "issho / ni / bangohan / wo / tabemasen / ka",
-            "asagohan / ni / pan / wo / tabemasu",
-            "kuukou / de / pasupooto / wo / misemasu",
-            "kono / fuku / wo / kaimasu"
+            "issho / ni / bangohan / o / tabemasen / ka",
+            "asagohan / ni / pan / o / tabemasu",
+            "kuukou / de / pasupooto / o / misemasu",
+            "kono / fuku / o / kaimasu"
           ]
         },
         {
@@ -4028,7 +4028,7 @@
                 },
                 {
                   "japanese": "なにをたべましょうか。",
-                  "romaji": "Nani wo tabemashou ka.",
+                  "romaji": "Nani o tabemashou ka.",
                   "english": "What shall we eat?"
                 }
               ]
@@ -4261,7 +4261,7 @@
               "lines": [
                 {
                   "speaker": "A",
-                  "japanese": "Mou tegami wo kakimashita ka.",
+                  "japanese": "Mou tegami o kakimashita ka.",
                   "english": "Did you already write the letter?"
                 },
                 {
@@ -4275,7 +4275,7 @@
             {
               "id": "jfz2-lesson6-act-2",
               "kind": "translate",
-              "prompt": "Translate: 'Mou shousetsu wo yomimashita.'",
+              "prompt": "Translate: 'Mou shousetsu o yomimashita.'",
               "answer": "I already read the novel."
             },
             {
@@ -4294,13 +4294,13 @@
               "id": "jfz2-lesson6-act-5",
               "kind": "translate",
               "prompt": "How would you say 'Let's read one more novel'?",
-              "answer": "Mou hitotsu shousetsu wo yomimashou."
+              "answer": "Mou hitotsu shousetsu o yomimashou."
             },
             {
               "id": "jfz2-lesson6-act-6",
               "kind": "translate",
               "prompt": "How would you say 'Let's write one more letter'?",
-              "answer": "Mou ippon... (incorrect counter preview) — correct: Mou ichimai tegami wo kakimashou."
+              "answer": "Mou ippon... (incorrect counter preview) — correct: Mou ichimai tegami o kakimashou."
             },
             {
               "id": "jfz2-lesson6-act-7",
@@ -4335,7 +4335,7 @@
               "id": "jfz2-lesson6-act-11",
               "kind": "translate",
               "prompt": "How would you say 'What shall we buy?'",
-              "answer": "Nani wo kaimashou ka."
+              "answer": "Nani o kaimashou ka."
             },
             {
               "id": "jfz2-lesson6-act-12",
@@ -4375,7 +4375,7 @@
             {
               "id": "jfz2-lesson6-act-15",
               "kind": "reading_comprehension",
-              "passage": "Kenji wa kongetsu, mou shousetsu wo sansatsu yomimashita. Getsumatsu made ni, mou issatsu yomitai desu.",
+              "passage": "Kenji wa kongetsu, mou shousetsu o sansatsu yomimashita. Getsumatsu made ni, mou issatsu yomitai desu.",
               "questions": [
                 {
                   "prompt": "How many novels has Kenji already read?",
@@ -4403,7 +4403,7 @@
               "lines": [
                 {
                   "speaker": "A",
-                  "japanese": "Kippu wo mou kaimashita ka.",
+                  "japanese": "Kippu o mou kaimashita ka.",
                   "english": "Have you bought the tickets yet?"
                 },
                 {
@@ -4415,7 +4415,7 @@
             },
             {
               "kind": "fill_blank",
-              "prompt": "Tegami wo ___. (write, polite)",
+              "prompt": "Tegami o ___. (write, polite)",
               "answer": "kakimasu",
               "id": "jfz2-lesson6-act-17"
             },
@@ -4439,13 +4439,13 @@
             },
             {
               "kind": "translate",
-              "prompt": "Translate: 'Shousetsu wo mou yomimashita.'",
+              "prompt": "Translate: 'Shousetsu o mou yomimashita.'",
               "answer": "I already read the novel.",
               "id": "jfz2-lesson6-act-20"
             },
             {
               "kind": "fill_blank",
-              "prompt": "Eki de kippu wo ___. (let's buy)",
+              "prompt": "Eki de kippu o ___. (let's buy)",
               "answer": "kaimashou",
               "id": "jfz2-lesson6-act-21"
             },
@@ -4466,9 +4466,9 @@
         {
           "type": "sentence_building",
           "prompts": [
-            "eki / de / kippu / wo / kaimashou",
-            "tegami / wo / kakimasu",
-            "shousetsu / wo / mou / yomimashita",
+            "eki / de / kippu / o / kaimashou",
+            "tegami / o / kakimasu",
+            "shousetsu / o / mou / yomimashita",
             "jiyuu seki / wa / mada / arimasu"
           ]
         },
@@ -4791,7 +4791,7 @@
               "examples": [
                 {
                   "japanese": "よくえいがをみます。",
-                  "romaji": "Yoku eiga wo mimasu.",
+                  "romaji": "Yoku eiga o mimasu.",
                   "english": "I often watch movies."
                 }
               ]
@@ -4803,7 +4803,7 @@
               "examples": [
                 {
                   "japanese": "あまりえいがをみません。",
-                  "romaji": "Amari eiga wo mimasen.",
+                  "romaji": "Amari eiga o mimasen.",
                   "english": "I don't watch movies that often."
                 }
               ]
@@ -4915,26 +4915,26 @@
             {
               "id": "jfz2-lesson7-act-2",
               "kind": "translate",
-              "prompt": "Translate: 'Oniisan wa itsuka tegami wo kakimasu.'",
+              "prompt": "Translate: 'Oniisan wa itsuka tegami o kakimasu.'",
               "answer": "My older brother sometimes writes letters."
             },
             {
               "id": "jfz2-lesson7-act-3",
               "kind": "fill_blank",
-              "prompt": "___ tegami wo kakimasu. (I often write letters)",
+              "prompt": "___ tegami o kakimasu. (I often write letters)",
               "answer": "Yoku"
             },
             {
               "id": "jfz2-lesson7-act-4",
               "kind": "translate",
               "prompt": "How would you say 'I don't often eat chocolate'?",
-              "answer": "Amari chokoreeto wo tabemasen."
+              "answer": "Amari chokoreeto o tabemasen."
             },
             {
               "id": "jfz2-lesson7-act-5",
               "kind": "translate",
               "prompt": "How would you say 'My younger sister often shops'?",
-              "answer": "Imouto wa yoku kaimono wo shimasu."
+              "answer": "Imouto wa yoku kaimono o shimasu."
             },
             {
               "id": "jfz2-lesson7-act-6",
@@ -5042,12 +5042,12 @@
               "lines": [
                 {
                   "speaker": "A",
-                  "japanese": "Oniisan wa nani wo shite imasu ka.",
+                  "japanese": "Oniisan wa nani o shite imasu ka.",
                   "english": "What is your older brother doing?"
                 },
                 {
                   "speaker": "B",
-                  "japanese": "Itsumo tegami wo kaite imasu.",
+                  "japanese": "Itsumo tegami o kaite imasu.",
                   "english": "He's always writing letters."
                 }
               ]
@@ -5084,7 +5084,7 @@
             },
             {
               "kind": "fill_blank",
-              "prompt": "Yuubinkyoku de ___ wo kaimasu. (stamp)",
+              "prompt": "Yuubinkyoku de ___ o kaimasu. (stamp)",
               "answer": "kitte",
               "id": "jfz2-lesson7-act-20"
             },
@@ -5099,9 +5099,9 @@
         {
           "type": "sentence_building",
           "prompts": [
-            "oniisan / wa / yoku / tegami / wo / kakimasu",
+            "oniisan / wa / yoku / tegami / o / kakimasu",
             "tsuma / wa / yubiwa / ga / suki / desu",
-            "yuubinkyoku / de / kitte / wo / kaimasu",
+            "yuubinkyoku / de / kitte / o / kaimasu",
             "otouto / wa / intaanetto / ga / suki / desu"
           ]
         },
@@ -6155,13 +6155,13 @@
             {
               "id": "jfz2-lesson9-act-1",
               "kind": "translate",
-              "prompt": "Translate: 'Kinou, gomi wo hirotta.'",
+              "prompt": "Translate: 'Kinou, gomi o hirotta.'",
               "answer": "I picked up trash yesterday."
             },
             {
               "id": "jfz2-lesson9-act-2",
               "kind": "fill_blank",
-              "prompt": "Kuruma wo ___ (informal negative of 'to wash' — arau)",
+              "prompt": "Kuruma o ___ (informal negative of 'to wash' — arau)",
               "answer": "arawanai"
             },
             {
@@ -6209,26 +6209,26 @@
             {
               "id": "jfz2-lesson9-act-9",
               "kind": "translate",
-              "prompt": "Convert to informal: 'Tomodachi ni tegami wo kakimashita ka.'",
-              "answer": "Tomodachi ni tegami wo kaita?"
+              "prompt": "Convert to informal: 'Tomodachi ni tegami o kakimashita ka.'",
+              "answer": "Tomodachi ni tegami o kaita?"
             },
             {
               "id": "jfz2-lesson9-act-10",
               "kind": "translate",
-              "prompt": "Convert to informal: 'Kono shousetsu wo yomimasu ka.'",
-              "answer": "Kono shousetsu wo yomu?"
+              "prompt": "Convert to informal: 'Kono shousetsu o yomimasu ka.'",
+              "answer": "Kono shousetsu o yomu?"
             },
             {
               "id": "jfz2-lesson9-act-11",
               "kind": "translate",
-              "prompt": "Convert to informal: 'Mainichi, koohii wo nomimasu ka.'",
-              "answer": "Mainichi, koohii wo nomu?"
+              "prompt": "Convert to informal: 'Mainichi, koohii o nomimasu ka.'",
+              "answer": "Mainichi, koohii o nomu?"
             },
             {
               "id": "jfz2-lesson9-act-12",
               "kind": "translate",
-              "prompt": "Convert to informal: 'Kanojo/kareshi to mainichi bangohan wo tabemasu ka.'",
-              "answer": "Kanojo/kareshi to mainichi bangohan wo taberu?"
+              "prompt": "Convert to informal: 'Kanojo/kareshi to mainichi bangohan o tabemasu ka.'",
+              "answer": "Kanojo/kareshi to mainichi bangohan o taberu?"
             },
             {
               "id": "jfz2-lesson9-act-13",
@@ -6268,7 +6268,7 @@
             {
               "id": "jfz2-lesson9-act-16",
               "kind": "reading_comprehension",
-              "passage": "Kenta wa amari kuruma wo arawanai. Demo, kinou, yatto aratta.",
+              "passage": "Kenta wa amari kuruma o arawanai. Demo, kinou, yatto aratta.",
               "questions": [
                 {
                   "prompt": "Did Kenta wash his car yesterday?",
@@ -6294,7 +6294,7 @@
               "lines": [
                 {
                   "speaker": "A",
-                  "japanese": "Mou gomi wo hirotta?",
+                  "japanese": "Mou gomi o hirotta?",
                   "english": "Did you pick up the trash already?"
                 },
                 {
@@ -6318,7 +6318,7 @@
             },
             {
               "kind": "fill_blank",
-              "prompt": "Kinou, gomi wo ___. (picked up, informal past)",
+              "prompt": "Kinou, gomi o ___. (picked up, informal past)",
               "answer": "hirotta",
               "id": "jfz2-lesson9-act-19"
             },
@@ -6348,7 +6348,7 @@
             },
             {
               "kind": "translate",
-              "prompt": "Translate: 'Ore wa gomi wo hirotta.'",
+              "prompt": "Translate: 'Ore wa gomi o hirotta.'",
               "answer": "I (informal, male) picked up the trash.",
               "id": "jfz2-lesson9-act-23"
             }
@@ -6357,9 +6357,9 @@
         {
           "type": "sentence_building",
           "prompts": [
-            "kinou / gomi / wo / hirotta",
-            "mainichi / te / wo / arau",
-            "gomi / wo / mou / hirotta",
+            "kinou / gomi / o / hirotta",
+            "mainichi / te / o / arau",
+            "gomi / o / mou / hirotta",
             "un, / wakatta"
           ]
         },
@@ -6552,12 +6552,12 @@
               "examples": [
                 {
                   "japanese": "さむいから、まどをしめます。",
-                  "romaji": "Samui kara, mado wo shimemasu.",
+                  "romaji": "Samui kara, mado o shimemasu.",
                   "english": "Because it's cold, I'll close the window. (clause 1 informal, clause 2 polite — allowed)"
                 },
                 {
                   "japanese": "さむいですから、まどをしめます。",
-                  "romaji": "Samui desu kara, mado wo shimemasu.",
+                  "romaji": "Samui desu kara, mado o shimemasu.",
                   "english": "Because it's cold, I'll close the window. (both clauses polite — also allowed)"
                 }
               ]
@@ -7052,7 +7052,7 @@
               "id": "jfz2-lesson10-act-6",
               "kind": "translate",
               "prompt": "How would you ask 'What kind of music do you listen to?'",
-              "answer": "Donna ongaku wo kikimasu ka."
+              "answer": "Donna ongaku o kikimasu ka."
             },
             {
               "id": "jfz2-lesson10-act-7",
@@ -7102,7 +7102,7 @@
               "lines": [
                 {
                   "speaker": "A",
-                  "japanese": "Doushite konban ryouri wo shimasen ka.",
+                  "japanese": "Doushite konban ryouri o shimasen ka.",
                   "english": "Why aren't you cooking tonight?"
                 },
                 {
@@ -7127,7 +7127,7 @@
             {
               "id": "jfz2-lesson10-act-15",
               "kind": "reading_comprehension",
-              "passage": "Nao wa kyou, kaze wo hiita kara, gakkou ni ikanakatta. Ima, uchi de yasunde iru.",
+              "passage": "Nao wa kyou, kaze o hiita kara, gakkou ni ikanakatta. Ima, uchi de yasunde iru.",
               "questions": [
                 {
                   "prompt": "Why didn't Nao go to school?",
@@ -7159,7 +7159,7 @@
                 },
                 {
                   "speaker": "B",
-                  "japanese": "Kaze wo hiita kara.",
+                  "japanese": "Kaze o hiita kara.",
                   "english": "Because I caught a cold."
                 }
               ]
@@ -7218,7 +7218,7 @@
           "type": "sentence_building",
           "prompts": [
             "atsui / kara / puuru / ni / ikimasu",
-            "sabishii / kara / ongaku / wo / kikimasu",
+            "sabishii / kara / ongaku / o / kikimasu",
             "muzukashii / kara / shitsumon / ga / arimasu",
             "tanoshii / kara / mata / kimasu"
           ]
@@ -7477,7 +7477,7 @@
               "examples": [
                 {
                   "japanese": "やきゅうをします。",
-                  "romaji": "Yakyuu wo shimasu.",
+                  "romaji": "Yakyuu o shimasu.",
                   "english": "I play baseball."
                 }
               ]
@@ -7630,7 +7630,7 @@
             },
             {
               "char": "ウォ",
-              "romaji": "wo",
+              "romaji": "o",
               "stroke_count": 6,
               "stroke_order_ref": "kana/katakana-wo2.svg",
               "audio_ref": "audio/kana/katakana-wo2.mp3",
@@ -7716,13 +7716,13 @@
             {
               "id": "jfz2-lesson11-act-1",
               "kind": "translate",
-              "prompt": "Translate: 'Mukashi, yoku sukii wo shimashita.'",
+              "prompt": "Translate: 'Mukashi, yoku sukii o shimashita.'",
               "answer": "A long time ago, I often skied."
             },
             {
               "id": "jfz2-lesson11-act-2",
               "kind": "translate",
-              "prompt": "Translate: 'Minna de yakyuu wo shimasu.'",
+              "prompt": "Translate: 'Minna de yakyuu o shimasu.'",
               "answer": "Everyone plays baseball together."
             },
             {
@@ -7757,7 +7757,7 @@
             {
               "id": "jfz2-lesson11-act-7",
               "kind": "translate",
-              "prompt": "Translate this exchange between two people who are angry with each other (polite register still used): 'Naze konban shokuji wo shimasen ka.'",
+              "prompt": "Translate this exchange between two people who are angry with each other (polite register still used): 'Naze konban shokuji o shimasen ka.'",
               "answer": "Why aren't you eating dinner tonight?"
             },
             {
@@ -7791,7 +7791,7 @@
               "lines": [
                 {
                   "speaker": "A",
-                  "japanese": "Doushite Nihongo wo benkyou shimasu ka.",
+                  "japanese": "Doushite Nihongo o benkyou shimasu ka.",
                   "english": "Why do you study Japanese?"
                 },
                 {
@@ -7834,7 +7834,7 @@
             {
               "id": "jfz2-lesson11-act-15",
               "kind": "reading_comprehension",
-              "passage": "Chiimu no minna wa maishuu issho ni yakyuu wo renshuu shimasu. Kyou, Kota wa byouki datta kara, renshuu shimasendeshita.",
+              "passage": "Chiimu no minna wa maishuu issho ni yakyuu o renshuu shimasu. Kyou, Kota wa byouki datta kara, renshuu shimasendeshita.",
               "questions": [
                 {
                   "prompt": "What does the team do every week?",
@@ -7886,7 +7886,7 @@
             },
             {
               "kind": "fill_blank",
-              "prompt": "Mainichi supootsu wo ___. (do, polite)",
+              "prompt": "Mainichi supootsu o ___. (do, polite)",
               "answer": "shimasu",
               "id": "jfz2-lesson11-act-18"
             },
@@ -7926,7 +7926,7 @@
           "type": "sentence_building",
           "prompts": [
             "kore / wa / ikura / shimasu / ka",
-            "mainichi / supootsu / wo / shimasu",
+            "mainichi / supootsu / o / shimasu",
             "kekkon / no / mae / ni / benkyou / shimasu",
             "naze / kaminari / ga / suki / desu ka"
           ]
@@ -8318,7 +8318,7 @@
           "prompts": [
             "mainichi / rokuji / gurai / ni / okimasu",
             "kesa / hayaku / okimasu",
-            "yoku / netobou / wo / shimasu",
+            "yoku / netobou / o / shimasu",
             "kare / wa / itsumo / osoi / desu"
           ]
         },

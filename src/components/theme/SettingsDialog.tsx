@@ -97,6 +97,8 @@ function Stepper({
   onChange: (v: number) => void;
 }) {
   const clamp = (v: number) => Math.min(max, Math.max(min, v));
+  // What's being typed: clearing the box on the way to a new number must not save 0.
+  const [draft, setDraft] = useState<string | null>(null);
   return (
     <div className="inline-flex items-center gap-2">
       <button
@@ -113,9 +115,14 @@ function Stepper({
         min={min}
         max={max}
         inputMode="numeric"
-        value={value}
+        value={draft ?? value}
         aria-label={label}
-        onChange={(e) => onChange(clamp(Number(e.target.value) || 0))}
+        onChange={(e) => {
+          setDraft(e.target.value);
+          const n = e.target.valueAsNumber;
+          if (Number.isFinite(n)) onChange(clamp(n));
+        }}
+        onBlur={() => setDraft(null)}
         className="no-spin w-16 rounded-md border border-input bg-background px-2 py-1 text-center text-sm text-foreground"
       />
       <button

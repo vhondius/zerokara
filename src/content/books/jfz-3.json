@@ -875,7 +875,7 @@
                 },
                 {
                   "japanese": "さんねんまえ、いまからべんきょうをはじめました。",
-                  "romaji": "Sannen mae, imakara benkyou wo hajimemashita.",
+                  "romaji": "Sannen mae, imakara benkyou o hajimemashita.",
                   "english": "Three years ago, I started studying from that point. (only いまから works with a past reference point)"
                 }
               ]
@@ -925,7 +925,7 @@
               "id": "l1-act-7",
               "kind": "translate",
               "prompt": "How would you say 'I will do my best at homework'?",
-              "answer": "Shukudai wo ganbarimasu."
+              "answer": "Shukudai o ganbarimasu."
             },
             {
               "id": "l1-act-8",
@@ -941,7 +941,7 @@
               "options": [
                 "ni",
                 "de",
-                "wo",
+                "o",
                 "kara"
               ]
             },
@@ -1646,7 +1646,7 @@
                   "english": "to cost money; to take time"
                 },
                 {
-                  "romaji": "kaimono (wo) suru",
+                  "romaji": "kaimono (o) suru",
                   "kana": "かいもの（を）する",
                   "kanji": "買い物（を）する",
                   "english": "to shop"
@@ -1862,14 +1862,14 @@
             {
               "id": "l2-act-4",
               "kind": "fill_blank",
-              "prompt": "Isshuukan ___ nikai, eigo wo benkyou shimasu. (I study English twice a week)",
+              "prompt": "Isshuukan ___ nikai, eigo o benkyou shimasu. (I study English twice a week)",
               "answer": "ni"
             },
             {
               "id": "l2-act-5",
               "kind": "translate",
               "prompt": "How would you say 'I paid the rent with a credit card'?",
-              "answer": "Yachin wo kurejitto kaado de haraimashita."
+              "answer": "Yachin o kurejitto kaado de haraimashita."
             },
             {
               "id": "l2-act-6",
@@ -1880,7 +1880,7 @@
             {
               "id": "l2-act-7",
               "kind": "translate",
-              "prompt": "Translate: 'Denwadai wo kogitte de haraimashita.'",
+              "prompt": "Translate: 'Denwadai o kogitte de haraimashita.'",
               "answer": "I paid the phone bill with a check."
             },
             {
@@ -2062,7 +2062,7 @@
           "prompts": [
             "isshuukan / ni / sankai / puuru / ni / ikimasu",
             "densha / de / kaisha / ni / ikimasu",
-            "isshuukan / ni / ichido / eiga / wo / mimasu",
+            "isshuukan / ni / ichido / eiga / o / mimasu",
             "kono / kutsu / wa / takakatta / desu"
           ]
         },
@@ -2750,7 +2750,7 @@
               "examples": [
                 {
                   "japanese": "まどをしめてください。",
-                  "romaji": "Mado wo shimete kudasai.",
+                  "romaji": "Mado o shimete kudasai.",
                   "english": "Please close the window."
                 },
                 {
@@ -2935,26 +2935,26 @@
             {
               "id": "l3-act-1",
               "kind": "translate",
-              "prompt": "Translate: 'Mado wo akete kudasai.'",
+              "prompt": "Translate: 'Mado o akete kudasai.'",
               "answer": "Please open the window."
             },
             {
               "id": "l3-act-2",
               "kind": "translate",
               "prompt": "Please listen to this music. (translate to Japanese)",
-              "answer": "Kono ongaku wo kiite kudasai."
+              "answer": "Kono ongaku o kiite kudasai."
             },
             {
               "id": "l3-act-3",
               "kind": "translate",
               "prompt": "Please buy some milk. (translate to Japanese)",
-              "answer": "Miruku wo katte kudasai."
+              "answer": "Miruku o katte kudasai."
             },
             {
               "id": "l3-act-4",
               "kind": "translate",
               "prompt": "Please buy this car. (translate to Japanese)",
-              "answer": "Kono kuruma wo katte kudasai."
+              "answer": "Kono kuruma o katte kudasai."
             },
             {
               "id": "l3-act-5",
@@ -2966,13 +2966,13 @@
               "id": "l3-act-6",
               "kind": "translate",
               "prompt": "Please don't drink that much beer. (translate to Japanese)",
-              "answer": "Biiru wo amari nomanaide kudasai."
+              "answer": "Biiru o amari nomanaide kudasai."
             },
             {
               "id": "l3-act-7",
               "kind": "translate",
               "prompt": "Please don't gamble. (translate to Japanese)",
-              "answer": "Gyanburu wo shinaide kudasai."
+              "answer": "Gyanburu o shinaide kudasai."
             },
             {
               "id": "l3-act-8",
@@ -3002,13 +3002,13 @@
               "id": "l3-act-12",
               "kind": "translate",
               "prompt": "Please buy (me) this ring. (translate to Japanese)",
-              "answer": "Kono yubiwa wo katte kudasai."
+              "answer": "Kono yubiwa o katte kudasai."
             },
             {
               "id": "l3-act-13",
               "kind": "translate",
               "prompt": "Please don't sell my car. (translate to Japanese)",
-              "answer": "Watashi no kuruma wo uranaide kudasai."
+              "answer": "Watashi no kuruma o uranaide kudasai."
             },
             {
               "id": "l3-act-14",
@@ -3026,7 +3026,7 @@
               "id": "l3-act-16",
               "kind": "translate",
               "prompt": "Please read this Japanese newspaper. (translate to Japanese)",
-              "answer": "Kono nihon no shinbun wo yonde kudasai."
+              "answer": "Kono nihon no shinbun o yonde kudasai."
             },
             {
               "id": "l3-act-17",
@@ -3081,7 +3081,7 @@
               "lines": [
                 {
                   "speaker": "A",
-                  "japanese": "Terebi wo tsukenaide kudasai. Benkyou shite imasu.",
+                  "japanese": "Terebi o tsukenaide kudasai. Benkyou shite imasu.",
                   "english": "Please don't turn on the TV. I'm studying."
                 },
                 {
@@ -3101,12 +3101,12 @@
             {
               "id": "l3-act-23",
               "kind": "reading_comprehension",
-              "passage": "Sensei wa gakusei ni iimashita. \"Hon wo akete kudasai. Hanasanaide kudasai. Namae wo kaite kudasai.\"",
+              "passage": "Sensei wa gakusei ni iimashita. \"Hon o akete kudasai. Hanasanaide kudasai. Namae o kaite kudasai.\"",
               "questions": [
                 {
                   "prompt": "What is the first instruction?",
                   "answer": [
-                    "Open your books (hon wo akete kudasai).",
+                    "Open your books (hon o akete kudasai).",
                     "Please open your books.",
                     "Open the book.",
                     "Please open the book."
@@ -3124,7 +3124,7 @@
                 {
                   "prompt": "What is the third instruction?",
                   "answer": [
-                    "Write your name (namae wo kaite kudasai).",
+                    "Write your name (namae o kaite kudasai).",
                     "Please write your name."
                   ]
                 }
@@ -3138,7 +3138,7 @@
               "lines": [
                 {
                   "speaker": "A",
-                  "japanese": "Sumimasen, mado wo shimete kudasai.",
+                  "japanese": "Sumimasen, mado o shimete kudasai.",
                   "english": "Excuse me, please close the window."
                 },
                 {
@@ -3156,7 +3156,7 @@
               "lines": [
                 {
                   "speaker": "A",
-                  "japanese": "Koko ni namae wo kaite kudasai.",
+                  "japanese": "Koko ni namae o kaite kudasai.",
                   "english": "Please write your name here."
                 },
                 {
@@ -3171,9 +3171,9 @@
         {
           "type": "sentence_building",
           "prompts": [
-            "mado / wo / shimete / kudasai",
+            "mado / o / shimete / kudasai",
             "koko / ni / suwatte / kudasai",
-            "sono / hon / wo / yonde",
+            "sono / hon / o / yonde",
             "denwa / shite / kudasai"
           ]
         },
@@ -4620,7 +4620,7 @@
               "examples": [
                 {
                   "japanese": "テレビをみています。",
-                  "romaji": "Terebi wo mite imasu.",
+                  "romaji": "Terebi o mite imasu.",
                   "english": "I am watching TV."
                 }
               ]
@@ -4637,7 +4637,7 @@
                 },
                 {
                   "japanese": "そのとき、テレビをみていました。",
-                  "romaji": "Sono toki, terebi wo mite imashita.",
+                  "romaji": "Sono toki, terebi o mite imashita.",
                   "english": "I was watching TV at that time."
                 },
                 {
@@ -4654,7 +4654,7 @@
               "examples": [
                 {
                   "japanese": "なにをしていますか。 ／ なにしてますか。",
-                  "romaji": "Nani wo shite imasu ka. / Nani shitemasu ka.",
+                  "romaji": "Nani o shite imasu ka. / Nani shitemasu ka.",
                   "english": "What are you doing? (formal / casual spoken with the い dropped)"
                 }
               ]
@@ -4786,19 +4786,19 @@
             {
               "id": "l5-act-1",
               "kind": "translate",
-              "prompt": "Translate: 'Ima, souji wo shite imasu.'",
+              "prompt": "Translate: 'Ima, souji o shite imasu.'",
               "answer": "I am cleaning right now."
             },
             {
               "id": "l5-act-2",
               "kind": "translate",
-              "prompt": "Translate: 'Nani wo shite imasu ka.'",
+              "prompt": "Translate: 'Nani o shite imasu ka.'",
               "answer": "What are you doing?"
             },
             {
               "id": "l5-act-3",
               "kind": "translate",
-              "prompt": "Translate: 'Terebi wo mite imasen.'",
+              "prompt": "Translate: 'Terebi o mite imasen.'",
               "answer": "I am not watching TV."
             },
             {
@@ -4811,7 +4811,7 @@
               "id": "l5-act-5",
               "kind": "translate",
               "prompt": "How would you say 'Please write your name with a pencil or a pen'?",
-              "answer": "Enpitsu ka pen de namae wo kaite kudasai."
+              "answer": "Enpitsu ka pen de namae o kaite kudasai."
             },
             {
               "id": "l5-act-6",
@@ -4863,13 +4863,13 @@
             {
               "id": "l5-act-13",
               "kind": "translate",
-              "prompt": "Translate: 'Kaji wo shite imashita.'",
+              "prompt": "Translate: 'Kaji o shite imashita.'",
               "answer": "I was doing housework."
             },
             {
               "id": "l5-act-14",
               "kind": "translate",
-              "prompt": "Translate: 'Kinou, nani wo shite imasen deshita ka.'",
+              "prompt": "Translate: 'Kinou, nani o shite imasen deshita ka.'",
               "answer": "What weren't you doing yesterday?"
             },
             {
@@ -4908,7 +4908,7 @@
                 },
                 {
                   "speaker": "B",
-                  "japanese": "Hai, imasu. Kaigi wo shite imasu.",
+                  "japanese": "Hai, imasu. Kaigi o shite imasu.",
                   "english": "Yes, he is. He's having a meeting."
                 }
               ],
@@ -4923,7 +4923,7 @@
             {
               "id": "l5-act-19",
               "kind": "reading_comprehension",
-              "passage": "Mai wa ima, heya wo souji shite imasu. Otouto wa sentaku wo shite imasu. Okaasan wa souji no hou ga sentaku yori taihen da to omoimasu.",
+              "passage": "Mai wa ima, heya o souji shite imasu. Otouto wa sentaku o shite imasu. Okaasan wa souji no hou ga sentaku yori taihen da to omoimasu.",
               "questions": [
                 {
                   "prompt": "What is Mai doing right now?",
@@ -4959,12 +4959,12 @@
               "lines": [
                 {
                   "speaker": "A",
-                  "japanese": "Ima nani wo shite imasu ka.",
+                  "japanese": "Ima nani o shite imasu ka.",
                   "english": "What are you doing right now?"
                 },
                 {
                   "speaker": "B",
-                  "japanese": "Heya wo souji shite imasu.",
+                  "japanese": "Heya o souji shite imasu.",
                   "english": "I'm cleaning my room."
                 }
               ]
@@ -4994,7 +4994,7 @@
           "prompts": [
             "kono / heya / wa / ano / heya / yori / akarui / desu",
             "kore / no / hou / ga / ii / desu",
-            "ima / gohan / wo / tabete / imasu",
+            "ima / gohan / o / tabete / imasu",
             "ano / mise / yori / kono / mise / no / hou / ga / yasui / desu"
           ]
         },
@@ -5508,12 +5508,12 @@
                   "english": "to be wrong, to be different"
                 },
                 {
-                  "romaji": "hoomusutei (wo) suru",
+                  "romaji": "hoomusutei (o) suru",
                   "kana": "ホームステイ（を）する",
                   "english": "to home stay"
                 },
                 {
-                  "romaji": "arubaito (wo) suru",
+                  "romaji": "arubaito (o) suru",
                   "kana": "アルバイト（を）する",
                   "english": "to work part-time"
                 }
@@ -5593,7 +5593,7 @@
             },
             {
               "japanese": "にほんでホームステイをします。",
-              "romaji": "Nihon de hoomusutei wo shimasu.",
+              "romaji": "Nihon de hoomusutei o shimasu.",
               "english": "I'll do a homestay in Japan."
             }
           ]
@@ -5697,13 +5697,13 @@
             {
               "id": "l6-act-7",
               "kind": "translate",
-              "prompt": "Translate: 'Amerika de hoomusutei wo shimashita.'",
+              "prompt": "Translate: 'Amerika de hoomusutei o shimashita.'",
               "answer": "I did a home stay in America."
             },
             {
               "id": "l6-act-8",
               "kind": "translate",
-              "prompt": "Translate: 'Konbini de arubaito wo shite imasu.'",
+              "prompt": "Translate: 'Konbini de arubaito o shite imasu.'",
               "answer": "I am working part-time at a convenience store."
             },
             {
@@ -6496,12 +6496,12 @@
           "examples": [
             {
               "japanese": "いぬをかっています。",
-              "romaji": "Inu wo katte imasu.",
+              "romaji": "Inu o katte imasu.",
               "english": "I have a dog (as a pet)."
             },
             {
               "japanese": "しゃしんをみせてください。",
-              "romaji": "Shashin wo misete kudasai.",
+              "romaji": "Shashin o misete kudasai.",
               "english": "Please show me the photo."
             }
           ]
@@ -6539,7 +6539,7 @@
             {
               "id": "l7-act-1",
               "kind": "translate",
-              "prompt": "Translate: 'Niwatori wo sanwa, katte imasu.'",
+              "prompt": "Translate: 'Niwatori o sanwa, katte imasu.'",
               "answer": "I am keeping (have as pets) three chickens."
             },
             {
@@ -6552,7 +6552,7 @@
               "id": "l7-act-3",
               "kind": "translate",
               "prompt": "How would you say 'Please show me the photograph'?",
-              "answer": "Shashin wo misete kudasai."
+              "answer": "Shashin o misete kudasai."
             },
             {
               "id": "l7-act-4",
@@ -6593,13 +6593,13 @@
             {
               "id": "l7-act-9",
               "kind": "translate",
-              "prompt": "Translate: 'Kono usagi wo katte imasu ka.' (using 飼う, not 買う — identify the difference)",
+              "prompt": "Translate: 'Kono usagi o katte imasu ka.' (using 飼う, not 買う — identify the difference)",
               "answer": "Are you keeping this rabbit (as a pet)? (kau here is 飼う, to have a pet, a homonym of 買う, to buy)"
             },
             {
               "id": "l7-act-10",
               "kind": "translate",
-              "prompt": "Translate: 'Kagi wo mitsukemashita ka.'",
+              "prompt": "Translate: 'Kagi o mitsukemashita ka.'",
               "answer": "Did you find the key?"
             },
             {
@@ -7250,7 +7250,7 @@
             },
             {
               "japanese": "べんきょうをはじめます。",
-              "romaji": "Benkyou wo hajimemasu.",
+              "romaji": "Benkyou o hajimemasu.",
               "english": "I'll start studying."
             },
             {
@@ -7275,7 +7275,7 @@
                 },
                 {
                   "japanese": "かいぎをはじめます。",
-                  "romaji": "Kaigi wo hajimemasu.",
+                  "romaji": "Kaigi o hajimemasu.",
                   "english": "I will start the meeting. (someone actively starts it)"
                 }
               ]
@@ -7294,7 +7294,7 @@
             {
               "id": "l8-act-2",
               "kind": "fill_blank",
-              "prompt": "Chichi wa kaisha wo ___ (my father started a company — use はじめる in past tense)",
+              "prompt": "Chichi wa kaisha o ___ (my father started a company — use はじめる in past tense)",
               "answer": "hajimemashita"
             },
             {
@@ -7342,13 +7342,13 @@
             {
               "id": "l8-act-9",
               "kind": "translate",
-              "prompt": "Translate: 'Sensei ga jugyou wo hajimemasu.'",
+              "prompt": "Translate: 'Sensei ga jugyou o hajimemasu.'",
               "answer": "The teacher will start the class."
             },
             {
               "id": "l8-act-10",
               "kind": "translate",
-              "prompt": "Rewrite this to use はじまる instead of はじめる: 'Watashi wa shigoto wo hajimemasu.'",
+              "prompt": "Rewrite this to use はじまる instead of はじめる: 'Watashi wa shigoto o hajimemasu.'",
               "answer": "Shigoto ga hajimarimasu. (no one specified as starting it)"
             },
             {
@@ -7396,7 +7396,7 @@
             {
               "id": "l8-act-16",
               "kind": "reading_comprehension",
-              "passage": "Kenta no otousan wa gonen mae ni chiisai resutoran wo hajimemashita. Asa juuichiji ni hajimarimasu. Yoru kuji ni owarimasu.",
+              "passage": "Kenta no otousan wa gonen mae ni chiisai resutoran o hajimemashita. Asa juuichiji ni hajimarimasu. Yoru kuji ni owarimasu.",
               "questions": [
                 {
                   "prompt": "When did Kenta's father start the restaurant?",
@@ -8072,7 +8072,7 @@
           "examples": [
             {
               "japanese": "たばこをすいません。",
-              "romaji": "Tabako wo suimasen.",
+              "romaji": "Tabako o suimasen.",
               "english": "I don't smoke."
             },
             {
@@ -8269,7 +8269,7 @@
             {
               "id": "l9-act-7",
               "kind": "translate",
-              "prompt": "Translate: 'Chuukosha wo kaitakunai desu.'",
+              "prompt": "Translate: 'Chuukosha o kaitakunai desu.'",
               "answer": "I don't want to buy a used car."
             },
             {
@@ -8352,7 +8352,7 @@
             {
               "id": "l9-act-18",
               "kind": "reading_comprehension",
-              "passage": "Mika wa itsuka isha ni naritai desu. Tabako wo suitakunai desu. Osake mo nomitakunai desu.",
+              "passage": "Mika wa itsuka isha ni naritai desu. Tabako o suitakunai desu. Osake mo nomitakunai desu.",
               "questions": [
                 {
                   "prompt": "What does Mika want to become?",
@@ -8399,7 +8399,7 @@
               "lines": [
                 {
                   "speaker": "A",
-                  "japanese": "Tabako wo suitakunai desu.",
+                  "japanese": "Tabako o suitakunai desu.",
                   "english": "I don't want to smoke."
                 },
                 {
@@ -8416,7 +8416,7 @@
           "prompts": [
             "atarashii / kuruma / ga / kaitai / desu",
             "umi / ni / oyogi / ni / ikitai / desu",
-            "kusuri / wo / nomitakunai / desu",
+            "kusuri / o / nomitakunai / desu",
             "itsuka / nihon / ni / sumitai / desu"
           ]
         },
@@ -9000,7 +9000,7 @@
           "examples": [
             {
               "japanese": "水をたくさんのみます。",
-              "romaji": "Mizu wo takusan nomimasu.",
+              "romaji": "Mizu o takusan nomimasu.",
               "english": "I drink a lot of water."
             },
             {
@@ -9119,7 +9119,7 @@
             {
               "id": "l10-act-6",
               "kind": "translate",
-              "prompt": "Translate: 'Shizuka na toki, hon wo yomimasu.'",
+              "prompt": "Translate: 'Shizuka na toki, hon o yomimasu.'",
               "answer": "When it is quiet, I read books."
             },
             {
@@ -9131,13 +9131,13 @@
             {
               "id": "l10-act-8",
               "kind": "translate",
-              "prompt": "Translate: 'Nihon ni iku toki, nihongo wo benkyou shimasu.'",
+              "prompt": "Translate: 'Nihon ni iku toki, nihongo o benkyou shimasu.'",
               "answer": "When I go to Japan, I study Japanese."
             },
             {
               "id": "l10-act-9",
               "kind": "translate",
-              "prompt": "Translate: 'Hima na toki, nani wo shimasu ka.'",
+              "prompt": "Translate: 'Hima na toki, nani o shimasu ka.'",
               "answer": "What do you do when you're free?"
             },
             {
@@ -9150,7 +9150,7 @@
               "id": "l10-act-11",
               "kind": "translate",
               "prompt": "How would you say 'the first time I ate popcorn'?",
-              "answer": "hajimete poppukoon wo tabeta toki"
+              "answer": "hajimete poppukoon o tabeta toki"
             },
             {
               "id": "l10-act-12",
@@ -9218,12 +9218,12 @@
               "lines": [
                 {
                   "speaker": "A",
-                  "japanese": "Jikan ga aru toki, nani wo shimasu ka.",
+                  "japanese": "Jikan ga aru toki, nani o shimasu ka.",
                   "english": "What do you do when you have time?"
                 },
                 {
                   "speaker": "B",
-                  "japanese": "Hon wo yomimasu.",
+                  "japanese": "Hon o yomimasu.",
                   "english": "I read books."
                 }
               ]
@@ -9236,7 +9236,7 @@
               "lines": [
                 {
                   "speaker": "A",
-                  "japanese": "Kodomo no toki, nani wo shimashita ka.",
+                  "japanese": "Kodomo no toki, nani o shimashita ka.",
                   "english": "What did you do when you were a child?"
                 },
                 {
@@ -9254,7 +9254,7 @@
             "otousan / ga / kaetta / toki / tabemasu",
             "ame / ga / futta / toki / ie / ni / imashita",
             "kodomo / no / toki / yoku / asobimashita",
-            "jikan / ga / aru / toki / hon / wo / yomimasu"
+            "jikan / ga / aru / toki / hon / o / yomimasu"
           ]
         },
         {
@@ -9828,12 +9828,12 @@
             },
             {
               "japanese": "かぎをさがしています。",
-              "romaji": "Kagi wo sagashite imasu.",
+              "romaji": "Kagi o sagashite imasu.",
               "english": "I'm looking for my keys."
             },
             {
               "japanese": "スポーツをやります。",
-              "romaji": "Supootsu wo yarimasu.",
+              "romaji": "Supootsu o yarimasu.",
               "english": "I play sports."
             },
             {
@@ -9937,7 +9937,7 @@
             {
               "id": "l11-act-8",
               "kind": "translate",
-              "prompt": "Translate: 'Apaato wo sagashite imasu.'",
+              "prompt": "Translate: 'Apaato o sagashite imasu.'",
               "answer": "I am looking for an apartment."
             },
             {
@@ -10003,7 +10003,7 @@
             {
               "id": "l11-act-17",
               "kind": "reading_comprehension",
-              "passage": "Satou san wa sengetsu, Oosaka ni tenkin ni narimashita. Ima, eki no chikaku no wanruumu manshon wo sagashite imasu.",
+              "passage": "Satou san wa sengetsu, Oosaka ni tenkin ni narimashita. Ima, eki no chikaku no wanruumu manshon o sagashite imasu.",
               "questions": [
                 {
                   "prompt": "Why did Mr. Sato move?",
@@ -10639,7 +10639,7 @@
               "examples": [
                 {
                   "japanese": "学校にいってから、サッカーをします。",
-                  "romaji": "Gakkou ni itte kara, sakkaa wo shimasu.",
+                  "romaji": "Gakkou ni itte kara, sakkaa o shimasu.",
                   "english": "After I go to school, I will play soccer."
                 },
                 {
@@ -10674,13 +10674,13 @@
             {
               "id": "l12-act-1",
               "kind": "translate",
-              "prompt": "Translate: 'Shukudai wo shite kara, terebi wo mimasu.'",
+              "prompt": "Translate: 'Shukudai o shite kara, terebi o mimasu.'",
               "answer": "After I do my homework, I will watch TV."
             },
             {
               "id": "l12-act-2",
               "kind": "fill_blank",
-              "prompt": "Kanji wo ___ kaite kudasai. (Please write the kanji quickly)",
+              "prompt": "Kanji o ___ kaite kudasai. (Please write the kanji quickly)",
               "answer": "hayaku"
             },
             {
@@ -10709,7 +10709,7 @@
             {
               "id": "l12-act-6",
               "kind": "translate",
-              "prompt": "Translate: 'Gohan wo tabete kara, deraeru.' (preview dekiru — identify meaning generally)",
+              "prompt": "Translate: 'Gohan o tabete kara, deraeru.' (preview dekiru — identify meaning generally)",
               "answer": "After eating, I can go out. (dekiru = can do; deraeru is a typo-preview of dekakerareru, acceptable simplified: dekakemasu, 'go out')"
             },
             {
@@ -10767,7 +10767,7 @@
               "lines": [
                 {
                   "speaker": "A",
-                  "japanese": "Shigoto ga owatte kara, e wo kakimasu.",
+                  "japanese": "Shigoto ga owatte kara, e o kakimasu.",
                   "english": "After work ends, I paint."
                 },
                 {
@@ -10787,7 +10787,7 @@
             {
               "id": "l12-act-17",
               "kind": "reading_comprehension",
-              "passage": "Rio wa mainichi asa, mazu ranningu wo shimasu. Sorekara, asagohan wo tabemasu. Asagohan wo tabete kara, shigoto ni ikimasu.",
+              "passage": "Rio wa mainichi asa, mazu ranningu o shimasu. Sorekara, asagohan o tabemasu. Asagohan o tabete kara, shigoto ni ikimasu.",
               "questions": [
                 {
                   "prompt": "What does Rio do first every morning?",
@@ -10815,7 +10815,7 @@
               "lines": [
                 {
                   "speaker": "A",
-                  "japanese": "Asagohan wo tabete kara, nani wo shimasu ka.",
+                  "japanese": "Asagohan o tabete kara, nani o shimasu ka.",
                   "english": "What do you do after eating breakfast?"
                 },
                 {
@@ -10848,8 +10848,8 @@
         {
           "type": "sentence_building",
           "prompts": [
-            "gakkou / ni / itte / kara / sakkaa / wo / shimasu",
-            "asagohan / wo / tabete / kara / gakkou / ni / ikimasu",
+            "gakkou / ni / itte / kara / sakkaa / o / shimasu",
+            "asagohan / o / tabete / kara / gakkou / ni / ikimasu",
             "yukkuri / hanashite / kudasai",
             "kare / wa / hayaku / hashirimasu"
           ]
@@ -11398,12 +11398,12 @@
             },
             {
               "japanese": "さいふをなくしました。",
-              "romaji": "Saifu wo nakushimashita.",
+              "romaji": "Saifu o nakushimashita.",
               "english": "I lost my wallet."
             },
             {
               "japanese": "かぎをみつけました。",
-              "romaji": "Kagi wo mitsukemashita.",
+              "romaji": "Kagi o mitsukemashita.",
               "english": "I found my keys. (active, 見つける)"
             },
             {
@@ -11413,7 +11413,7 @@
             },
             {
               "japanese": "いたみをがまんしました。",
-              "romaji": "Itami wo gaman shimashita.",
+              "romaji": "Itami o gaman shimashita.",
               "english": "I endured the pain."
             }
           ]
@@ -11580,7 +11580,7 @@
             {
               "id": "l13-act-5",
               "kind": "translate",
-              "prompt": "Translate: 'Saifu wo nakushimashita.'",
+              "prompt": "Translate: 'Saifu o nakushimashita.'",
               "answer": "I lost my wallet."
             },
             {
@@ -11675,7 +11675,7 @@
             {
               "id": "l13-act-18",
               "kind": "reading_comprehension",
-              "passage": "Amelia wa kyonen, oyogemasen deshita. Kotoshi, takusan renshuu shite kara, umi de oyogemasu. Kyuu no mizugi wo nakushimashita. Demo, kinou mitsukarimashita.",
+              "passage": "Amelia wa kyonen, oyogemasen deshita. Kotoshi, takusan renshuu shite kara, umi de oyogemasu. Kyuu no mizugi o nakushimashita. Demo, kinou mitsukarimashita.",
               "questions": [
                 {
                   "prompt": "Could Amelia swim last year?",

@@ -2552,7 +2552,7 @@
             {
               "id": "lesson2-act-19",
               "kind": "translate",
-              "prompt": "'Nihongo wo benkyou shite imasu.' — What language is mentioned in this sentence?",
+              "prompt": "'Nihongo o benkyou shite imasu.' — What language is mentioned in this sentence?",
               "answer": "Japanese (nihongo)"
             },
             {
@@ -6194,7 +6194,7 @@
                 {
                   "japanese": "を",
                   "romaji": "wo",
-                  "english": "object-marking particle"
+                  "english": "object-marking particle (pronounced o; typed wo)"
                 }
               ]
             },
@@ -6956,7 +6956,7 @@
               "lines": [
                 {
                   "speaker": "A",
-                  "japanese": "Kotoshi no natsu, nani wo shimasu ka.",
+                  "japanese": "Kotoshi no natsu, nani o shimasu ka.",
                   "english": "What are you doing this summer?"
                 },
                 {
@@ -7164,7 +7164,7 @@
               "examples": [
                 {
                   "japanese": "みずをください。",
-                  "romaji": "Mizu wo kudasai.",
+                  "romaji": "Mizu o kudasai.",
                   "english": "Water, please."
                 }
               ]
@@ -7176,7 +7176,7 @@
               "examples": [
                 {
                   "japanese": "みずをおねがいします。",
-                  "romaji": "Mizu wo onegaishimasu.",
+                  "romaji": "Mizu o onegaishimasu.",
                   "english": "Water, please. (more polite)"
                 }
               ]
@@ -7643,26 +7643,26 @@
             {
               "id": "lesson10-act-1",
               "kind": "translate",
-              "prompt": "Translate: 'Kagi wo kudasai.'",
+              "prompt": "Translate: 'Kagi o kudasai.'",
               "answer": "Key, please. / Give me the key, please."
             },
             {
               "id": "lesson10-act-2",
               "kind": "translate",
-              "prompt": "Translate: 'Kasa wo onegaishimasu.'",
+              "prompt": "Translate: 'Kasa o onegaishimasu.'",
               "answer": "Umbrella, please. (more polite)"
             },
             {
               "id": "lesson10-act-3",
               "kind": "translate",
-              "prompt": "Translate: 'Denwa wo kudasai.'",
+              "prompt": "Translate: 'Denwa o kudasai.'",
               "answer": "The phone, please."
             },
             {
               "id": "lesson10-act-4",
               "kind": "translate",
               "prompt": "How would you politely ask for tea using the more formal request word?",
-              "answer": "Ocha wo onegaishimasu."
+              "answer": "Ocha o onegaishimasu."
             },
             {
               "id": "lesson10-act-5",
@@ -7757,7 +7757,7 @@
             {
               "id": "lesson10-act-19",
               "kind": "reading_comprehension",
-              "passage": "Resutoran de: Mizu to menyuu wo onegaishimasu. Hashi mo onegaishimasu. Dezaato mo tabetai desu.",
+              "passage": "Resutoran de: Mizu to menyuu o onegaishimasu. Hashi mo onegaishimasu. Dezaato mo tabetai desu.",
               "questions": [
                 {
                   "prompt": "What three things are being asked for?",
@@ -7777,7 +7777,7 @@
               "id": "lesson10-act-21",
               "kind": "translate",
               "prompt": "How would you politely ask for chopsticks?",
-              "answer": "Hashi wo onegaishimasu."
+              "answer": "Hashi o onegaishimasu."
             },
             {
               "id": "lesson10-act-22",
@@ -7796,28 +7796,28 @@
               "kind": "translate",
               "image_ref": "/images/jfz-1/jfz1-l10-item1.png",
               "prompt": "How would you order this at a restaurant? Use both 〜をおねがいします and 〜をください.",
-              "answer": "Keeki wo onegaishimasu. / Keeki wo kudasai. (cake)"
+              "answer": "Keeki o onegaishimasu. / Keeki o kudasai. (cake)"
             },
             {
               "id": "lesson10-act-25",
               "kind": "translate",
               "image_ref": "/images/jfz-1/jfz1-l10-item2.png",
               "prompt": "How would you order this at a restaurant? Use both 〜をおねがいします and 〜をください.",
-              "answer": "Piza wo onegaishimasu. / Piza wo kudasai."
+              "answer": "Piza o onegaishimasu. / Piza o kudasai."
             },
             {
               "id": "lesson10-act-26",
               "kind": "translate",
               "image_ref": "/images/jfz-1/jfz1-l10-item3.png",
               "prompt": "How would you order both of these at a restaurant? Use と (and).",
-              "answer": "Sandoicchi to juusu wo onegaishimasu."
+              "answer": "Sandoicchi to juusu o onegaishimasu."
             },
             {
               "id": "lesson10-act-27",
               "kind": "translate",
               "image_ref": "/images/jfz-1/jfz1-l10-item4.png",
               "prompt": "How would you order both of these at a restaurant? Use と (and).",
-              "answer": "Hanbaagaa to furaido poteto wo onegaishimasu. (hamburger and fries)"
+              "answer": "Hanbaagaa to furaido poteto o onegaishimasu. (hamburger and fries)"
             },
             {
               "id": "lesson10-act-28",
@@ -7827,7 +7827,7 @@
               "lines": [
                 {
                   "speaker": "Kyaku",
-                  "japanese": "Sumimasen, menyuu wo onegaishimasu.",
+                  "japanese": "Sumimasen, menyuu o onegaishimasu.",
                   "english": "Excuse me, could I have a menu, please?"
                 },
                 {
@@ -7837,7 +7837,7 @@
                 },
                 {
                   "speaker": "Kyaku",
-                  "japanese": "Piza to mizu wo kudasai.",
+                  "japanese": "Piza to mizu o kudasai.",
                   "english": "I'll have pizza and water, please."
                 }
               ]
@@ -7847,10 +7847,10 @@
         {
           "type": "sentence_building",
           "prompts": [
-            "mizu / wo / onegaishimasu",
-            "menyuu / wo / kudasai",
+            "mizu / o / onegaishimasu",
+            "menyuu / o / kudasai",
             "hashi / mo / onegaishimasu",
-            "piza / to / mizu / wo / kudasai"
+            "piza / to / mizu / o / kudasai"
           ]
         },
         {
@@ -7894,17 +7894,17 @@
               "examples": [
                 {
                   "japanese": "りんごをにこ、ください。",
-                  "romaji": "Ringo wo niko, kudasai.",
+                  "romaji": "Ringo o niko, kudasai.",
                   "english": "Two apples, please."
                 },
                 {
                   "japanese": "えんぴつをいっぽん、ください。",
-                  "romaji": "Enpitsu wo ippon, kudasai.",
+                  "romaji": "Enpitsu o ippon, kudasai.",
                   "english": "One pencil, please."
                 },
                 {
                   "japanese": "かみをさんまい、ください。",
-                  "romaji": "Kami wo sanmai, kudasai.",
+                  "romaji": "Kami o sanmai, kudasai.",
                   "english": "Three sheets of paper, please."
                 },
                 {
@@ -8296,25 +8296,25 @@
             {
               "id": "lesson11-act-1",
               "kind": "translate",
-              "prompt": "Translate: 'Kami wo gomai, kudasai.'",
+              "prompt": "Translate: 'Kami o gomai, kudasai.'",
               "answer": "Five sheets of paper, please."
             },
             {
               "id": "lesson11-act-2",
               "kind": "translate",
-              "prompt": "Translate: 'Enpitsu wo sanbon, kudasai.'",
+              "prompt": "Translate: 'Enpitsu o sanbon, kudasai.'",
               "answer": "Three pencils, please."
             },
             {
               "id": "lesson11-act-3",
               "kind": "translate",
-              "prompt": "Translate: 'Ringo wo yokko, kudasai.'",
+              "prompt": "Translate: 'Ringo o yokko, kudasai.'",
               "answer": "Four apples, please."
             },
             {
               "id": "lesson11-act-4",
               "kind": "translate",
-              "prompt": "Translate: 'Chiketto wo nimai, onegaishimasu.'",
+              "prompt": "Translate: 'Chiketto o nimai, onegaishimasu.'",
               "answer": "Two tickets, please."
             },
             {
@@ -8339,13 +8339,13 @@
               "id": "lesson11-act-8",
               "kind": "translate",
               "prompt": "How would you ask for '3 more tickets'?",
-              "answer": "Ato, chiketto wo sanmai, kudasai."
+              "answer": "Ato, chiketto o sanmai, kudasai."
             },
             {
               "id": "lesson11-act-9",
               "kind": "translate",
               "prompt": "How would you ask for '2 more apples'?",
-              "answer": "Ato, ringo wo niko, kudasai."
+              "answer": "Ato, ringo o niko, kudasai."
             },
             {
               "id": "lesson11-act-10",
@@ -8362,7 +8362,7 @@
             {
               "id": "lesson11-act-12",
               "kind": "translate",
-              "prompt": "Translate: 'Karendaa wo ikko, kudasai.'",
+              "prompt": "Translate: 'Karendaa o ikko, kudasai.'",
               "answer": "One calendar, please."
             },
             {
@@ -8380,7 +8380,7 @@
             {
               "id": "lesson11-act-15",
               "kind": "translate",
-              "prompt": "Translate: 'Hana wo nanbon, kaimashita ka.'",
+              "prompt": "Translate: 'Hana o nanbon, kaimashita ka.'",
               "answer": "How many flowers (stems) did you buy?"
             },
             {
@@ -8472,9 +8472,9 @@
         {
           "type": "sentence_building",
           "prompts": [
-            "ringo / wo / niko / kudasai",
+            "ringo / o / niko / kudasai",
             "enpitsu / ga / nanbon / arimasu / ka",
-            "chiketto / wo / nimai / onegaishimasu",
+            "chiketto / o / nimai / onegaishimasu",
             "hana / ga / itsutsu / arimasu"
           ]
         },

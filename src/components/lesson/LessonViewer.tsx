@@ -14,6 +14,7 @@ import { LessonActivities, UnitDoneBanner, useJustCompleted } from "./sections/L
 import { SentenceBuilding } from "./sections/SentenceBuilding";
 import { UnitProvider } from "./unit-context";
 import { useHydrated } from "@/hooks/use-hydrated";
+import { unitExerciseIds } from "@/lib/book-progress";
 import { isNativePlatform } from "@/lib/notifications";
 import { useUnitProgress } from "@/hooks/use-unit-progress";
 
@@ -70,9 +71,7 @@ const labelFor = (s: Section) =>
   s.type === "kana_intro" && s.data.script === "kanji" ? "Kanji" : stripLabel[s.type];
 
 export function LessonViewer({ bookId, unit }: { bookId: string; unit: Unit }) {
-  const allExerciseIds = unit.sections.flatMap((s) =>
-    s.type === "lesson_activities" ? s.data.exercises.map((e) => e.id) : [],
-  );
+  const allExerciseIds = unitExerciseIds(unit);
   const hydrated = useHydrated();
   const shown = unit.sections.flatMap((section, index) =>
     labelFor(section) ? [{ section, index }] : [],

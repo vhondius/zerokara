@@ -3,7 +3,7 @@ import { Link } from "@tanstack/react-router";
 import { useProgressTick } from "@/hooks/use-unit-progress";
 import { useTheme } from "@/components/theme/ThemeProvider";
 import { buildReviewSession } from "@/hooks/use-srs";
-import { bookStatus, currentBook } from "@/lib/book-progress";
+import { bookStatus, currentBook, unitExerciseIds } from "@/lib/book-progress";
 import { getState } from "@/lib/progress-store";
 import { allHiragana, allKatakana } from "@/lib/kana-index";
 import { allVocabulary, vocabId } from "@/lib/vocab-index";
@@ -86,6 +86,13 @@ export function TodayCard() {
 
   const book = currentBook();
   const next = book ? bookStatus(book).firstIncomplete : undefined;
+  // A part-done lesson says what's left: moving on to later lessons doesn't finish it.
+  const nextIds = next ? unitExerciseIds(next) : [];
+  const answered =
+    next && book ? state.units[`${book.id}:${next.id}`]?.exercise_results : undefined;
+  const left = nextIds.filter((id) => !answered?.[id]).length;
+  const leftNote =
+    left > 0 && left < nextIds.length ? `${left} exercise${left === 1 ? "" : "s"} left` : null;
 
   const plan = planFor(study.pattern);
   const away = daysAway();
@@ -100,7 +107,7 @@ export function TodayCard() {
         params={{ bookId: book.id, unitId: next.id }}
         className="inline-block rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground hover:bg-primary/90"
       >
-        Continue: {next.label} →
+        {leftNote ? `Finish ${next.label}: ${leftNote}` : `Continue: ${next.label}`} →
       </Link>
     ) : book ? (
       <Link
@@ -128,7 +135,7 @@ export function TodayCard() {
         params={{ bookId: book.id, unitId: next.id }}
         className="text-sm text-muted-foreground underline-offset-2 hover:text-foreground hover:underline"
       >
-        or continue {next.label}
+        {leftNote ? `or finish ${next.label}: ${leftNote}` : `or continue ${next.label}`}
       </Link>
     ) : null;
 
@@ -160,9 +167,9 @@ export function TodayCard() {
               ? `Strengthen what you've learned: ${reviewTotal} card${reviewTotal === 1 ? "" : "s"} ready.`
               : today === "lesson"
                 ? next
-                  ? `Next up: ${next.label} — ${next.title}.`
+                  ? `${leftNote ? "Finish" : "Next up:"} ${next.label} — ${next.title}.${leftNote ? ` ${leftNote}.` : ""}`
                   : "Every unit is done — time for the book test."
-                : `${next ? `Next up: ${next.label}. ` : ""}${reviewTotal} card${reviewTotal === 1 ? "" : "s"} to review.`}
+                : `${next ? `${leftNote ? "Finish" : "Next up:"} ${next.label}${leftNote ? ` (${leftNote})` : ""}. ` : ""}${reviewTotal} card${reviewTotal === 1 ? "" : "s"} to review.`}
           </p>
           <div className="mt-3 flex flex-wrap items-center gap-3">
             {today === "review" ? reviewLink : lessonLink}
