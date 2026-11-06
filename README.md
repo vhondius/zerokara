@@ -5,6 +5,22 @@ A Japanese-learning app built around the *Japanese From Zero* book series (books
 **Current version:** 1.0.4
 **Download:** [Zerokara_v1.0.4.apk](https://github.com/vhondius/zerokara/releases/latest/download/Zerokara_v1.0.4.apk) — grab it straight from the [Releases page](https://github.com/vhondius/zerokara/releases/latest) and sideload it on Android.
 
+<p align="center">
+  <img src="docs/screenshots/01-home.jpg" alt="Home with today's plan" width="200">
+  <img src="docs/screenshots/02-course.jpg" alt="Course overview" width="200">
+  <img src="docs/screenshots/03-lesson.jpg" alt="A lesson: culture note and vocabulary" width="200">
+</p>
+<p align="center">
+  <img src="docs/screenshots/04-lesson-kana.jpg" alt="New hiragana in a lesson" width="200">
+  <img src="docs/screenshots/05-lesson-workbook.jpg" alt="Workbook exercises" width="200">
+  <img src="docs/screenshots/06-hiragana-flashcards.jpg" alt="Hiragana flashcards" width="200">
+</p>
+<p align="center">
+  <img src="docs/screenshots/07-hiragana-quiz.jpg" alt="Hiragana quiz" width="200">
+  <img src="docs/screenshots/08-stroke-tracing.jpg" alt="Stroke order and tracing" width="200">
+  <img src="docs/screenshots/09-review.jpg" alt="Spaced-repetition review" width="200">
+</p>
+
 ## Features
 
 - **Structured course** — lessons and units following *Japanese From Zero* books 1–5, with an overview view and "resume where you left off" on the Learn tab.
