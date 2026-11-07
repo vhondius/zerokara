@@ -1,3 +1,4 @@
+import { Furigana } from "@/components/Furigana";
 import type { Section } from "@/content/schema";
 import { ReportButton } from "../ReportButton";
 import { ExampleRow, Prose, SectionShell } from "./shared";
@@ -23,7 +24,9 @@ export function SpecialUsage({ section }: { section: Data }) {
                   snapshot={n}
                 />
               </div>
-              <Prose>{n.body}</Prose>
+              <Prose>
+                <Furigana text={n.body} />
+              </Prose>
             </div>
           ))}
         </div>

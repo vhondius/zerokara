@@ -1,3 +1,4 @@
+import { Furigana } from "@/components/Furigana";
 import type { Section } from "@/content/schema";
 import { ReportButton } from "../ReportButton";
 import { SectionShell } from "./shared";
@@ -25,7 +26,9 @@ export function SpeakingNaturally({ section }: { section: Data }) {
                 />
               </span>
             </div>
-            <p className="mt-1 whitespace-pre-line text-sm text-foreground/90">{n.body}</p>
+            <p className="mt-1 whitespace-pre-line text-sm text-foreground/90">
+              <Furigana text={n.body} />
+            </p>
           </article>
         ))}
       </div>

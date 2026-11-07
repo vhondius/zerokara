@@ -1,3 +1,4 @@
+import { Furigana } from "@/components/Furigana";
 import type { Section } from "@/content/schema";
 import { ReportButton } from "../ReportButton";
 import { Prose, SectionShell } from "./shared";
@@ -19,7 +20,9 @@ export function CoolTools({ section }: { section: Data }) {
         />
       }
     >
-      <Prose>{section.data.body}</Prose>
+      <Prose>
+        <Furigana text={section.data.body} />
+      </Prose>
     </SectionShell>
   );
 }

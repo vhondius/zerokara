@@ -1,3 +1,4 @@
+import { Furigana } from "@/components/Furigana";
 import { useState, type ReactNode } from "react";
 import { ChevronDown } from "lucide-react";
 
@@ -64,7 +65,9 @@ export function ExampleRow({
 }) {
   return (
     <div className="grid gap-1 rounded-md bg-muted/50 px-4 py-3 md:grid-cols-[1fr_1fr_1fr] md:items-baseline md:gap-6">
-      <span className="jp text-lg text-foreground">{japanese}</span>
+      <span className="jp text-lg text-foreground">
+        <Furigana text={japanese} />
+      </span>
       {/* Book 1's pre-lessons come before hiragana, so their examples are romaji only. */}
       {romaji.trim() !== japanese.trim() ? (
         <span className="text-sm text-muted-foreground">{romaji}</span>

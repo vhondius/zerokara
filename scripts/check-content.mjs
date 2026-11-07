@@ -141,6 +141,38 @@ for (let n = 1; n <= 5; n++) {
   }
 }
 
+// Hiragana above kanji: every content string with kanji (not a lone kanji) has its readings,
+// and they spell the string. Missing ones mean scripts/furigana.mjs was not re-run.
+{
+  const furigana = JSON.parse(readFileSync(join(root, "src/content/furigana.json"), "utf8"));
+  const KANJI = /[㐀-鿿々〆ヶ]/;
+  const seen = new Set();
+  const check = (s, where) => {
+    if (typeof s !== "string" || !KANJI.test(s) || /^\s*\S\s*$/.test(s) || seen.has(s)) return;
+    seen.add(s);
+    const pieces = furigana[s];
+    if (!pieces)
+      report(where, `no hiragana readings for "${s.slice(0, 40)}" (run node scripts/furigana.mjs)`);
+    else if (pieces.map((p) => (typeof p === "string" ? p : p[0])).join("") !== s)
+      report(where, `hiragana readings do not spell "${s.slice(0, 40)}"`);
+  };
+  const strings = (node, where) => {
+    if (typeof node === "string") check(node, where);
+    else if (Array.isArray(node)) node.forEach((n) => strings(n, where));
+    else if (node && typeof node === "object")
+      Object.values(node).forEach((n) => strings(n, where));
+  };
+  for (let n = 1; n <= 5; n++)
+    strings(
+      JSON.parse(readFileSync(join(root, `src/content/books/jfz-${n}.json`), "utf8")),
+      `jfz-${n}`,
+    );
+  strings(
+    JSON.parse(readFileSync(join(root, "src/content/reference/jfz-1-phrases.json"), "utf8")),
+    "phrases",
+  );
+}
+
 if (problems.length) {
   console.error(
     `check-content: ${problems.length} problem(s)\n` + problems.map((p) => `  - ${p}`).join("\n"),

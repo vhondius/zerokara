@@ -268,6 +268,20 @@
     font-family: var(--font-jp);
   }
 
+  /* Hiragana above kanji (Settings): small, in the secondary ink, room kept between lines. */
+  ruby {
+    ruby-position: over;
+  }
+  rt {
+    font-family: var(--font-jp);
+    font-size: 0.5em;
+    font-weight: 400;
+    color: var(--muted-foreground);
+  }
+  :where(p, li, span, div):has(> ruby) {
+    line-height: 2;
+  }
+
   h1,
   h2,
   h3 {

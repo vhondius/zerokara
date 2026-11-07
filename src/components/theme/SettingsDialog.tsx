@@ -156,6 +156,8 @@ export function SettingsDialog({ onClose }: { onClose: () => void }) {
     setStudy,
     reportButtons,
     setReportButtons,
+    furigana,
+    setFurigana,
   } = useTheme();
 
   const [confirmDelete, setConfirmDelete] = useState(false);
@@ -247,6 +249,10 @@ export function SettingsDialog({ onClose }: { onClose: () => void }) {
               </SegButton>
             ))}
           </div>
+        </Row>
+
+        <Row label="Hiragana above kanji" hint="Hidden on questions until you see the answer.">
+          <Toggle checked={furigana} onChange={setFurigana} label="Toggle hiragana above kanji" />
         </Row>
 
         <Row

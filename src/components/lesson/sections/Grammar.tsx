@@ -1,3 +1,4 @@
+import { Furigana } from "@/components/Furigana";
 import type { Section, VerbTable } from "@/content/schema";
 import { ReportButton } from "../ReportButton";
 import { ExampleRow, SectionShell } from "./shared";
@@ -40,7 +41,9 @@ export function Grammar({ section }: { section: Data }) {
               <span className="whitespace-nowrap rounded-md bg-muted px-2 py-0.5 text-xs font-medium text-muted-foreground">
                 {p.id}
               </span>
-              <h3 className="font-display text-lg text-foreground">{p.title}</h3>
+              <h3 className="font-display text-lg text-foreground">
+                <Furigana text={p.title} />
+              </h3>
               <span className="ml-auto">
                 <ReportButton
                   sectionType="grammar"
@@ -52,7 +55,7 @@ export function Grammar({ section }: { section: Data }) {
               </span>
             </div>
             <p className="mt-2 whitespace-pre-line text-sm leading-relaxed text-foreground/90">
-              {p.explanation}
+              <Furigana text={p.explanation} />
             </p>
             {p.examples.length > 0 ? (
               <div className="mt-3 space-y-2">

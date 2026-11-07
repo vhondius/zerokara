@@ -1,3 +1,4 @@
+import { Furigana } from "@/components/Furigana";
 import { useMemo, useState } from "react";
 import type { Section } from "@/content/schema";
 import { ReportButton } from "../ReportButton";
@@ -30,7 +31,7 @@ export function SentenceBuilding({ section }: { section: Data }) {
           ) : (
             // A few prompts are patterns to complete ("Isogashii ___, ___."), not word sets.
             <li key={i} className="jp rounded-md bg-muted/50 px-4 py-3 text-base text-foreground">
-              {p}
+              <Furigana text={p} />
             </li>
           ),
         )}

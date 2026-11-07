@@ -1,3 +1,4 @@
+import { Furigana } from "@/components/Furigana";
 import { createFileRoute } from "@tanstack/react-router";
 import { jfz1Phrases } from "@/content/reference/schema";
 import { ColorScope } from "@/components/theme/ColorScope";
@@ -55,7 +56,7 @@ function PhrasesPageInner() {
                           {entry.english}
                         </span>
                         <span className="jp text-base text-foreground sm:flex-1 sm:text-right">
-                          {entry.japanese}
+                          <Furigana text={entry.japanese} />
                         </span>
                       </div>
                       {entry.note && (

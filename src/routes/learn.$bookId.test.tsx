@@ -367,7 +367,7 @@ function TestRunner({
                     </span>
                     <span className="text-xs text-muted-foreground">{it.unit.label}</span>
                   </div>
-                  <ExercisePrompt exercise={it.exercise} />
+                  <ExercisePrompt exercise={it.exercise} answered={!!results[it.exercise.id]} />
                   <div className="mt-3">
                     <ExerciseInput
                       exercise={it.exercise}
@@ -437,7 +437,7 @@ function TestRunner({
             />
           </span>
         </div>
-        <ExercisePrompt exercise={current.exercise} />
+        <ExercisePrompt exercise={current.exercise} answered={!!results[current.exercise.id]} />
         <div className="mt-3">
           <ExerciseInput
             exercise={current.exercise}

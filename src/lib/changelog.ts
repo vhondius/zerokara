@@ -16,6 +16,14 @@ export function newestChangelogId(): number {
  */
 export const CHANGELOG: ChangelogEntry[] = [
   {
+    id: 6,
+    date: "2026-11-08",
+    notes: [
+      "New setting: Hiragana above kanji. Lessons, examples, dialogues and reading passages show the reading over each kanji. Questions and answer choices only show it once you've answered, and vocabulary tables and word cards keep their own reading column.",
+      "Review and flashcards no longer flash the next card's answer for a moment after you rate or move on.",
+    ],
+  },
+  {
     id: 5,
     date: "2026-11-05",
     notes: [

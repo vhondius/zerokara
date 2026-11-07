@@ -1,3 +1,4 @@
+import { Furigana } from "@/components/Furigana";
 import { Link, createFileRoute } from "@tanstack/react-router";
 import { FirstRunCard, TodayCard } from "@/components/home/TodayCard";
 
@@ -45,7 +46,9 @@ function Landing() {
         >
           <div className="flex items-baseline justify-between">
             <h2 className="font-display text-2xl text-foreground">Course</h2>
-            <span className="jp text-3xl text-accent">課</span>
+            <span className="jp text-3xl text-accent">
+              <Furigana text="課" />
+            </span>
           </div>
           <p className="mt-2 text-sm text-muted-foreground">
             Work through pre-lessons and lessons in order. Grammar, culture, writing, vocabulary,
@@ -62,7 +65,9 @@ function Landing() {
         >
           <div className="flex items-baseline justify-between">
             <h2 className="font-display text-2xl text-foreground">Review</h2>
-            <span className="jp text-3xl text-accent">復</span>
+            <span className="jp text-3xl text-accent">
+              <Furigana text="復" />
+            </span>
           </div>
           <p className="mt-2 text-sm text-muted-foreground">
             Spaced review for vocabulary, hiragana, and katakana you've already learned — Anki-style
@@ -79,7 +84,9 @@ function Landing() {
         >
           <div className="flex items-baseline justify-between">
             <h2 className="font-display text-2xl text-foreground">Practice</h2>
-            <span className="jp text-3xl text-accent">練</span>
+            <span className="jp text-3xl text-accent">
+              <Furigana text="練" />
+            </span>
           </div>
           <p className="mt-2 text-sm text-muted-foreground">
             Standalone drills for hiragana, katakana, and kanji. Flashcards, stroke order, and

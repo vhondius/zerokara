@@ -27,6 +27,8 @@ type ThemeState = {
   hideCharacterInTrace: boolean;
   /** Show the per-item "report an error" buttons in lessons and practice. */
   reportButtons: boolean;
+  /** Hiragana above kanji (furigana), except where the reading is the question. */
+  furigana: boolean;
   study: StudySettings;
 };
 
@@ -73,6 +75,7 @@ type ThemeContextValue = ThemeState & {
   setNotifyTime: (v: string) => void;
   setHideCharacterInTrace: (v: boolean) => void;
   setReportButtons: (v: boolean) => void;
+  setFurigana: (v: boolean) => void;
   setStudy: (v: Partial<StudySettings>) => void;
   hydrated: boolean;
 };
@@ -86,6 +89,7 @@ const defaults: ThemeState = {
   notifyTime: "19:00",
   hideCharacterInTrace: false,
   reportButtons: false,
+  furigana: false,
   study: STUDY_DEFAULTS,
 };
 
@@ -99,6 +103,7 @@ const ThemeContext = createContext<ThemeContextValue>({
   setNotifyTime: () => {},
   setHideCharacterInTrace: () => {},
   setReportButtons: () => {},
+  setFurigana: () => {},
   setStudy: () => {},
   hydrated: false,
 });
@@ -122,6 +127,7 @@ function read(): ThemeState {
             : "19:00",
         hideCharacterInTrace: !!p.hideCharacterInTrace,
         reportButtons: !!p.reportButtons,
+        furigana: !!p.furigana,
         study: readStudy(p.study),
       };
     }
@@ -196,6 +202,8 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
     [],
   );
 
+  const setFurigana = useCallback((v: boolean) => setState((s) => ({ ...s, furigana: v })), []);
+
   const setStudy = useCallback(
     (v: Partial<StudySettings>) =>
       setState((s) => ({ ...s, study: readStudy({ ...s.study, ...v }) })),
@@ -214,6 +222,7 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
       setNotifyTime,
       setHideCharacterInTrace,
       setReportButtons,
+      setFurigana,
       hydrated,
     }),
     [
@@ -226,6 +235,7 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
       setNotifyTime,
       setHideCharacterInTrace,
       setReportButtons,
+      setFurigana,
       setStudy,
       hydrated,
     ],

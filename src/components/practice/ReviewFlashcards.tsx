@@ -290,7 +290,9 @@ export function ReviewFlashcards({
               : "Space / Enter reveals"}
         </span>
       </div>
+      {/* Keyed per card: a new card mounts face-down instead of fading out the next card's answer. */}
       <button
+        key={i}
         type="button"
         ref={flipRef}
         data-flip

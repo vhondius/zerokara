@@ -1,3 +1,4 @@
+import { Furigana } from "@/components/Furigana";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { Link } from "@tanstack/react-router";
 import type { Exercise, Section } from "@/content/schema";
@@ -174,7 +175,7 @@ function ExerciseItem({ exercise, index }: { exercise: Exercise; index: number }
         </span>
       </div>
 
-      <ExercisePrompt exercise={exercise} />
+      <ExercisePrompt exercise={exercise} answered={!!result} />
 
       <div className="mt-3">
         {/* Inputs seed their state from `result` on mount; saved progress only
@@ -191,7 +192,8 @@ function ExerciseItem({ exercise, index }: { exercise: Exercise; index: number }
 }
 
 /** Picture, prompt and hint shown above an exercise's answer input. */
-export function ExercisePrompt({ exercise }: { exercise: Exercise }) {
+/** `answered`: the hiragana over the prompt's kanji shows only then, as it may be the answer. */
+export function ExercisePrompt({ exercise, answered }: { exercise: Exercise; answered: boolean }) {
   return (
     <>
       {exercise.image_ref ? (
@@ -202,7 +204,9 @@ export function ExercisePrompt({ exercise }: { exercise: Exercise }) {
         />
       ) : null}
       {exercise.prompt ? (
-        <p className="jp mt-2 text-base text-foreground">{exercise.prompt}</p>
+        <p className="jp mt-2 text-base text-foreground">
+          <Furigana text={exercise.prompt} show={answered} />
+        </p>
       ) : null}
       {exercise.hint ? (
         <p className="mt-1 text-xs text-muted-foreground">Hint: {exercise.hint}</p>
@@ -436,7 +440,7 @@ function MultipleChoice({
                     : "border-border bg-background hover:bg-muted/60 text-foreground",
             ].join(" ")}
           >
-            {opt}
+            <Furigana text={opt} show={!!result} />
           </button>
         );
       })}
@@ -445,7 +449,10 @@ function MultipleChoice({
           <StatusBadge result={result} />
           {result.status === "incorrect" ? (
             <span className="text-xs text-muted-foreground">
-              Answer: <span className="text-foreground">{answerAsString(exercise.answer)}</span>
+              Answer:{" "}
+              <span className="text-foreground">
+                <Furigana text={answerAsString(exercise.answer)} />
+              </span>
             </span>
           ) : null}
           {done ? <AdvanceButton label={advanceLabel} onAdvance={onAdvance} /> : null}
@@ -573,7 +580,9 @@ function TextAnswer({
             </div>
             <div>
               <span className="text-muted-foreground">Reference:</span>{" "}
-              <span className="jp text-foreground">{answerAsString(exercise.answer) || "—"}</span>
+              <span className="jp text-foreground">
+                <Furigana text={answerAsString(exercise.answer) || "—"} />
+              </span>
             </div>
           </div>
           {casualNote ? <p className="mt-1 text-xs text-muted-foreground">{casualNote}</p> : null}
@@ -635,7 +644,9 @@ function PartsAnswer({ exercise, result, onRecord, locked, advanceLabel, onAdvan
                     {partOk ? "Correct" : "Incorrect"}
                   </span>
                   <span className="text-muted-foreground"> · Reference: </span>
-                  <span className="jp text-foreground">{answerAsString(part.answer)}</span>
+                  <span className="jp text-foreground">
+                    <Furigana text={answerAsString(part.answer)} />
+                  </span>
                 </p>
               ) : null}
             </li>
@@ -763,7 +774,9 @@ function Matching({ exercise, result, onRecord, locked, advanceLabel, onAdvance 
           const isTarget = !done && target === k;
           return (
             <div key={`${k}-${ki}`} className="flex flex-wrap items-center gap-x-3 gap-y-1">
-              <span className="jp min-w-0 basis-full text-sm text-foreground sm:basis-40">{k}</span>
+              <span className="jp min-w-0 basis-full text-sm text-foreground sm:basis-40">
+                <Furigana text={k} show={!!result} />
+              </span>
               <button
                 type="button"
                 disabled={done}
@@ -788,7 +801,10 @@ function Matching({ exercise, result, onRecord, locked, advanceLabel, onAdvance 
               </button>
               {showState && !right ? (
                 <span className="basis-full text-xs text-muted-foreground sm:basis-auto">
-                  answer: <span className="jp text-foreground">{correctVal}</span>
+                  answer:{" "}
+                  <span className="jp text-foreground">
+                    <Furigana text={correctVal} />
+                  </span>
                 </span>
               ) : null}
             </div>
@@ -922,7 +938,7 @@ function ReadingComprehension({
     <div className="space-y-4">
       {exercise.passage ? (
         <div className="jp rounded-md bg-muted/40 px-4 py-3 text-sm leading-relaxed text-foreground whitespace-pre-line">
-          {exercise.passage}
+          <Furigana text={exercise.passage} />
         </div>
       ) : null}
       <ol className="space-y-3">
@@ -931,7 +947,7 @@ function ReadingComprehension({
           return (
             <li key={i} className="space-y-1">
               <p className="jp text-sm text-foreground">
-                {i + 1}. {q.prompt}
+                {i + 1}. <Furigana text={q.prompt} show={!!state && state.ok !== null} />
               </p>
               <div className="flex flex-wrap gap-2">
                 <input
@@ -955,7 +971,9 @@ function ReadingComprehension({
                   <span className="text-muted-foreground">
                     {" "}
                     · Reference:{" "}
-                    <span className="jp text-foreground">{answerAsString(q.answer) || "—"}</span>
+                    <span className="jp text-foreground">
+                      <Furigana text={answerAsString(q.answer) || "—"} />
+                    </span>
                   </span>
                 </p>
               ) : null}
@@ -1055,7 +1073,9 @@ function MiniConversation({
                 <span className="text-xs font-medium uppercase tracking-wide text-muted-foreground">
                   {line.speaker}
                 </span>
-                <span className={isJtoE ? "jp text-foreground" : "text-foreground"}>{source}</span>
+                <span className={isJtoE ? "jp text-foreground" : "text-foreground"}>
+                  <Furigana text={source} />
+                </span>
               </div>
               <input
                 type="text"
@@ -1076,7 +1096,7 @@ function MiniConversation({
                   </span>
                   <span className="text-muted-foreground"> · Reference: </span>
                   <span className={`text-foreground ${isJtoE ? "" : "jp"}`}>
-                    {answerAsString(reference)}
+                    <Furigana text={answerAsString(reference)} />
                   </span>
                 </p>
               ) : null}

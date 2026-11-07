@@ -1,3 +1,4 @@
+import { Furigana } from "@/components/Furigana";
 import { Link, createFileRoute } from "@tanstack/react-router";
 import { ColorBlock } from "@/components/theme/ColorScope";
 import { SECTION_COLORS } from "@/lib/theme-colors";
@@ -77,7 +78,9 @@ function PracticeIndex() {
               to={s.to}
               className={`block rounded-xl border p-6 transition-[border-color,box-shadow,translate] ${s.ready ? "border-border bg-card shadow-sheet hover:border-accent hover:shadow-lift active:translate-y-px" : "border-dashed border-border bg-card/40"}`}
             >
-              <div className="jp text-3xl text-accent">{s.jp}</div>
+              <div className="jp text-3xl text-accent">
+                <Furigana text={s.jp} />
+              </div>
               <div className="mt-3 flex items-center gap-2">
                 <span className="font-display text-xl text-foreground">{s.label}</span>
                 {!s.ready ? (

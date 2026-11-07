@@ -102,7 +102,9 @@ export function FlashcardDeck({
           {touch ? "Tap the card to flip" : "Click card or press F to flip · ← → to navigate"}
         </span>
       </div>
+      {/* Keyed per card: a new card mounts face-down instead of fading out the next card's answer. */}
       <button
+        key={i}
         type="button"
         onClick={flip}
         aria-label={flipped ? card.backLabel : card.frontLabel}
