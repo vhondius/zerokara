@@ -24,8 +24,9 @@ describe("furigana.json", () => {
     expect(data["#words"]["今日"]).toEqual([["今日", "きょう"]]);
   });
   it("spells every string it holds", () => {
-    for (const [text, pieces] of Object.entries(data)) {
+    for (const [text, value] of Object.entries(data)) {
       if (text === "#words") continue;
+      const pieces = value as FuriganaPiece[];
       expect(pieces.map((p) => (typeof p === "string" ? p : p[0])).join("")).toBe(text);
     }
   });

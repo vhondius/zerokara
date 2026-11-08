@@ -1,3 +1,4 @@
+import { Furigana } from "@/components/Furigana";
 import { useMemo, useState } from "react";
 import { Link } from "@tanstack/react-router";
 import { allKanji, type KanaEntry } from "@/lib/kana-index";
@@ -32,7 +33,9 @@ export function KanjiPractice() {
         ← All practice
       </Link>
       <div className="mt-6 flex items-baseline gap-4">
-        <span className="jp text-5xl text-accent">漢字</span>
+        <span className="jp text-5xl text-accent">
+          <Furigana text="漢字" />
+        </span>
         <h1 className="font-display text-4xl text-foreground">Kanji</h1>
       </div>
       <p className="mt-2 text-sm text-muted-foreground">

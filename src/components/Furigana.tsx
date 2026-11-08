@@ -1,6 +1,6 @@
 import { Fragment, useEffect, useState } from "react";
 import { useTheme } from "@/components/theme/ThemeProvider";
-import { HAS_KANJI, piecesFromWords, type FuriganaPiece } from "@/lib/furigana-align";
+import { align, HAS_KANJI, piecesFromWords, type FuriganaPiece } from "@/lib/furigana-align";
 
 /**
  * Text with hiragana over its kanji when Settings → "Hiragana above kanji" is on. Readings come
@@ -32,11 +32,25 @@ function useFuriganaData(want: boolean): Data | null {
   return want ? data : null;
 }
 
-export function Furigana({ text, show = true }: { text: string; show?: boolean }) {
+/**
+ * `reading`: the word's own kana (a vocabulary card), used instead of the generated readings.
+ */
+export function Furigana({
+  text,
+  show = true,
+  reading,
+}: {
+  text: string;
+  show?: boolean;
+  reading?: string;
+}) {
   const { furigana } = useTheme();
-  const data = useFuriganaData(furigana && show && HAS_KANJI.test(text));
-  if (!data) return <>{text}</>;
-  const pieces = data[text] ?? piecesFromWords(text, data["#words"], words);
+  const on = furigana && show && HAS_KANJI.test(text);
+  const data = useFuriganaData(on && !reading);
+  let pieces: FuriganaPiece[] | null = null;
+  if (on && reading) pieces = align(text, reading) ?? [[text, reading]];
+  else if (data) pieces = data[text] ?? piecesFromWords(text, data["#words"], words);
+  if (!pieces) return <>{text}</>;
   return (
     <>
       {pieces.map((p, i) =>

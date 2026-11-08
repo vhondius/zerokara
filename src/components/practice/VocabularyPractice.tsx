@@ -1,3 +1,4 @@
+import { Furigana } from "@/components/Furigana";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { Link } from "@tanstack/react-router";
 import { allVocabulary, vocabAnswers, vocabId, type VocabEntry } from "@/lib/vocab-index";
@@ -76,7 +77,9 @@ export function VocabularyPractice() {
         ← All practice
       </Link>
       <div className="mt-6 flex items-baseline gap-4">
-        <span className="jp text-5xl text-accent">単語</span>
+        <span className="jp text-5xl text-accent">
+          <Furigana text="単語" />
+        </span>
         <h1 className="font-display text-4xl text-foreground">Vocabulary</h1>
       </div>
       <p className="mt-2 text-sm text-muted-foreground">

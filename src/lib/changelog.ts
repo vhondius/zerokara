@@ -21,6 +21,8 @@ export const CHANGELOG: ChangelogEntry[] = [
     notes: [
       "New setting: Hiragana above kanji. Lessons, examples, dialogues and reading passages show the reading over each kanji. Questions and answer choices only show it once you've answered, and vocabulary tables and word cards keep their own reading column.",
       "Review and flashcards no longer flash the next card's answer for a moment after you rate or move on.",
+      "Hiragana above kanji now also covers lesson headings (such as 書く — to write), English lines that mention kanji, verb tables, and the page titles.",
+      "With Hiragana above kanji on, vocabulary flashcards and Review cards show the reading over the kanji too.",
     ],
   },
   {

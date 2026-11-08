@@ -1,3 +1,4 @@
+import { Furigana } from "@/components/Furigana";
 import { useCallback, useEffect, useRef, useState, type ReactNode } from "react";
 import type { KanaEntry } from "@/lib/kana-index";
 import { entryAnswer, entryReadings } from "@/lib/kana-index";
@@ -79,7 +80,11 @@ export function vocabReviewCards(words: VocabEntry[]): ReviewCard[] {
     return {
       id: vocabId(w),
       itemType: "vocabulary" as const,
-      front: <span className="jp text-6xl text-foreground">{face}</span>,
+      front: (
+        <span className="jp text-6xl text-foreground">
+          <Furigana text={face} reading={w.kanji ? w.kana : undefined} />
+        </span>
+      ),
       back: (
         <span className="flex flex-col items-center gap-2 text-center">
           <span className="font-display text-3xl text-accent">{w.english}</span>

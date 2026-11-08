@@ -1,3 +1,4 @@
+import { Furigana } from "@/components/Furigana";
 import type { Section, VocabWord } from "@/content/schema";
 import { VocabFlashcards } from "@/components/practice/VocabFlashcards";
 import { ReportButton } from "../ReportButton";
@@ -39,7 +40,9 @@ export function VocabularyGroups({ section }: { section: Data }) {
         {section.data.groups.map((g, i) => (
           <div key={i}>
             <div className="mb-2 flex items-center justify-between gap-3">
-              <h3 className="font-display text-base text-foreground">{g.theme}</h3>
+              <h3 className="font-display text-base text-foreground">
+                {g.theme ? <Furigana text={g.theme} /> : null}
+              </h3>
               <ReportButton
                 sectionType="vocabulary_groups"
                 itemType="vocabulary_group"

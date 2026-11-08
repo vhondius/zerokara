@@ -31,7 +31,9 @@ export function SectionShell({
             aria-expanded={open}
             className="flex items-start gap-2 text-left"
           >
-            <span>{heading}</span>
+            <span>
+              <Furigana text={heading} />
+            </span>
             <ChevronDown
               aria-hidden
               className={`mt-1.5 size-5 shrink-0 text-muted-foreground transition-transform ${
@@ -74,7 +76,9 @@ export function ExampleRow({
       ) : (
         <span className="hidden md:block" />
       )}
-      <span className="text-sm text-foreground/80">{english}</span>
+      <span className="text-sm text-foreground/80">
+        <Furigana text={english} />
+      </span>
     </div>
   );
 }

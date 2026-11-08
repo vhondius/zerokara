@@ -1,6 +1,14 @@
+import { Furigana } from "@/components/Furigana";
+import { useTheme } from "@/components/theme/ThemeProvider";
 import { useState, type ReactNode } from "react";
 import type { VocabWord } from "@/content/schema";
 import { FlashcardDeck, type DeckCard } from "./Flashcards";
+
+/** The kana under the word, unless the hiragana already sits above its kanji (Settings). */
+function KanaBelow({ kana }: { kana: string }) {
+  const { furigana } = useTheme();
+  return furigana ? null : <span className="jp text-lg text-muted-foreground">{kana}</span>;
+}
 
 export type VocabDirection = "jp-to-en" | "en-to-jp";
 
@@ -18,10 +26,10 @@ export function vocabCards(
       report: report?.(w, i),
       front: (
         <span className="flex flex-col items-center gap-1">
-          <span className="jp text-5xl text-foreground">{face}</span>
-          {w.kanji && w.kana && w.kanji !== w.kana ? (
-            <span className="jp text-lg text-muted-foreground">{w.kana}</span>
-          ) : null}
+          <span className="jp text-5xl text-foreground">
+            <Furigana text={face} reading={w.kanji ? w.kana : undefined} />
+          </span>
+          {w.kanji && w.kana && w.kanji !== w.kana ? <KanaBelow kana={w.kana} /> : null}
         </span>
       ),
       back: <span className="text-3xl">{w.romaji}</span>,
@@ -35,7 +43,11 @@ export function vocabCards(
     return {
       ...jpFront,
       front: <span className="font-display text-3xl text-foreground">{w.english}</span>,
-      back: <span className="jp text-4xl">{face}</span>,
+      back: (
+        <span className="jp text-4xl">
+          <Furigana text={face} reading={w.kanji ? w.kana : undefined} />
+        </span>
+      ),
       sub: <span>{w.romaji}</span>,
       frontLabel: `Card showing ${w.english}. Activate to reveal the Japanese.`,
       backLabel: `Card showing ${face}, ${w.romaji}. Activate to hide the answer.`,

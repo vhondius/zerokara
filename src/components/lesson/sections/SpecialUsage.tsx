@@ -15,7 +15,9 @@ export function SpecialUsage({ section }: { section: Data }) {
           {notes.map((n) => (
             <div key={n.id}>
               <div className="flex items-start justify-between gap-3">
-                <h3 className="font-display text-base text-foreground">{n.title}</h3>
+                <h3 className="font-display text-base text-foreground">
+                  <Furigana text={n.title} />
+                </h3>
                 <ReportButton
                   sectionType="special_usage"
                   itemType="usage_note"

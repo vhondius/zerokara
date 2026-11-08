@@ -15,7 +15,9 @@ export function SpeakingNaturally({ section }: { section: Data }) {
               <span className="rounded-md bg-muted px-2 py-0.5 text-xs font-medium text-muted-foreground">
                 {n.id}
               </span>
-              <h3 className="font-display text-base text-foreground">{n.title}</h3>
+              <h3 className="font-display text-base text-foreground">
+                <Furigana text={n.title} />
+              </h3>
               <span className="ml-auto">
                 <ReportButton
                   sectionType="speaking_naturally"

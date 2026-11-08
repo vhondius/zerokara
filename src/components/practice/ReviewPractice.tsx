@@ -1,3 +1,4 @@
+import { Furigana } from "@/components/Furigana";
 import { useMemo, useState } from "react";
 import { allHiragana, allKatakana } from "@/lib/kana-index";
 import { allVocabulary, vocabId } from "@/lib/vocab-index";
@@ -59,7 +60,9 @@ export function ReviewPractice() {
     <ColorScope color={SECTION_COLORS.review}>
       <div className="mx-auto max-w-3xl px-6 py-12">
         <div className="flex items-baseline gap-4">
-          <span className="jp text-5xl text-accent">復習</span>
+          <span className="jp text-5xl text-accent">
+            <Furigana text="復習" />
+          </span>
           <h1 className="font-display text-4xl text-foreground">Review</h1>
         </div>
         <p className="mt-2 text-sm text-muted-foreground">

@@ -84,7 +84,9 @@ function VerbTableCard({ verb }: { verb: VerbTable }) {
   return (
     <div className="overflow-hidden rounded-lg border border-border bg-card">
       <div className="flex flex-wrap items-baseline gap-2 border-b border-border bg-muted/40 px-4 py-3">
-        <span className="jp text-base font-medium text-foreground">{verb.dictionary_form}</span>
+        <span className="jp text-base font-medium text-foreground">
+          <Furigana text={verb.dictionary_form} />
+        </span>
         <span className="text-xs text-muted-foreground">
           {verb.romaji} · {verb.english}
         </span>
@@ -108,7 +110,9 @@ function VerbTableCard({ verb }: { verb: VerbTable }) {
           <li key={f.form_name} className="px-4 py-2.5">
             <p className="text-xs text-muted-foreground">{humanForm(f.form_name)}</p>
             <div className="mt-0.5 grid grid-cols-2 items-baseline gap-x-4">
-              <span className="jp min-w-0 text-base text-foreground">{f.kana}</span>
+              <span className="jp min-w-0 text-base text-foreground">
+                <Furigana text={f.kana} />
+              </span>
               <span className="min-w-0 text-sm">
                 <span className="block text-foreground/80">{f.english}</span>
                 <span className="block text-muted-foreground">{f.romaji}</span>
