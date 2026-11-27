@@ -16,6 +16,13 @@ export function newestChangelogId(): number {
  */
 export const CHANGELOG: ChangelogEntry[] = [
   {
+    id: 7,
+    date: "2026-11-27",
+    notes: [
+      "Review has a Previous card button below the rating buttons. Answered too quickly? Go back, and the card shows its answer again so you can rate it properly. Your earlier rating is undone.",
+    ],
+  },
+  {
     id: 6,
     date: "2026-11-08",
     notes: [
