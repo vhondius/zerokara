@@ -2,7 +2,14 @@ import { Furigana } from "@/components/Furigana";
 import { useCallback, useEffect, useRef, useState, type ReactNode } from "react";
 import type { KanaEntry } from "@/lib/kana-index";
 import { entryAnswer, entryReadings } from "@/lib/kana-index";
-import { rateSrsItem, type SrsItemType, type SrsRating } from "@/lib/progress-store";
+import {
+  getSrsItem,
+  rateSrsItem,
+  undoSrsRating,
+  type SrsItem,
+  type SrsItemType,
+  type SrsRating,
+} from "@/lib/progress-store";
 import { type VocabEntry, vocabId } from "@/lib/vocab-index";
 import { ReportButton } from "@/components/lesson/ReportButton";
 import { ExampleWords } from "@/components/lesson/ExampleWords";
@@ -191,6 +198,10 @@ export function ReviewFlashcards({
     easy: 0,
   });
   const requeued = useRef<Record<string, number>>({});
+  // One entry per rating, newest last, so "Previous card" can undo it.
+  const history = useRef<
+    { card: ReviewCard; rating: SrsRating; prev: SrsItem | undefined; requeued: boolean }[]
+  >([]);
   const started = useRef(false);
 
   // Progress loads after the first render: adopt the cards once they arrive,
@@ -207,17 +218,49 @@ export function ReviewFlashcards({
     (r: SrsRating) => {
       if (!card) return;
       started.current = true;
+      const prev = getSrsItem(card.itemType, card.id);
       rateSrsItem(card.itemType, card.id, r);
       setTally((t) => ({ ...t, [r]: t[r] + 1 }));
-      if (r === "again" && study.requeueAgain && (requeued.current[card.id] ?? 0) < MAX_REQUEUES) {
+      const requeue =
+        r === "again" && study.requeueAgain && (requeued.current[card.id] ?? 0) < MAX_REQUEUES;
+      if (requeue) {
         requeued.current[card.id] = (requeued.current[card.id] ?? 0) + 1;
         setQueue((q) => [...q, card]);
       }
+      history.current.push({ card, rating: r, prev, requeued: requeue });
       setFlipped(false);
       setI((n) => n + 1);
     },
     [card, study.requeueAgain],
   );
+
+  // Undo the last rating and show that card again, answer side up, to re-rate.
+  const back = useCallback(() => {
+    const last = history.current.pop();
+    if (!last) return;
+    undoSrsRating(last.card.itemType, last.card.id, last.prev);
+    setTally((t) => ({ ...t, [last.rating]: t[last.rating] - 1 }));
+    if (last.requeued) {
+      requeued.current[last.card.id] -= 1;
+      // Undo is newest-first, so this rating's requeue is still the last entry.
+      setQueue((q) => q.slice(0, -1));
+    }
+    setI((n) => n - 1);
+    setFlipped(true);
+  }, []);
+
+  const backButton =
+    i > 0 ? (
+      <div className="flex justify-center">
+        <button
+          type="button"
+          onClick={back}
+          className="rounded-md px-3 py-1.5 text-sm text-muted-foreground hover:bg-muted hover:text-foreground"
+        >
+          ← Previous card
+        </button>
+      </div>
+    ) : null;
 
   // Each new card takes focus, so Space/Enter flip it straight away.
   const flipRef = useRef<HTMLButtonElement | null>(null);
@@ -274,6 +317,7 @@ export function ReviewFlashcards({
             Start another session
           </button>
         ) : null}
+        <div className="mt-2">{backButton}</div>
       </div>
     );
   }
@@ -348,6 +392,7 @@ export function ReviewFlashcards({
           </button>
         ))}
       </div>
+      {backButton}
     </div>
   );
 }

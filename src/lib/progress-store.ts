@@ -351,6 +351,29 @@ export function rateSrsItem(
   return next;
 }
 
+/**
+ * Undo a rateSrsItem: put back the item as it was before (`prev`, from
+ * getSrsItem; undefined = it didn't exist) and take the review off today's
+ * counts. The study-day mark stays — the card was still studied.
+ */
+export function undoSrsRating(itemType: SrsItemType, itemId: string, prev: SrsItem | undefined) {
+  const id = `${itemType}:${itemId}`;
+  const s = read();
+  if (prev) s.srs[id] = prev;
+  else delete s.srs[id];
+  write(s);
+  const day = getStudyDay();
+  const c = day.counts[itemType];
+  if (!c) return;
+  const key = prev?.last_reviewed_at ? "reviews" : "fresh";
+  day.counts[itemType] = { ...c, [key]: Math.max(0, c[key] - 1) };
+  try {
+    window.localStorage.setItem(STUDY_DAY_KEY, JSON.stringify(day));
+  } catch {
+    /* the limits just stay one higher */
+  }
+}
+
 /** A quiz miss brings an already-scheduled item back into review right away. */
 export function markSrsDueNow(itemType: SrsItemType, itemId: string, now = new Date()) {
   const id = `${itemType}:${itemId}`;
